@@ -1,0 +1,3005 @@
+{
+  "active": true,
+  "connections": {
+    "trata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "buscarContatoChatwoot",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados2": {
+      "main": [
+        [
+          {
+            "node": "dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados2": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscarContatoChatwoot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados3": {
+      "main": [
+        [
+          {
+            "node": "dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscarContatoChatwoot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados4": {
+      "main": [
+        [
+          {
+            "node": "dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados4": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscarContatoChatwoot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_flavio": {
+      "main": [
+        [
+          {
+            "node": "trata_dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados5": {
+      "main": [
+        [
+          {
+            "node": "dados5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados5": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "buscarContatoChatwoot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_jamil": {
+      "main": [
+        [
+          {
+            "node": "trata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_marcus": {
+      "main": [
+        [
+          {
+            "node": "trata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_pre_flaviano": {
+      "main": [
+        [
+          {
+            "node": "trata_dados4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_thiago": {
+      "main": [
+        [
+          {
+            "node": "trata_dados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot": {
+      "main": [
+        [
+          {
+            "node": "cria_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot": {
+      "main": [
+        [
+          {
+            "node": "cria_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot1": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "cria_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "cria_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot2": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot2": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot2": {
+      "main": [
+        [
+          {
+            "node": "cria_task2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot2": {
+      "main": [
+        [
+          {
+            "node": "cria_task2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot3": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot3": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot3": {
+      "main": [
+        [
+          {
+            "node": "cria_task3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot3": {
+      "main": [
+        [
+          {
+            "node": "cria_task3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot4": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot4": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot4": {
+      "main": [
+        [
+          {
+            "node": "cria_task4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot4": {
+      "main": [
+        [
+          {
+            "node": "cria_task4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot5": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot5": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot5": {
+      "main": [
+        [
+          {
+            "node": "cria_task5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot5": {
+      "main": [
+        [
+          {
+            "node": "cria_task5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_roberto": {
+      "main": [
+        [
+          {
+            "node": "trata_dados5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados6": {
+      "main": [
+        [
+          {
+            "node": "dados6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados6": {
+      "main": [
+        [
+          {
+            "node": "buscarContatoChatwoot6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot6": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot6": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot6": {
+      "main": [
+        [
+          {
+            "node": "cria_task6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot6": {
+      "main": [
+        [
+          {
+            "node": "cria_task6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_pag_vendas": {
+      "main": [
+        [
+          {
+            "node": "trata_dados6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "trata_dados7": {
+      "main": [
+        [
+          {
+            "node": "dados7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados7": {
+      "main": [
+        [
+          {
+            "node": "buscarContatoChatwoot7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot7": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot7": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot7": {
+      "main": [
+        [
+          {
+            "node": "cria_task7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot7": {
+      "main": [
+        [
+          {
+            "node": "cria_task7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preencheu_venda_direta": {
+      "main": [
+        [
+          {
+            "node": "trata_dados7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-12T18:36:17.580Z",
+  "id": "gYkpdUktMXWmOGTy",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[WIZARD] - Não Aplicou em 10 min - Parte 1 + Click Up",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_jamil\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_jamil\"].json[\"body\"][\"WHATSAPP\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_jamil\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_jamil\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_jamil\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_jamil\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_jamil\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_jamil\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "d652d6d6-93a0-4e33-9363-3a365ec494c2",
+      "name": "trata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados\"].json[\"nome\"][\"fullname\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Jamil"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_jamil\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_jamil\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_jamil\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "32722083-9b29-462b-9af8-60333bc65f89",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "get",
+        "id": "86a4a44kp"
+      },
+      "id": "69190fb9-1498-492f-958c-c45d7fb63b2e",
+      "name": "ClickUp",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        100,
+        3120
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados\"].json[\"visto_americano\"] }}\"\n  }\n]\n",
+          "tags": [
+            "jamil"
+          ]
+        }
+      },
+      "id": "2012b3b6-87e2-4c63-a592-e8d6ed9dbbe5",
+      "name": "cria_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        600
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_marcus\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_marcus\"].json[\"body\"][\"WHATSAPP\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_marcus\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_marcus\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_marcus\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_marcus\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_marcus\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_marcus\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "9ade7fa0-95ef-4a85-bf50-2781ca289c9d",
+      "name": "trata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados1\"].json[\"nome\"][\"fullname\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados1\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados1\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Marcus"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_marcus\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_marcus\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_marcus\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e1a1c821-e9f3-4ddf-bf17-df304558795a",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados1\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados1\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados1\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados1\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot\"].runIndex >= 0 ? $node[\"criarContatoChatwoot\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados1\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados1\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados1\"].json[\"visto_americano\"] }}\"\n  }\n]\n\n",
+          "tags": [
+            "marcus"
+          ]
+        }
+      },
+      "id": "a3eb9a81-f1b5-48ba-9780-b805221da357",
+      "name": "cria_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        1020
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_flavio\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_flavio\"].json[\"body\"][\"WHATSAPP\"] || '';\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_flavio\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_flavio\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_flavio\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_flavio\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_flavio\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_flavio\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "5cfef1f3-a046-45c5-bb42-f84b6f48854b",
+      "name": "trata_dados2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados2\"].json[\"nome\"][\"fullname\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados2\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados2\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Flavio"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_flavio\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_flavio\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_flavio\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de63c70f-f3e1-4359-8b98-ca41dc8dd773",
+      "name": "dados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados2\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados2\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados2\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados2\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot2\"].runIndex >= 0 ? $node[\"criarContatoChatwoot2\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot2\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot2\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados2\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados2\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados2\"].json[\"visto_americano\"] }}\"\n  }\n]\n\n",
+          "tags": [
+            "flavio"
+          ]
+        }
+      },
+      "id": "5c8a6fa5-ccb8-4078-b60c-cd7335ba29a2",
+      "name": "cria_task2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        1320
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_thiago\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_thiago\"].json[\"body\"][\"WHATSAPP\"] || '';\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_thiago\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_thiago\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_thiago\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_thiago\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_thiago\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_thiago\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "082acc5c-48e5-4751-a965-0fdc729d0312",
+      "name": "trata_dados3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados3\"].json[\"nome\"][\"fullname\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados3\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados3\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Thiago"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_thiago\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_thiago\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_thiago\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f0f5c328-6ba4-4289-8c4a-59105a109840",
+      "name": "dados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados3\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados3\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados3\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados3\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot3\"].runIndex >= 0 ? $node[\"criarContatoChatwoot3\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot3\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot3\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados3\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados3\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados3\"].json[\"visto_americano\"] }}\"\n  }\n]\n\n",
+          "tags": [
+            "thiago"
+          ]
+        }
+      },
+      "id": "b8814e1b-61bd-4b10-a3a9-a422cbe02733",
+      "name": "cria_task3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        1740
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"WHATSAPP\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_pre_flaviano\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_pre_flaviano\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_pre_flaviano\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_pre_flaviano\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_pre_flaviano\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "ee7d8aa6-549f-4b48-a960-af15904f3132",
+      "name": "trata_dados4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados4\"].json[\"nome\"][\"fullname\"] }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados4\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados4\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Flaviano"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_pre_flaviano\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "17d02ef7-dc55-4af7-a456-32bd8422781b",
+      "name": "dados4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados4\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados4\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados4\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados4\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot4\"].runIndex >= 0 ? $node[\"criarContatoChatwoot4\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot4\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot4\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados4\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados4\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados4\"].json[\"visto_americano\"] }}\"\n  }\n]\n\n",
+          "tags": [
+            "flaviano"
+          ]
+        }
+      },
+      "id": "cb6bdb56-fae9-4b12-8bd1-744ff094941d",
+      "name": "cria_task4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        2100
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "Não Aplicou - Sessão",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "8c4eb24d-a208-4640-b48b-be0cb8545564",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        1280
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-flavio",
+        "options": {}
+      },
+      "id": "fe8fe69c-4e59-40eb-a3e0-04b47dd98937",
+      "name": "preencheu_flavio",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        1380
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_roberto\"].json[\"body\"][\"Nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_roberto\"].json[\"body\"][\"WHATSAPP\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_roberto\"].json[\"body\"][\"E_mail\"].toLowerCase().trim();\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_roberto\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_roberto\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_roberto\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_roberto\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_roberto\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "dfbe0373-15b2-4989-8001-ae28469550da",
+      "name": "trata_dados5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados5\"].json[\"nome\"][\"fullname\"] }} "
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados5\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados5\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "tag",
+              "value": "Roberto"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"preencheu_roberto\"].json[\"body\"][\"situacao_atual\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"preencheu_roberto\"].json[\"body\"][\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"preencheu_roberto\"].json[\"body\"][\"visto_americano\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fa101b6e-b7dc-45c4-bf5b-1fee12357e02",
+      "name": "dados5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados5\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados5\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados5\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados5\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot5\"].runIndex >= 0 ? $node[\"criarContatoChatwoot5\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot5\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot5\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados5\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados5\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados5\"].json[\"visto_americano\"] }}\"\n  }\n]\n",
+          "tags": [
+            "roberto"
+          ]
+        }
+      },
+      "id": "5bb82673-257b-4be9-aa63-07df57b4e272",
+      "name": "cria_task5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        2500
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-jamil",
+        "options": {}
+      },
+      "id": "4375f64e-70fa-4249-a60e-b765adddbfbf",
+      "name": "preencheu_jamil",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        620
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-marcus",
+        "options": {}
+      },
+      "id": "012b0fbe-4482-42ce-83fc-ee74ad2bb941",
+      "name": "preencheu_marcus",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        1000
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-flaviano",
+        "options": {}
+      },
+      "id": "7a9b3721-6726-4262-b5d8-4a679407e206",
+      "name": "preencheu_pre_flaviano",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        2120
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-thiago",
+        "options": {}
+      },
+      "id": "01646950-3104-4b8d-99b8-486547219df7",
+      "name": "preencheu_thiago",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        1740
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2df5645d-b1be-4dc8-93c7-993703a0b3c4",
+      "name": "buscarContatoChatwoot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1100,
+        1000
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e04d706c-7508-4f5d-a72a-d937d99a46ea",
+      "name": "existe_chatwoot",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados1\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados1\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "f0055f3f-f315-4f42-9b3a-c9bbab985e6c",
+      "name": "atualizarContatoChatwoot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        860
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados1\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados1\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "5e8c4e16-3b4f-415c-a3f6-231c8b691249",
+      "name": "criarContatoChatwoot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        1080
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bd39c6ce-e07c-41aa-bf60-957462d2e764",
+      "name": "buscarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1100,
+        620
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8e99a8db-550f-4616-a6ec-528d9dc869af",
+      "name": "existe_chatwoot1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "16539993-b1a9-4a18-8a52-f95abf024ff4",
+      "name": "atualizarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        480
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "54ab4f61-197e-4ae0-924f-ea5490846b42",
+      "name": "criarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        700
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d231a19f-43c9-4035-ae1e-4000ebc579bc",
+      "name": "buscarContatoChatwoot2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1100,
+        1380
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot2\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "651d6e2b-5962-42e0-b2ca-bfc8d63e0a7a",
+      "name": "existe_chatwoot2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot2\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados2\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados2\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "2bbb2e13-7488-4a43-ac5d-04ed8e0d901c",
+      "name": "atualizarContatoChatwoot2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        1240
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados2\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados2\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "492ac1b1-1844-436b-afcb-164ab8995339",
+      "name": "criarContatoChatwoot2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        1460
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ce010543-1062-45d5-bb03-2da90471feee",
+      "name": "buscarContatoChatwoot3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        1740
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot3\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "229f3b60-a547-404d-8851-25a2a998bef9",
+      "name": "existe_chatwoot3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot3\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados3\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados3\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "2b06ad96-5e97-403a-994d-39a2e5abc529",
+      "name": "atualizarContatoChatwoot3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        1640
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados3\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados3\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "9d13e18b-699e-45e9-8aea-b0a233a40b68",
+      "name": "criarContatoChatwoot3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        1860
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "82c6e25e-ecb0-411c-9508-dad48c4c13db",
+      "name": "buscarContatoChatwoot4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        2120
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot4\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ef906e2f-fe86-4ea0-a1a0-104bb5ed289c",
+      "name": "existe_chatwoot4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        2120
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot4\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados4\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados4\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "78e8edd8-8f68-4002-95f4-8c7ca71543eb",
+      "name": "atualizarContatoChatwoot4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        2020
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados4\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados4\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "e3466de2-3b6e-4049-9ec0-e1065c0b5c0d",
+      "name": "criarContatoChatwoot4",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        2240
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6ab50c12-ef6c-484f-b1b8-f5dae554b361",
+      "name": "buscarContatoChatwoot5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        2500
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot5\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d9843d61-b6fd-4636-99f2-d377ab945c8c",
+      "name": "existe_chatwoot5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        2500
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot5\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados5\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados5\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "73252636-09b1-4829-bde3-c00c5b467b7c",
+      "name": "atualizarContatoChatwoot5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        2400
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados5\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados5\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "199a3058-fc60-40db-8be9-34bfaf1d3a60",
+      "name": "criarContatoChatwoot5",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        2620
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "crm-roberto",
+        "options": {}
+      },
+      "id": "321c240e-b655-4547-8f19-ac9013208e2d",
+      "name": "preencheu_roberto",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        2500
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"telefone\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"email\"].toLowerCase().trim();\nconst empresario = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"empresario\"];\nconst segmento = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"segmento\"] ;\nconst situacao = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"situacao\"];\nconst visto = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"visto\"];\nconst faturamento = $node[\"preencheu_pag_vendas\"].json[\"body\"][\"renda\"] ;\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_pag_vendas\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_pag_vendas\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_pag_vendas\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_pag_vendas\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_pag_vendas\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  empresario,\n  segmento,\n  situacao,\n  visto,\n  faturamento,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "42ba2265-9563-445d-810e-93395cc34cdd",
+      "name": "trata_dados6",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        2900
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados6\"].json[\"nome\"][\"fullname\"] }} "
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados6\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados6\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"trata_dados6\"].json[\"situacao\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"trata_dados6\"].json[\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"trata_dados6\"].json[\"visto\"] }}"
+            },
+            {
+              "name": "segmento",
+              "value": "={{ $node[\"trata_dados6\"].json[\"segmento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa5356ca-c8c6-41d9-af36-8efe324aa9da",
+      "name": "dados6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        2900
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"dados6\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados6\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados6\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados6\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot6\"].runIndex >= 0 ? $node[\"criarContatoChatwoot6\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot6\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot6\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados6\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados6\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados6\"].json[\"visto_americano\"] }}\"\n  }\n]\n",
+          "tags": [
+            "pagina_de_vendas"
+          ]
+        }
+      },
+      "id": "403af24e-7124-4a32-b122-343909b3ebff",
+      "name": "cria_task6",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        2900
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ad992376-c8b8-4319-bab3-246719b32b12",
+      "name": "buscarContatoChatwoot6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        2900
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot6\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a7c47249-eea7-43e3-a9ab-5234a48b7fb7",
+      "name": "existe_chatwoot6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        2900
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot6\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados6\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados6\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "588ebf5f-2a18-4126-bd3b-1d49a4218de3",
+      "name": "atualizarContatoChatwoot6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        2800
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados6\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados6\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "72d4d8b9-cba8-4def-94dc-15b2b5883847",
+      "name": "criarContatoChatwoot6",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        3020
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "preencheu_pag_vendas",
+        "options": {}
+      },
+      "id": "8f54e3bb-b6e1-4987-bfd3-4bbedff4d49c",
+      "name": "preencheu_pag_vendas",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        2900
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"preencheu_venda_direta\"].json[\"body\"][\"nome\"] || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nconst nome = capitalizeName(fullNameAnswer);\n\n\n// Formatar o número de telefone\nconst telefone = $node[\"preencheu_venda_direta\"].json[\"body\"][\"telefone\"] || '';\n\nconst telefoneLimpo = telefone.replace(/[^\\d]/g, '');\n\nlet ddi;\nlet ddd;\nlet telefoneFormatado;\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\n// Verificar se o telefone começa com \"55\" antes de formatá-lo\nif (telefoneLimpo.startsWith('55')) {\n  ddi = telefoneLimpo.slice(0, 2);\n  ddd = telefoneLimpo.slice(2, 4);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n} else {\n  ddi = '55';\n  ddd = telefoneLimpo.slice(0, 2);\n  if (parseInt(ddd, 10) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n}\n\n// Pegar o email em minúsculas e sem espaços no final\nconst email = $node[\"preencheu_venda_direta\"].json[\"body\"][\"email\"].toLowerCase().trim();\nconst empresario = $node[\"preencheu_venda_direta\"].json[\"body\"][\"empresario\"];\nconst segmento = $node[\"preencheu_venda_direta\"].json[\"body\"][\"segmento\"] ;\nconst situacao = $node[\"preencheu_venda_direta\"].json[\"body\"][\"situacao\"];\nconst visto = $node[\"preencheu_venda_direta\"].json[\"body\"][\"visto\"];\nconst faturamento = $node[\"preencheu_venda_direta\"].json[\"body\"][\"renda\"] ;\n\n// Captar os parâmetros UTM\nconst utm_source = $node[\"preencheu_venda_direta\"].json.body[\"utm_source\"];\nconst utm_campaign = $node[\"preencheu_venda_direta\"].json.body[\"utm_campaign\"];\nconst utm_term = $node[\"preencheu_venda_direta\"].json.body[\"utm_term\"];\nconst utm_medium = $node[\"preencheu_venda_direta\"].json.body[\"utm_medium\"];\nconst utm_content = $node[\"preencheu_venda_direta\"].json.body[\"utm_content\"];\n\n// Criar um objeto com os valores formatados\nconst formattedData = {\n  email,\n  telefone: telefoneFormatado,\n  empresario,\n  segmento,\n  situacao,\n  visto,\n  faturamento,\n  utm_source,\n  utm_campaign,\n  utm_term,\n  utm_medium,\n  utm_content,\n  nome\n};\n\n// Retorna o objeto formatado como JSON\nreturn formattedData;\n"
+      },
+      "id": "93e02349-9bd5-4e86-b35b-51d08a6513f3",
+      "name": "trata_dados7",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        720,
+        3300
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"trata_dados7\"].json[\"nome\"][\"fullname\"] }} "
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"trata_dados7\"].json[\"email\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"trata_dados7\"].json[\"telefone\"] }}"
+            },
+            {
+              "name": "situacao_atual",
+              "value": "={{ $node[\"trata_dados7\"].json[\"situacao\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"trata_dados7\"].json[\"faturamento\"] }}"
+            },
+            {
+              "name": "visto_americano",
+              "value": "={{ $node[\"trata_dados7\"].json[\"visto\"] }}"
+            },
+            {
+              "name": "segmento",
+              "value": "={{ $node[\"trata_dados7\"].json[\"segmento\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "746e8322-edc3-4057-b82a-9e84a04fdef3",
+      "name": "dados7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        880,
+        3300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304752326",
+        "name": "={{ $node[\"dados7\"].json[\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"dados7\"].json[\"email\"] }}\"\n    },\n    {\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"dados7\"].json[\"telefone\"].slice(0,4)}}9{{ $node[\"dados7\"].json[\"telefone\"].slice(-8)}}\"\n    },\n{\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot7\"].runIndex >= 0 ? $node[\"criarContatoChatwoot7\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot7\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot7\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"f323d32b-13d7-4bce-82a9-61b9f8221b16\"\n  },\n{\n\"id\": \"be6701f6-e745-4613-b71c-2648ac9e9380\",\n        \"value\": \"{{ $node[\"dados7\"].json[\"situacao_atual\"] }}\"\n  },\n{\n\"id\": \"617065cb-25a9-4cdb-ad29-54c8a04c4858\",\n        \"value\": \"{{ $node[\"dados7\"].json[\"faturamento\"] }}\"\n  },\n{\n\"id\": \"68ea5ae1-72d7-43d0-92d3-ee74b73db741\",\n        \"value\": \"{{ $node[\"dados7\"].json[\"visto_americano\"] }}\"\n  }\n]\n",
+          "tags": [
+            "venda_direta"
+          ]
+        }
+      },
+      "id": "f123b005-1b7c-4e50-843b-ae38cf6d3090",
+      "name": "cria_task7",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        3300
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json[\"telefone\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1de279bc-c2a7-4076-a1c6-4ec83feeb30e",
+      "name": "buscarContatoChatwoot7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        3300
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot7\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2f4bf978-9960-486f-93ef-a2b53116de9f",
+      "name": "existe_chatwoot7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1220,
+        3300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot7\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados7\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados7\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "997c2cb9-25d7-493f-9e85-792d3d567cb2",
+      "name": "atualizarContatoChatwoot7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        3200
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"dados7\"].json[\"nome\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"dados7\"].json[\"telefone\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "b391e14b-b51e-4600-8f3b-a57eea18f528",
+      "name": "criarContatoChatwoot7",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1440,
+        3420
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "preencheu_venda_direta",
+        "options": {}
+      },
+      "id": "06f9ebe1-a57a-4100-9ac9-cf1d60152351",
+      "name": "preencheu_venda_direta",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        540,
+        3300
+      ],
+      "webhookId": "bed44c59-3e58-44ac-b2e4-e5cefcb196a5"
+    }
+  ],
+  "pinData": {
+    "preencheu_marcus": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "content-length": "549",
+            "accept-encoding": "gzip",
+            "cdn-loop": "cloudflare; subreqs=1",
+            "cf-connecting-ip": "2a06:98c0:3600::103",
+            "cf-ew-via": "14",
+            "cf-ray": "8a5b9f1af117cee1-SJC",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "greatsoftwares.workers.dev",
+            "content-type": "application/json",
+            "great-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncGFnZXMtcjItcGFnZXMtY29udmVyc2lvbnMiLCJhdWQiOiJzZXJ2aWNlIiwiaWF0IjoxNzIxNDAxNjUwfQ.c1UY0Wtklui3f3JF6mxUjRQTLzgUW-E2JrQW5YdKBF0",
+            "great-server": "GreatApps",
+            "great-service": "gpages-r2-pages-conversions",
+            "x-forwarded-for": "172.71.154.150",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "172.71.154.150"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Nome": "gabriel",
+            "E_mail": "Acessos@automagicbots.com.br",
+            "WHATSAPP": "(31) 9857-11260",
+            "situacao_atual": "Sou aposentado e tenho interesse na viagem",
+            "faturamento": "De R$10.001 a R$25.000",
+            "visto_americano": "Sim",
+            "Politicas_de_privacidade": true,
+            "Referral_Source": "https://app.greatpages.com.br/",
+            "Dispositivo": "Desktop",
+            "URL": "https://www.fabricadevendas.digital/jornada-dos-pioneiros/marcus",
+            "IP_do_usuario": "2804:1b2:1002:323d:129c:6919:e6a4:f926",
+            "Data_da_conversao": "2024-07-19 15:07:24",
+            "Id_do_formulario": "688252_1_35986",
+            "Id_da_pagina": 688252
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/crm-marcus",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "preencheu_pre_flaviano": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "content-length": "576",
+            "accept-encoding": "gzip",
+            "cdn-loop": "cloudflare; subreqs=1",
+            "cf-connecting-ip": "2a06:98c0:3600::103",
+            "cf-ew-via": "14",
+            "cf-ray": "8a5bb2292057cee1-SJC",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "greatsoftwares.workers.dev",
+            "content-type": "application/json",
+            "great-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncGFnZXMtcjItcGFnZXMtY29udmVyc2lvbnMiLCJhdWQiOiJzZXJ2aWNlIiwiaWF0IjoxNzIxNDAyNDMwfQ.xtn5JftWK_LY6XonSiAvUNyOMF2LwWm56AFI342sxF4",
+            "great-server": "GreatApps",
+            "great-service": "gpages-r2-pages-conversions",
+            "x-forwarded-for": "172.71.154.93",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "172.71.154.93"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Nome": "teste flaviano2",
+            "E_mail": "flaviano@auto.com.br",
+            "WHATSAPP": "(62) 9891-52614",
+            "situacao_atual": "Quero começar no empreendedorismo e quero estar próximo ao Wizard",
+            "faturamento": "De R$50.001 a R$100.000",
+            "visto_americano": "Sim",
+            "Politicas_de_privacidade": true,
+            "Referral_Source": "https://app.greatpages.com.br/",
+            "Dispositivo": "Desktop",
+            "URL": "https://www.fabricadevendas.digital/jornada-dos-pioneiros/flaviano",
+            "IP_do_usuario": "2804:14d:ca83:47c2:c4dd:f837:a993:3a2",
+            "Data_da_conversao": "2024-07-19 15:20:26",
+            "Id_do_formulario": "688277_1_52254",
+            "Id_da_pagina": 688277
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/crm-flaviano",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "preencheu_thiago": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "content-length": "542",
+            "accept-encoding": "gzip",
+            "cdn-loop": "cloudflare; subreqs=1",
+            "cf-connecting-ip": "2a06:98c0:3600::103",
+            "cf-ew-via": "14",
+            "cf-ray": "8a5bb7bbd600cee1-SJC",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "greatsoftwares.workers.dev",
+            "content-type": "application/json",
+            "great-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncGFnZXMtcjItcGFnZXMtY29udmVyc2lvbnMiLCJhdWQiOiJzZXJ2aWNlIiwiaWF0IjoxNzIxNDAyNjU5fQ.cj2A64xWtabLt8OP3qZVEx_NRGAbXtpNDH5Dk53Xxqo",
+            "great-server": "GreatApps",
+            "great-service": "gpages-r2-pages-conversions",
+            "x-forwarded-for": "172.71.154.226",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "172.71.154.226"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Nome": "teste thiago",
+            "E_mail": "thiago@auto.com.br",
+            "WHATSAPP": "(62) 9815-69521",
+            "situacao_atual": "Sou empregado e tenho interesse na viagem",
+            "faturamento": "De R$10.001 a R$25.000",
+            "visto_americano": "Sim",
+            "Politicas_de_privacidade": true,
+            "Referral_Source": "https://app.greatpages.com.br/",
+            "Dispositivo": "Desktop",
+            "URL": "https://www.fabricadevendas.digital/jornada-dos-pioneiros/thiago",
+            "IP_do_usuario": "2804:14d:ca83:47c2:c4dd:f837:a993:3a2",
+            "Data_da_conversao": "2024-07-19 15:24:15",
+            "Id_do_formulario": "687638_1_68055",
+            "Id_da_pagina": 687638
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/crm-thiago",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "preencheu_roberto": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "content-length": "537",
+            "accept-encoding": "gzip",
+            "cdn-loop": "cloudflare; subreqs=1",
+            "cf-connecting-ip": "2a06:98c0:3600::103",
+            "cf-ew-via": "14",
+            "cf-ray": "8a5b97d0b38dcee1-SJC",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cf-worker": "greatsoftwares.workers.dev",
+            "content-type": "application/json",
+            "great-auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJncGFnZXMtcjItcGFnZXMtY29udmVyc2lvbnMiLCJhdWQiOiJzZXJ2aWNlIiwiaWF0IjoxNzIxNDAxMzUxfQ.uJ7vHJnB7g3SBWeMZemYe0OmY794RmS_0qNaOyQ98VY",
+            "great-server": "GreatApps",
+            "great-service": "gpages-r2-pages-conversions",
+            "x-forwarded-for": "172.71.154.79",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "172.71.154.79"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "Nome": "Testando 12345",
+            "E_mail": "teste@automagicbots.com.br",
+            "WHATSAPP": "(62) 9811-15822",
+            "situacao_atual": "Sou empresário e quero estar próximo ao Wizard",
+            "faturamento": "De R$25.001 a R$50.000",
+            "visto_americano": "Sim",
+            "Politicas_de_privacidade": true,
+            "Referral_Source": "Acesso direto",
+            "Dispositivo": "Desktop",
+            "URL": "https://www.fabricadevendas.digital/jornada-dos-pioneiros/roberto",
+            "IP_do_usuario": "2804:14d:ca83:47c2:c4dd:f837:a993:3a2",
+            "Data_da_conversao": "2024-07-19 15:02:27",
+            "Id_do_formulario": "688259_1_99572",
+            "Id_da_pagina": 688259
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/crm-roberto",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "preencheu_pag_vendas": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+            "content-length": "197",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+            "content-type": "application/json",
+            "origin": "https://www.fabricadevendas.digital",
+            "priority": "u=1, i",
+            "referer": "https://www.fabricadevendas.digital/",
+            "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "x-forwarded-for": "179.216.21.71",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "179.216.21.71"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "nome": "Mateus Diniz",
+            "email": "mateusdiniz@automagicbots.com.br",
+            "telefone": "62981196678",
+            "empresario": "sim",
+            "segmento": "automação",
+            "situacao": "empresario",
+            "visto": "sim",
+            "renda": "10mil_a_25mil"
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/preencheu_pag_vendas",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "preencheu_venda_direta": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+            "content-length": "219",
+            "accept": "*/*",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+            "content-type": "application/json",
+            "origin": "https://www.fabricadevendas.digital",
+            "priority": "u=1, i",
+            "referer": "https://www.fabricadevendas.digital/",
+            "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "x-forwarded-for": "179.216.21.71",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "179.216.21.71"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "nome": "Mateus Diniz - Automagic Bots",
+            "email": "mateusdiniz@automagicbots.com.br",
+            "telefone": "(62) 98119-6678",
+            "empresario": "sim",
+            "segmento": "Automações",
+            "situacao": "empresario",
+            "visto": "sim",
+            "renda": "10mil_a_25mil"
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/preencheu_venda_direta",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-07-25T14:26:47.218Z",
+      "updatedAt": "2024-07-25T14:26:47.218Z",
+      "id": "Gq7GD9Qsg3sdBL9G",
+      "name": "[NAP]"
+    }
+  ],
+  "triggerCount": 8,
+  "updatedAt": "2024-07-25T17:39:46.886Z",
+  "versionId": "36e6f7c5-cfa9-4e9f-a9cc-6a5b5f23f1ab"
+}
