@@ -1,0 +1,560 @@
+{
+  "active": false,
+  "connections": {
+    "dados1": {
+      "main": [
+        [
+          {
+            "node": "envia_msg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sexta_18:30": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "envia_msg1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sexta_19:30": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados2": {
+      "main": [
+        [
+          {
+            "node": "envia_msg2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF2": {
+      "main": [
+        [
+          {
+            "node": "dados2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sexta_19:45": {
+      "main": [
+        [
+          {
+            "node": "IF2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-12T20:48:29.710Z",
+  "id": "YZEWpZKeefeZYvMl",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "[EVOLUTION] - Envio de msg no Grupo",
+  "nodes": [
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "id_grupo",
+              "value": "120363315643400792@g.us"
+            },
+            {
+              "name": "url_base",
+              "value": "https://wizardevolution.automagicbots.com.br/"
+            },
+            {
+              "name": "apikey",
+              "value": "tonsb6jcp9gctcnsekdb8"
+            },
+            {
+              "name": "instancia",
+              "value": "FabricaDeVendas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0de2c59b-b63a-49b8-b45e-2e959711ba1c",
+      "name": "dados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"dados1\"].json[\"url_base\"] }}message/sendText/{{ $node[\"dados1\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"dados1\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"dados1\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=⏰ *EM 1 HORA:*\n\nDaqui 1h estaremos ao vivo com Carlos Wizard desvendando os mistérios da sua prosperidade, revelando o caminho que ele seguiu para conquistar seus objetivos e sua fortuna.\n\nPara participar, aperte no link abaixo, antes das 19:30\n\nhttps://meet.google.com/igj-zavo-fsp\n\nVejo você lá."
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "affb4bf5-7eeb-4314-8ace-19459a88fba9",
+      "name": "envia_msg",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        160,
+        360
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "value2": "12/07/2024"
+            },
+            {
+              "value1": "={{ $json[\"Readable time\"] }}",
+              "value2": "6:30:00 pm"
+            }
+          ]
+        }
+      },
+      "id": "e7365185-864c-4c19-9436-5ff7b0a04541",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                5
+              ],
+              "triggerAtHour": 18,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "85e258ff-319a-4f38-9d90-8915a1994b68",
+      "name": "sexta_18:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -420,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "id_grupo",
+              "value": "120363315643400792@g.us"
+            },
+            {
+              "name": "url_base",
+              "value": "https://wizardevolution.automagicbots.com.br/"
+            },
+            {
+              "name": "apikey",
+              "value": "tonsb6jcp9gctcnsekdb8"
+            },
+            {
+              "name": "instancia",
+              "value": "FabricaDeVendas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ba5ee491-b068-4bff-bad4-c290d17abb37",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"dados\"].json[\"url_base\"] }}message/sendText/{{ $node[\"dados\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"dados\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"dados\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=📽️ *ESTAMOS AO VIVO!*\n\nPara entrar na reunião, aperte agora no link:\n\nhttps://meet.google.com/igj-zavo-fsp"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "23347a0a-3674-4006-aa3e-f532b739ad5e",
+      "name": "envia_msg1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        160,
+        620
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "value2": "12/07/2024"
+            },
+            {
+              "value1": "={{ $json[\"Readable time\"] }}",
+              "value2": "7:30:00 pm"
+            }
+          ]
+        }
+      },
+      "id": "0461a5c4-9abe-465e-9a73-b40f4f60f076",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                5
+              ],
+              "triggerAtHour": 19,
+              "triggerAtMinute": 30
+            }
+          ]
+        }
+      },
+      "id": "4d7c915a-9f68-4b47-9237-292936b9deed",
+      "name": "sexta_19:30",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -420,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "id_grupo",
+              "value": "120363315643400792@g.us"
+            },
+            {
+              "name": "url_base",
+              "value": "https://wizardevolution.automagicbots.com.br/"
+            },
+            {
+              "name": "apikey",
+              "value": "tonsb6jcp9gctcnsekdb8"
+            },
+            {
+              "name": "instancia",
+              "value": "FabricaDeVendas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4b38f12f-1745-4cf2-9470-a8320a16846a",
+      "name": "dados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"dados2\"].json[\"url_base\"] }}message/sendText/{{ $node[\"dados2\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"dados2\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"dados2\"].json[\"id_grupo\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=⌛ *VOCÊ ESTÁ ATRASADO…*\n\nMas corre que ainda dá tempo (ou não reclame de falta de sorte).\n\nPara entrar na reunião, aperte agora no link:\n\nhttps://meet.google.com/igj-zavo-fsp"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "e1b85429-5c36-40b5-a3c3-5ffc7af58807",
+      "name": "envia_msg2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        160,
+        880
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $now.toFormat('dd/MM/yyyy') }}",
+              "value2": "12/07/2024"
+            },
+            {
+              "value1": "={{ $json[\"Readable time\"] }}",
+              "value2": "7:45:00 pm"
+            }
+          ]
+        }
+      },
+      "id": "6280ec72-de92-46e7-b7a7-5e0235dad7f7",
+      "name": "IF2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -260,
+        920
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "triggerAtDay": [
+                5
+              ],
+              "triggerAtHour": 19,
+              "triggerAtMinute": 45
+            }
+          ]
+        }
+      },
+      "id": "65d9eda6-3f76-462f-b147-3840f204050f",
+      "name": "sexta_19:45",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -420,
+        920
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": {
+    "node:sexta_18:30": {
+      "recurrencyRules": []
+    },
+    "node:sexta_19:30": {
+      "recurrencyRules": []
+    },
+    "node:sexta_19:45": {
+      "recurrencyRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 3,
+  "updatedAt": "2024-07-12T22:02:55.623Z",
+  "versionId": "9ac314a1-d681-4acd-a5ce-27b24602dc5a"
+}
