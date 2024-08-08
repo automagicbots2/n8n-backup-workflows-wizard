@@ -1,0 +1,5444 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_agendamento": {
+      "main": [
+        [
+          {
+            "node": "Limit2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_closer2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer": {
+      "main": [
+        [
+          {
+            "node": "Limit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe3": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_agendamento": {
+      "main": [
+        [
+          {
+            "node": "insert_utm_2_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake1": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia1": {
+      "main": [
+        [
+          {
+            "node": "nada1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia4": {
+      "main": [
+        [
+          {
+            "node": "nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer2": {
+      "main": [
+        [
+          {
+            "node": "Limit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe7": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador2": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia13": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake14",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe": {
+      "main": [
+        [
+          {
+            "node": "é_oferta_direta1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "clickup_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead1": {
+      "main": [
+        [
+          {
+            "node": "email_vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_utm_lead": {
+      "main": [
+        [
+          {
+            "node": "id_lead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido": {
+      "main": [
+        [
+          {
+            "node": "email_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido6": {
+      "main": [
+        [
+          {
+            "node": "email_igual8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual8": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email6": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email2": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual2": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email2_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido2": {
+      "main": [
+        [
+          {
+            "node": "email_igual2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email7": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone4": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email2_telefone1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_igual": {
+      "main": [
+        [
+          {
+            "node": "email_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead4": {
+      "main": [
+        [
+          {
+            "node": "email_vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados1": {
+      "main": [
+        [
+          {
+            "node": "id_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segundo_ou_mais_erro": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "buscarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia12": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_vazio": {
+      "main": [
+        [
+          {
+            "node": "telefone_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "telefone_vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio": {
+      "main": [
+        [
+          {
+            "node": "instagram_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "instagram_vazio3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio": {
+      "main": [
+        [
+          {
+            "node": "sem_acao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_insta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio1": {
+      "main": [
+        [
+          {
+            "node": "instagram_vazio2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "instagram_vazio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_telefone_email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone_email_insta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_email",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_email_insta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone_insta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_email_insta": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_email_insta": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_insta": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_insta": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "email_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead": {
+      "main": [
+        [
+          {
+            "node": "nao_existe",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_vazio1": {
+      "main": [
+        [
+          {
+            "node": "telefone_vazio2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "telefone_vazio3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio2": {
+      "main": [
+        [
+          {
+            "node": "instagram_vazio4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "instagram_vazio7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio4": {
+      "main": [
+        [
+          {
+            "node": "sem_acao1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_insta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_vazio3": {
+      "main": [
+        [
+          {
+            "node": "instagram_vazio6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "instagram_vazio5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio5": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_telefone_email1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone_email_insta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio6": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_email1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_email_insta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "instagram_vazio7": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_lead_telefone_insta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_email_insta1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_email1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_email_insta1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_email1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone_insta1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_telefone1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead_insta1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_agendamento": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_utm_2_agendamento": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task3": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task": {
+      "main": [
+        [
+          {
+            "node": "update_task3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "insert_data_utm_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "clickup_vazio": {
+      "main": [
+        [
+          {
+            "node": "é_oferta_direta",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "campos_para_update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3_segun": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "campos_para_update": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "update_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "divide_campos": {
+      "main": [
+        [
+          {
+            "node": "add_ids",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_ids": {
+      "main": [
+        [
+          {
+            "node": "3_segun",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task4": {
+      "main": [
+        [
+          {
+            "node": "atualiza_clickup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task1": {
+      "main": [
+        [
+          {
+            "node": "update_task4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_clickup": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task1": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake10": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake11": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake14": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake15": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada1": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake6": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake7": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot1": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "chega_da_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "chega_da_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task3": {
+      "main": [
+        [
+          {
+            "node": "update_task5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_oferta_direta1": {
+      "main": [
+        [
+          {
+            "node": "cria_task3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task5": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task": {
+      "main": [
+        [
+          {
+            "node": "atualiza_clickup1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task2": {
+      "main": [
+        [
+          {
+            "node": "update_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_clickup1": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_oferta_direta": {
+      "main": [
+        [
+          {
+            "node": "cria_task2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit": {
+      "main": [
+        [
+          {
+            "node": "nao_existe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit1": {
+      "main": [
+        [
+          {
+            "node": "nao_existe7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-16T19:31:54.537Z",
+  "id": "lxuSiSkQ7INvT4LD",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[WIZARD] - CALENDLY - CANCELAMENTOS",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "1172250b-cc35-4d82-a90d-c9c9b870c00b",
+      "name": "pesquisa_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        4760,
+        1180
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamento\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "1ff0354a-135c-4266-adda-14e48e01c0c2",
+      "name": "nao_existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5100,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "status_evento",
+              "value": "=Cancelado"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "9f44ab99-0e5e-42e9-aa32-c215d0946bb8",
+      "name": "update_data_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6140,
+        1300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "a85a3c7a-df98-4beb-8f67-0675d199a60b",
+      "name": "pesquisa_closer",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5300,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4f6ad8c6-dbd4-4d3c-a596-d0ee5d21b038",
+      "name": "update_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5760,
+        1120
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "75df272f-0371-4edd-ad42-e5b4c2c0f64d",
+      "name": "nao_existe3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5600,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead3\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Cancelado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Hora de Início\"] }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana do Evento\"] }}"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Cancelamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Cancelamento\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "41e2d676-7123-481d-9192-0c9488b46b15",
+      "name": "insert_data_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6260,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"].split(' ')[0] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "11f58356-4610-4d64-9cdc-ca6445f7ebdb",
+      "name": "pesquisa_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6680,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "6981e8f3-0c0e-4236-b03f-9c8e6319ce65",
+      "name": "nao_encontrou_registro_dia_dia_data_lake",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6920,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"].split(' ')[0] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "8a180ddc-046b-4ae8-8b4e-10aaab7fbe31",
+      "name": "pesquisa_data_data_lake1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6700,
+        1300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "c81a854e-8582-4ade-a761-ecf220c42e59",
+      "name": "nao_encontrou_registro_dia_dia_data_lake1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        6900,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "df1b2533-1118-4b44-a589-8d36ef8c250b",
+      "name": "lead_ja_existia1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7160,
+        1740
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "80ea8b16-3686-446c-89bc-c1e4f3297448",
+      "name": "nada1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        7360,
+        1640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e7ddcf51-87bb-4e6a-9da8-fc5f67c34f54",
+      "name": "lead_ja_existia4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7140,
+        2020
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b0ef1db2-8ff6-4b79-b907-d5fe933179c1",
+      "name": "nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        7360,
+        1940
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake1\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "d3fdcaa7-56c2-4464-a78b-f246cffbfe3a",
+      "name": "update_data_data_lake7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7360,
+        2140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos_2_utms",
+          "mode": "list",
+          "cachedResultName": "agendamentos_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_agendamento",
+              "value": "={{ $node[\"insert_data_agendamento\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "24d6df91-6269-49fb-b8d5-80242a91a204",
+      "name": "insert_utm_2_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        6460,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9d5ea7d6-bf5b-43bc-b93d-416a2e88ded9",
+      "name": "id_colaborador1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "b4fc5134-ed7d-45ee-a468-ef80cb50d9c3",
+      "name": "pesquisa_closer2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5300,
+        1380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "8443ffff-6d35-405b-9685-62d3f7f5ca42",
+      "name": "insert_data_colaborador2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5780,
+        1300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer2\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "13f07ffb-352f-4a19-a246-88fab001c6de",
+      "name": "update_data_colaborador2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5780,
+        1500
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "8e5367fa-308d-4152-9b38-674246a51e62",
+      "name": "nao_existe7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        5600,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador2\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b40cc5dc-d17a-4769-8382-b983cd253e64",
+      "name": "id_colaborador2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer2\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0ea9834b-8729-42a6-a275-a7dc3fa762e9",
+      "name": "id_colaborador3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        1500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "4d9e8535-2e98-4ce0-a678-f7ddcc549350",
+      "name": "lead_ja_existia13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7180,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4e88098a-9b4d-4795-aba7-e543993d60fa",
+      "name": "insert_data_data_lake6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7360,
+        1800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f134a464-3199-4426-9996-ce4687fc9d81",
+      "name": "insert_data_data_lake11",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7380,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_agendamentos\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fac2c7c4-0a0d-4bef-8a93-9557119f7ab5",
+      "name": "update_data_data_lake14",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7380,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_agendamentos\"] + 1 }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "fa58dcf4-eee6-473c-982f-f45e4880acf8",
+      "name": "update_data_data_lake15",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7380,
+        1440
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "7427a492-9b76-4a46-b66c-e9f249be438b",
+      "name": "nao_existe",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        740,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "6acdd445-bb22-4412-a391-b56e021e19c7",
+      "name": "id_lead1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        2340,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_2_utms",
+          "mode": "list",
+          "cachedResultName": "leads_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "ee295e75-24e5-4dc8-bf89-d47e250ebdc1",
+      "name": "insert_data_utm_lead",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2160,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "775c8072-2f1c-4b03-a098-37b98879b616",
+      "name": "email_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2520,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "e8e5903c-b0d1-4be9-b8ca-02788a62c5a6",
+      "name": "email_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2360,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "c39c7650-664a-42ee-9e58-0dca756a8a41",
+      "name": "email_preenchido6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2340,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "974ec00a-df16-439b-8f76-6adff4d067f7",
+      "name": "email_igual8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2540,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "93ca0222-c4b0-40ba-ae32-381fad395588",
+      "name": "atualiza_dados_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2720,
+        1220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "489508f9-e925-480c-91e3-f231df66d70a",
+      "name": "atualiza_dados_email6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2520,
+        1400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "8639da13-a451-4565-a532-29c3a23c09e4",
+      "name": "atualiza_dados_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2740,
+        1540
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "3ebfff30-d9f3-47f6-bd0e-ac81e5830400",
+      "name": "atualiza_dados_telefone2_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2740,
+        1720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2b5afab7-5215-4f23-a14e-f7477528ea5b",
+      "name": "atualiza_dados_telefone2_email2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2540,
+        1840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "9ad71591-8bd1-4cf1-8990-7896f096272a",
+      "name": "email_igual2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        2080
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7916bfff-1ab5-4f2a-a0d7-cebc010f2593",
+      "name": "email_preenchido2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2220,
+        2160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "577fb124-129b-41df-8b09-c86490c5a0a9",
+      "name": "atualiza_dados_email7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2380,
+        2320
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2f9a3d22-86a4-48c3-894c-2b0df27447ec",
+      "name": "atualiza_dados_telefone4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2580,
+        2000
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "27ed3923-6438-498c-87da-e0767c8d5215",
+      "name": "atualiza_dados_email2_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2580,
+        2160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"telefone\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "bdfc304d-04a2-47bd-bbe8-17006a838306",
+      "name": "telefone_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"telefone\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "c66eab86-2f3b-4fe6-8f76-5859790ed851",
+      "name": "telefone_preenchido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d102ec5f-71dc-425b-9522-4d2da61fea34",
+      "name": "id_lead4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        2920,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "d2c9ff97-cac8-48ea-8cf8-77dbef040d92",
+      "name": "atualiza_dados1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2720,
+        1060
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "ff102c3e-f394-4d2c-840f-f5fe540c36d1",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"fields\"][\"redelivered\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "b7a9aa9d-0230-4504-a27e-18e05fd383c7",
+      "name": "segundo_ou_mais_erro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1880,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Cancelamentos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": true,
+          "parallelMessages": 3
+        }
+      },
+      "id": "ad4cc1c2-e506-4562-883d-c63813c28ea3",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2080,
+        1320
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Responsável\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "82fd6970-bdcc-44bc-a280-a596ec493403",
+      "name": "insert_data_colaborador",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        5760,
+        940
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3f9e78c4-da00-4c0a-9fd7-3f65576c599e",
+      "name": "id_colaborador",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        5960,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "49855c21-ddc2-4e1f-8c84-5cf6c555476f",
+      "name": "lead_ja_existia12",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        7160,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento\"] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "324c4704-66d9-4504-9735-3e36bd2a5d1e",
+      "name": "insert_data_data_lake10",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        7380,
+        860
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags?limit=1000&search={{ $node[\"Set\"].json[\"tag_procurada\"] }}",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        380,
+        460
+      ],
+      "id": "bb8a2ea6-474e-4d78-bc72-ad535aa93175"
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n \nUtilize os Nodes Abaixo para consultar os IDs dos Campos e Tags no ActiveCampaign",
+        "height": 407.6377565498652,
+        "width": 747.0856205721786
+      },
+      "id": "cf6e7cdf-b033-42d4-8e52-c2af76f5f3f1",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        180,
+        460
+      ],
+      "id": "9568ede9-019c-48b2-a201-75f81713ca2c"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "tag_procurada",
+              "value": "cancelou"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "54821ba7-187b-4cc0-b63b-fd871d7f077f",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -20,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "eea0214f-cf1e-4d79-92fa-95c036d58598",
+      "name": "email_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -860,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "8b86f9ca-0984-4fe2-aa1b-f75789f337bc",
+      "name": "telefone_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "ca0f56bd-9c58-4795-9076-e6f9ff3b71fc",
+      "name": "instagram_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "49cf47fa-c189-438c-ad6f-20b07644f164",
+      "name": "telefone_vazio1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "244e29b5-78b1-478f-82cd-d72ea7dfc1a2",
+      "name": "instagram_vazio1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        1880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "f581b770-cde7-42d3-866b-3410fc6f00d1",
+      "name": "instagram_vazio2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "b5831673-07d3-448d-bb02-84be80fa409b",
+      "name": "instagram_vazio3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "7f799634-f08d-4857-88f6-71a33ae80e81",
+      "name": "pesquisa_lead_telefone_email_insta",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1960
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "41ea0d47-7089-4a41-ae3c-100378ce4b7f",
+      "name": "pesquisa_lead_telefone_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1780
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "817a50e8-6ac3-4808-b235-a515ccb26226",
+      "name": "pesquisa_lead_email_insta",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1600
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "9b1a101c-ba42-4838-8973-72345723039b",
+      "name": "pesquisa_lead_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "0c7a8a96-6e2c-4291-9afd-7255d32146b8",
+      "name": "sem_acao",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "1a109037-0589-47e4-b129-ba350768a5f7",
+      "name": "pesquisa_lead_telefone_insta",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1240
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "b3b83803-e273-4435-b71f-68a054e7c328",
+      "name": "pesquisa_lead_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        1080
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "fffefbca-32f8-4fc2-880b-cff46dd9b180",
+      "name": "pesquisa_lead_insta",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -240,
+        920
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const content = {\n  \"E-mail do Cliente\": $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] || '',\n  \"Instagram\": $node[\"entra_na_fila\"].json[\"content\"][\"Instagram\"] || '',\n  \"Telefone do Cliente - Formato Z-API\": $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] || ''\n};\n\nreturn {\n  content\n};"
+      },
+      "id": "24e6fe78-bff4-4cf6-b79d-ae1eb151819e",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1040,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "d544869d-be25-45c0-8387-d7daa85b1940",
+      "name": "pesquisa_lead",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        360,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "4d819817-89ed-4644-9de9-a1d7a67a8c95",
+      "name": "email_vazio1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3220,
+        1120
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e5d52f3c-28cf-414b-bd33-0bc40a953064",
+      "name": "telefone_vazio2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3480,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "490ad963-fc6c-4916-bbe4-3212ee8a37bc",
+      "name": "instagram_vazio4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "78d1df55-fdad-477d-adf4-06985bd7f808",
+      "name": "telefone_vazio3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3500,
+        1500
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "6eb1971c-17d9-44fa-9612-d4705e1abae3",
+      "name": "instagram_vazio5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1a5de4bd-7c5c-43a4-bf75-c46e99125ebe",
+      "name": "instagram_vazio6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1c7b420a-febf-4c67-8da1-e75428b1e71b",
+      "name": "instagram_vazio7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        940
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "af7a8a9c-9222-41b6-9665-99635643b099",
+      "name": "pesquisa_lead_telefone_email_insta1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        1760
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "66400e8a-1c6c-41ff-a181-85f3ba88006b",
+      "name": "pesquisa_lead_telefone_email1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        1580
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "694c7e8e-ff73-4e1a-a032-ebd392cdc2da",
+      "name": "pesquisa_lead_email_insta1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        1400
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "0468f88a-6766-4fd0-8546-e66b587a9ebb",
+      "name": "pesquisa_lead_email1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        1220
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "025fa0d8-a51a-4079-884b-81a3516b70d2",
+      "name": "sem_acao1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        3900,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "7b08a5e3-84db-4f61-97c9-d75721ca6c27",
+      "name": "pesquisa_lead_telefone_insta1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        1040
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "9c135fc2-9d72-4ac9-a10a-161fee9a5607",
+      "name": "pesquisa_lead_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            },
+            {
+              "column": "instagram2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"Instagram\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "8a8f335f-1218-4f59-a347-9bd26b2ea7d2",
+      "name": "pesquisa_lead_insta1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        3900,
+        720
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "083d6ffd-20f6-49b6-bbe3-7ed29e136275",
+      "name": "pesquisa_lead3",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        4560,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "36d718b7-53d0-4e06-9282-ce85734b025a",
+      "name": "update_task3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        840
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n     \"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\", \n     \"value\": \"REUNIÃO CANCELADA\" \n}\n]\n"
+        }
+      },
+      "id": "b41753e3-009a-42bc-9580-3812c08a9357",
+      "name": "cria_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        840
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task3\"].runIndex >= 0      ?   $node[\"cria_task3\"].json[\"id\"] : $node[\"cria_task\"].json[\"id\"]  }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b2b13b2e-2cb9-4dbc-a23e-8bd35d1c8071",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1980,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead\"].json[\"id_clickup\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "e860a00f-d10f-49e2-b106-716a93a254c8",
+      "name": "clickup_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "702958a1-103e-4ba1-8cd3-72b0ba948e02",
+      "name": "3_segun",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        1520
+      ],
+      "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
+    },
+    {
+      "parameters": {
+        "jsCode": "let fields = [\n  { id: 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126', value: $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"]  || \"\" },\n  { id: '146e6a0b-d2f6-4c77-9ca7-c5214de84776', value:  'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\" },\n  { id: '667c5680-e9e2-4527-a7f2-3a13597398ae', value: '+' + $node[\"entra_na_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n  { id: 'b3c89f54-d6ab-4a13-a96f-387f13cf259d', value: '4a24666b-e2b6-4d73-9fb4-3d6288dc6450' || \"\" },\n    { id: 'f82979a8-dad0-4e60-8517-f4c967033fc8', value: 'REUNIÃO CANCELADA' }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
+      },
+      "id": "56606eb4-b1a9-4c80-b217-c1da14af16d2",
+      "name": "campos_para_update",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "096d4d25-4e45-41d2-9a6b-4d13aae7b9c4",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1640,
+        1720
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "178a4c09-e318-4b4c-8613-10cf77f0ff4b",
+      "name": "divide_campos",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "setCustomField",
+        "task": "={{ $node[\"pesquisa_lead\"].json[\"id_clickup\"] }}",
+        "field": "={{ $node[\"divide_campos\"].json[\"id\"] }}",
+        "value": "={{ $node[\"divide_campos\"].json[\"value\"] }}"
+      },
+      "id": "70b0a25b-2d0c-433c-8d4a-efae3cb0d890",
+      "name": "add_ids",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        1520
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"pesquisa_lead\"].json[\"id_clickup\"] }}",
+        "updateFields": {
+          "addAssignees": "=96789246"
+        }
+      },
+      "id": "eb2d7200-be9f-4c9d-a52d-9745c714b6ff",
+      "name": "update_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        1720
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task1\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "b97b67c7-ca26-4622-b5e0-3dac3aa5149a",
+      "name": "update_task4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        1360
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n      \"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\", \n      \"value\": \"REUNIÃO CANCELADA\" \n}\n]\n"
+        }
+      },
+      "id": "d4b4c68c-1ec4-47f4-8796-b62e095d946f",
+      "name": "cria_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        1360
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task1\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "1fc96af5-2d34-4305-a251-4a402c326f4d",
+      "name": "atualiza_clickup",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1780,
+        1360
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "url_base",
+              "value": "https://wizardevolution.automagicbots.com.br/"
+            },
+            {
+              "name": "apikey",
+              "value": "tonsb6jcp9gctcnsekdb8"
+            },
+            {
+              "name": "instancia",
+              "value": "FabricaDeVendas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "14604352-7912-4812-8365-dd272885bb0d",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        7920,
+        1360
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"dados\"].json[\"url_base\"] }}message/sendText/{{ $node[\"dados\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"dados\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=Fala {{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}! Aqui é o Roberto, da equipe do Wizard.\n\nEstou passando aqui para confirmar contigo o agendamento da sua reunião, que ficou marcada para {{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}.\n\nPosso confirmar o horário?"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "3c1b3421-d2d7-48ef-850e-9df544cf9ef2",
+      "name": "envia_msg1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        8140,
+        1360
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "987fbac7-876b-4607-89d7-7ea0146db109",
+      "name": "buscarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1640,
+        1340
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "be99fa45-25c7-4b56-9e2f-4a57b51b52fa",
+      "name": "existe_chatwoot1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1440,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "ab250806-3c6c-4487-845e-579462c4dfc8",
+      "name": "atualizarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1280,
+        1200
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "8bdb479a-10ed-4a24-b033-d098d29d71cd",
+      "name": "criarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -1280,
+        1420
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task3\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "19dc2dea-9a16-488c-b28e-d8c41f30deb0",
+      "name": "update_task5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        660
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304752326",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n     \"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\", \n     \"value\": \"REUNIÃO CANCELADA\" \n}\n]\n"
+        }
+      },
+      "id": "22ea04f2-dfb7-4705-b24b-f840f1b17765",
+      "name": "cria_task3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        660
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}",
+              "value2": "[OD] - Jornada dos Pioneiros"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "8aab7795-0a42-4a8b-967a-d9c36767238b",
+      "name": "é_oferta_direta1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task2\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "a08e400a-a76a-4028-8d9a-5fc1191c4752",
+      "name": "update_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        1160
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304752326",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n\"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\",\n        \"value\": \"{{$node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"]}}\" \n}\n]\n"
+        }
+      },
+      "id": "d5342e5f-56c8-4a0e-8bac-d2169ec5babf",
+      "name": "cria_task2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        1160
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task2\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e50d5ff4-1d5d-4420-99fb-ad38c13ae46b",
+      "name": "atualiza_clickup1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1780,
+        1160
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}",
+              "value2": "[OD] - Jornada dos Pioneiros"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "deb7b4d7-3233-4c3b-8b5e-7ffcb13088ef",
+      "name": "é_oferta_direta",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "ebecc9a2-4532-4d70-8652-82842ddb091a",
+      "name": "Limit",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        5460,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "97af2ff3-158f-4f77-96cc-d740154ea0b6",
+      "name": "Limit1",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        5460,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "489aea36-fbcc-4f1c-b79c-f5fc8b1bf69a",
+      "name": "Limit2",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        4940,
+        1180
+      ]
+    }
+  ],
+  "pinData": {
+    "entra_na_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-sXoIGBJin4RUPAKX39_hng",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Calendly - Cancelamentos"
+          },
+          "properties": {
+            "headers": {
+              "x-delivery-count": 99996
+            }
+          },
+          "content": {
+            "Telefone": "556281196678",
+            "Data do Cancelamento": "2024-08-05",
+            "Dia da Semana": "Sexta-feira",
+            "Nome do Cliente": "Mateus Diniz",
+            "E-mail do Cliente": "mateusdiniz@automagicbots.com.br",
+            "Telefone do Cliente - Formato BC": "+556281196678",
+            "Telefone do Cliente - Formato Z-API": "556281196678",
+            "ID do Evento": 3,
+            "ID do Cliente": "k7WMH8y4ft5B2riixeXUDH",
+            "API-KEY": "",
+            "ID do Campo ID do Agendamento": "",
+            "ID do Campo InviteeID": "",
+            "ID do Campo Horário Agendado": "",
+            "ID do Campo Data do Agendamento": "",
+            "ID do Campo Dia da Semana do Agendamento": "",
+            "Flow de Confirmação de Cancelamento": "",
+            "ID do Campo Motivo do Cancelamento": "",
+            "Motivo do Cancelamento": "teste",
+            "Data de Início": "2024-08-09",
+            "Hora de Início": "16:00:00",
+            "Serviço": "Alinhamento sobre Jornada dos Pioneiros",
+            "Dia da Semana do Evento": "Sexta-feira",
+            "data_agendamento": "2024-08-05",
+            "id_campo_id_bd_botconversa": "",
+            "funil": "sessao_estrategica",
+            "variacao_do_funil": "v1"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-07-25T14:26:42.069Z",
+      "updatedAt": "2024-07-25T14:26:42.069Z",
+      "id": "wmjovYZV7zBaApaS",
+      "name": "[CALENDLY]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-07T12:17:39.572Z",
+  "versionId": "862844b6-d610-406d-ab13-0c786f6cfe58"
+}
