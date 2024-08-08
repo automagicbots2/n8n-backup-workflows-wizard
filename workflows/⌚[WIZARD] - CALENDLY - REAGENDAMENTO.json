@@ -1,0 +1,5380 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_lead4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_antigo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe4": {
+      "main": [
+        [
+          {
+            "node": "um_item5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "um_item2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer1": {
+      "main": [
+        [
+          {
+            "node": "um_item3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador1": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe5": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe6": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_closer5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamento_antigo": {
+      "main": [
+        [
+          {
+            "node": "nao_existe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_agendamento_novo": {
+      "main": [
+        [
+          {
+            "node": "nao_existe6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_utm_2_agendamento1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia5": {
+      "main": [
+        [
+          {
+            "node": "update_data_data_lake",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake4": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia6": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake5": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake2": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake7": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer3": {
+      "main": [
+        [
+          {
+            "node": "um_item4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador3": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe8": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_colaborador3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador4": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador5": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador6": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador7": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia7": {
+      "main": [
+        [
+          {
+            "node": "nada3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake6": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lead_ja_existia8": {
+      "main": [
+        [
+          {
+            "node": "nada2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insert_data_data_lake8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake8": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake3": {
+      "main": [
+        [
+          {
+            "node": "lead_ja_existia8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lead_ja_existia7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake3": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_agendamento3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nada3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_agendamento_novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer4": {
+      "main": [
+        [
+          {
+            "node": "nao_existe9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador4": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador4": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe9": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Item Lists2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_agendamento3": {
+      "main": [
+        [
+          {
+            "node": "insert_utm_2_agendamento2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_utm_2_agendamento2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_data_data_lake4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_data_data_lake4": {
+      "main": [
+        [
+          {
+            "node": "nao_encontrou_registro_dia_dia_data_lake5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_closer5": {
+      "main": [
+        [
+          {
+            "node": "nao_existe10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_colaborador5": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_colaborador5": {
+      "main": [
+        [
+          {
+            "node": "id_colaborador9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe10": {
+      "main": [
+        [
+          {
+            "node": "insert_data_colaborador5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador8": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador9": {
+      "main": [
+        [
+          {
+            "node": "update_data_agendamento4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador10": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_colaborador11": {
+      "main": [
+        [
+          {
+            "node": "insert_data_agendamento3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_agendamento4": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_data_lake8": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_data_lake9": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_encontrou_registro_dia_dia_data_lake5": {
+      "main": [
+        [
+          {
+            "node": "insert_data_data_lake9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "update_data_data_lake8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_existe11": {
+      "main": [
+        [
+          {
+            "node": "é_oferta_direta1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "clickup_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert_data_utm_lead2": {
+      "main": [
+        [
+          {
+            "node": "id_lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual4": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido4": {
+      "main": [
+        [
+          {
+            "node": "email_igual4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido5": {
+      "main": [
+        [
+          {
+            "node": "email_igual7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual7": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_telefone2_email3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email3": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email4": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email3": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone2_email1": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual1": {
+      "main": [
+        [
+          {
+            "node": "atualiza_dados_telefone3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email2_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_preenchido1": {
+      "main": [
+        [
+          {
+            "node": "email_igual1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "atualiza_dados_email5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email5": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_telefone3": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados_email2_telefone": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_igual3": {
+      "main": [
+        [
+          {
+            "node": "email_preenchido4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_preenchido3": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "email_preenchido1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "id_lead3": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_dados": {
+      "main": [
+        [
+          {
+            "node": "id_lead3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_lead2": {
+      "main": [
+        [
+          {
+            "node": "nao_existe11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "entra_na_fila": {
+      "main": [
+        [
+          {
+            "node": "um_item",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Contatos da Conta": {
+      "main": [
+        [
+          {
+            "node": "Listar Tags da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Contatos da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_data_agendamento": {
+      "main": [
+        [
+          {
+            "node": "insert_utm_2_agendamento1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "segundo_ou_mais_erro": {
+      "main": [
+        [
+          {
+            "node": "Stop and Error",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "buscarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "update_data_colaborador1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "update_data_colaborador5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists2": {
+      "main": [
+        [
+          {
+            "node": "update_data_colaborador4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "um_item": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "um_item2": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "um_item3": {
+      "main": [
+        [
+          {
+            "node": "nao_existe5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "um_item4": {
+      "main": [
+        [
+          {
+            "node": "nao_existe8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "um_item5": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_closer1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task": {
+      "main": [
+        [
+          {
+            "node": "update_task3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task3": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_dados": {
+      "main": [
+        [
+          {
+            "node": "insert_data_utm_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "clickup_vazio": {
+      "main": [
+        [
+          {
+            "node": "é_oferta_direta",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "campos_para_update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3_segun": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "campos_para_update": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "update_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "divide_campos": {
+      "main": [
+        [
+          {
+            "node": "add_ids",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_ids": {
+      "main": [
+        [
+          {
+            "node": "3_segun",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task4": {
+      "main": [
+        [
+          {
+            "node": "atualiza_clickup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task1": {
+      "main": [
+        [
+          {
+            "node": "update_task4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task1": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_clickup": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "existe_chatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "existe_chatwoot1": {
+      "main": [
+        [
+          {
+            "node": "atualizarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "criarContatoChatwoot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualizarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "criarContatoChatwoot1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task3": {
+      "main": [
+        [
+          {
+            "node": "update_task5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_oferta_direta1": {
+      "main": [
+        [
+          {
+            "node": "cria_task3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task5": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task": {
+      "main": [
+        [
+          {
+            "node": "atualiza_clickup1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task2": {
+      "main": [
+        [
+          {
+            "node": "update_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_clickup1": {
+      "main": [
+        [
+          {
+            "node": "telefone_preenchido3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "é_oferta_direta": {
+      "main": [
+        [
+          {
+            "node": "cria_task2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "cria_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-16T20:06:33.744Z",
+  "id": "dKjgd9UpJvMBDP0k",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[WIZARD] - CALENDLY - REAGENDAMENTO",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "82c4d7ea-551e-4748-a651-03cc27e819a1",
+      "name": "pesquisa_lead4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1960,
+        1400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamento_antigo\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "61a87b2e-480f-4191-aba1-b11166a972b9",
+      "name": "nao_existe4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1580,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "9ab417a0-f544-48b1-a172-f5f7588204ad",
+      "name": "pesquisa_closer1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1300,
+        1280
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "daae10dd-669b-40a0-83d0-8e1616b64372",
+      "name": "insert_data_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -880,
+        1140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer1\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "42bacdb6-1407-4e81-9226-826ba87e8e8d",
+      "name": "update_data_colaborador1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -700,
+        1340
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer1\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "11dd814c-eeef-4c2e-bed8-a5d9df8e8dc6",
+      "name": "nao_existe5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_agendamento_novo\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "17c60660-0c7f-4a13-8cea-42eabdff8d1c",
+      "name": "nao_existe6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        840,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento Antigo\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "5302e6ce-71ae-4d00-913e-091cae54d85e",
+      "name": "pesquisa_agendamento_antigo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1720,
+        1400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "e91af024-4c09-4c0e-bcc7-331968dc24c1",
+      "name": "pesquisa_agendamento_novo",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        660,
+        1220
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos_2_utms",
+          "mode": "list",
+          "cachedResultName": "agendamentos_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e4604b44-5520-4bd8-9813-e5bfd800efce",
+      "name": "insert_utm_2_agendamento1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -320,
+        1140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(0,10) }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "087d96f3-92c2-4d05-a91e-5100c11172e9",
+      "name": "pesquisa_data_data_lake2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -120,
+        1140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"qtd_agendamentos\"] + 1}}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "c5202b94-18c7-453f-afb3-00e5e93c7e98",
+      "name": "update_data_data_lake",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "2c66a634-ac47-4f7e-aef8-e2f29bc61904",
+      "name": "lead_ja_existia5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        200,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"qtd_agendamentos\"] + 1 }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake2\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "811f2182-5e79-45f1-87ad-bce3ce679e17",
+      "name": "update_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "63473add-c63f-45f5-90b5-cb392cfedcae",
+      "name": "lead_ja_existia6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        200,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].split(' ')[0] }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "=1"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b9228bf3-9459-4eaa-8976-2168dfd21369",
+      "name": "insert_data_data_lake5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        620
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "11c4b48e-7dfd-442a-905c-d3875b405714",
+      "name": "nao_encontrou_registro_dia_dia_data_lake2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        40,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].split(' ')[0] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "7355a362-ecd1-48ba-b8f9-db765cc80627",
+      "name": "insert_data_data_lake7",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        400,
+        420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "a682fcf8-9528-430c-b007-be7341cbceb2",
+      "name": "pesquisa_closer3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -1280,
+        1660
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a151af97-4cd6-42ab-96bc-352d6279627c",
+      "name": "insert_data_colaborador3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -880,
+        1520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer3\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "df7bd6df-51f3-4b81-bf0d-e6e5f70def49",
+      "name": "update_data_colaborador3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -880,
+        1720
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer3\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "0501c0e5-3e27-4f77-bd06-5b29f6111f5a",
+      "name": "nao_existe8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        1660
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador3\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8a04fb1f-9823-4e14-afbf-90c256888233",
+      "name": "id_colaborador4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer3\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2b32b16c-6bf2-4c8c-9268-36b73849ca57",
+      "name": "id_colaborador5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        1720
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador1\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d7387ed-b445-406b-873e-4d1727455686",
+      "name": "id_colaborador6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -700,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer1\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "68ed7f0e-a782-4f90-b66f-7715207760b0",
+      "name": "id_colaborador7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -560,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "bc7949bc-2860-43a1-93d8-c3960cd27be9",
+      "name": "lead_ja_existia7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_leads",
+              "value": "={{ $node[\"pesquisa_data_data_lake3\"].json[\"qtd_leads\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "42e5120b-b717-4ff0-b6ea-c978509e10c8",
+      "name": "update_data_data_lake6",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        260,
+        1780
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "0540974e-505a-4e0e-8e60-4d446f0db0ec",
+      "name": "lead_ja_existia8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].split(' ')[0] }}"
+            },
+            {
+              "column": "qtd_leads",
+              "value": "1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "32bbc8c6-0905-4647-a73e-6e9496ab7cc4",
+      "name": "insert_data_data_lake8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        260,
+        1420
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a65567dd-73e9-47c9-8ded-e6f6e99c69d8",
+      "name": "nao_encontrou_registro_dia_dia_data_lake3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(0,10) }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "d6b7015c-10b5-4e0b-8210-409fb94a0078",
+      "name": "pesquisa_data_data_lake3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -320,
+        1520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento_antigo\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento Antigo\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead4\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Reagendado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião Antigo\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana de Início do Evento\"] }}"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data em que foi feito o Reagendamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Reagendamento\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "90150ba6-e044-4d60-9e34-c2d1e5a9db00",
+      "name": "update_data_agendamento3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -520,
+        1520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "c3ba159a-8027-4ad1-970d-668f30c4755a",
+      "name": "nada2",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        260,
+        1220
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2164dde0-7a2f-4583-98a1-20a8f0e9b134",
+      "name": "nada3",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        260,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "6ddebaa8-6624-448b-8450-cdc47951c41e",
+      "name": "pesquisa_closer4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1000,
+        1020
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "2dc585c2-df37-47b0-8311-6d6dba9e55c1",
+      "name": "insert_data_colaborador4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1360,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer4\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "6b4e584c-0a25-4416-bad9-68eca6251b33",
+      "name": "update_data_colaborador4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1520,
+        1040
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer4\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "36a264dd-e1d7-4375-af9e-b4aff31bff4a",
+      "name": "nao_existe9",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead4\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Agendado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(8,10) }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(5,7) }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(0,4) }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(11,13) }}:{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(14,16) }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião Antigo\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana de Início do Evento\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data em que foi feito o Reagendamento\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "9872f44a-d8ae-4575-8c6b-3bfc8cb5aacb",
+      "name": "insert_data_agendamento3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1860,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "agendamentos_2_utms",
+          "mode": "list",
+          "cachedResultName": "agendamentos_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_agendamento",
+              "value": "={{ $node[\"insert_data_agendamento3\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "1e836643-52e9-47e4-aea0-19150fb6bad8",
+      "name": "insert_utm_2_agendamento2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2060,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(0,10) }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "72bb37d5-bb20-4115-bd97-293008bcfc34",
+      "name": "pesquisa_data_data_lake4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2260,
+        840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "ad2175c1-88d4-4f49-9f85-ee49ca8e1269",
+      "name": "pesquisa_closer5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1000,
+        1400
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "41c007b4-a0ab-4762-af87-85eb66c71345",
+      "name": "insert_data_colaborador5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1420,
+        1260
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "colaboradores",
+          "mode": "list",
+          "cachedResultName": "colaboradores"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_colaborador",
+        "valueToMatchOn": "={{ $node[\"pesquisa_closer5\"].json[\"id_colaborador\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "funcao",
+              "value": "=Closer"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Responsável pelo Evento\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Responsável\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f11eb513-1386-4994-8ec8-5923d31aae9d",
+      "name": "update_data_colaborador5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1580,
+        1460
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_closer5\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "3d8c6fbb-2a18-4e59-a915-992d9116e3b8",
+      "name": "nao_existe10",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador5\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "1e19e10f-e378-4762-adaa-36168823d5d6",
+      "name": "id_colaborador8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer5\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dcf2ef63-1e5a-4060-b8f9-8d6e0c205175",
+      "name": "id_colaborador9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1740,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"insert_data_colaborador4\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "91efa461-7a2e-46d8-b74c-33518587d6f6",
+      "name": "id_colaborador10",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_colaborador",
+              "value": "={{ $node[\"pesquisa_closer4\"].json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "52824f6c-b3f9-4bd4-aa52-77c46ee2ada8",
+      "name": "id_colaborador11",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1700,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento_novo\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead4\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Agendado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(8,10) }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(5,7) }}/{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(0,4) }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(11,13) }}:{{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"].slice(14,16) }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião Antigo\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana de Início do Evento\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data em que foi feito o Reagendamento\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "35c269e9-b5f1-4878-b92f-2678ca45eb6a",
+      "name": "update_data_agendamento4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        1920,
+        1300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_data",
+        "valueToMatchOn": "={{ $node[\"pesquisa_data_data_lake4\"].json[\"id_data\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "qtd_agendamentos",
+              "value": "={{ $node[\"pesquisa_data_data_lake4\"].json[\"qtd_agendamentos\"] + 1 }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "69728e6a-99ad-4398-b17d-ba7310365daf",
+      "name": "update_data_data_lake8",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2720,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "data_lake_ht",
+          "mode": "list",
+          "cachedResultName": "data_lake_ht"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"data_agendamento_novo\"].split(' ')[0] }}"
+            },
+            {
+              "column": "qtd_agendamentos",
+              "value": "=1"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "eaa66645-7437-4d79-a643-dc12ed8d20fd",
+      "name": "insert_data_data_lake9",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        2720,
+        740
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "a3ea3f37-55de-46cf-9a77-b42e8698fdd2",
+      "name": "nao_encontrou_registro_dia_dia_data_lake5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"success\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "90cd0c27-7aab-425b-a829-726082098bbf",
+      "name": "nao_existe11",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4520,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"insere_dados2\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "78d5ac19-f43a-4975-92b9-d63e1c49267b",
+      "name": "id_lead",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -3360,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads_2_utms",
+          "mode": "list",
+          "cachedResultName": "leads_2_utms"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"insere_dados2\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f51c1639-55e8-4318-af5c-48dd723c4a3f",
+      "name": "insert_data_utm_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3540,
+        1040
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "04bca06a-c105-4752-a8cf-a922cb907fe4",
+      "name": "email_igual4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2680,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7fdeec7c-e855-49ea-9d69-1a0fd941ecaf",
+      "name": "email_preenchido4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2840,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "5abb338e-6bcf-4cb1-8db9-754728e08feb",
+      "name": "email_preenchido5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2860,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "b6ca9999-1657-4091-989f-17738898e53d",
+      "name": "email_igual7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2660,
+        1920
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "977873bb-6261-4e30-ae32-f2064dfc8949",
+      "name": "atualiza_dados_email3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2480,
+        1520
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e364a436-1428-4099-9471-62a57c00386a",
+      "name": "atualiza_dados_email4",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2680,
+        1700
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b225bed0-4262-4b6c-b438-1c4fecc1f741",
+      "name": "atualiza_dados_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2460,
+        1840
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a7566de7-4aac-4fa5-9882-734a8db0f658",
+      "name": "atualiza_dados_telefone2_email3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2460,
+        2020
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "e6a6c32b-5eb6-4378-9aab-f9333a1b5675",
+      "name": "atualiza_dados_telefone2_email1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2660,
+        2140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "b3f0ff32-f880-483f-bae3-1efb6164c4cd",
+      "name": "email_igual1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2820,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"email\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "e7f67f6c-80d6-4251-824e-3a404c588e5a",
+      "name": "email_preenchido1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -2980,
+        2460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "4f825a73-f4aa-4090-b4e1-628f45b6a9f6",
+      "name": "atualiza_dados_email5",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2820,
+        2620
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "f19b0a98-ca81-47b4-a9d5-4e61aff8cb3b",
+      "name": "atualiza_dados_telefone3",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2620,
+        2300
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "44e2ee73-435c-4031-a68d-658561ee1c37",
+      "name": "atualiza_dados_email2_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2620,
+        2460
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "value2": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "76856d66-6873-4a95-8f2d-0b67afddfdb1",
+      "name": "telefone_igual3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3020,
+        1620
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"telefone\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "e815bd0e-412b-42d4-aef7-8b9aa85b69ab",
+      "name": "telefone_preenchido3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -3180,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3f6917c2-34c5-41bc-8990-801e76be4fe6",
+      "name": "id_lead3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -2140,
+        1400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \")\n }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "a18acb3e-667f-4390-9b81-dd477bc6b89b",
+      "name": "atualiza_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -2480,
+        1360
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] || '-----------------------' }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] || '-----------------------' }}"
+            },
+            {
+              "column": "telefone_empresa",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"]|| '-----------------------' }}"
+            },
+            {
+              "column": "email2",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] || '-----------------------' }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {
+          "detailedOutput": false
+        }
+      },
+      "id": "9eec1831-641a-4ad8-b280-75917c2fce42",
+      "name": "pesquisa_lead2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -4700,
+        1180
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "errorMessage": "An error ocurred!"
+      },
+      "id": "8fcc7587-3e69-4a77-a210-3101f3468ec7",
+      "name": "Stop and Error",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        -5400,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Calendly - Reagendamentos",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": true,
+          "parallelMessages": 3
+        }
+      },
+      "id": "a8902c08-ea47-4c72-a497-efa87b1b7dcf",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        -5960,
+        1160
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/tags?limit=1000&search={{ $node[\"Set\"].json[\"tag_procurada\"] }}",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Tags da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -3480,
+        540
+      ],
+      "id": "a48083dc-9a44-44f6-820f-8846182d1174"
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n \nUtilize os Nodes Abaixo para consultar os IDs dos Campos e Tags no ActiveCampaign",
+        "height": 407.6377565498652,
+        "width": 747.0856205721786
+      },
+      "id": "19665832-dcbf-4d61-9427-6b77976132cd",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -3980,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/fields?limit=1000",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Contatos da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -3680,
+        540
+      ],
+      "id": "87a1825b-96a1-4a10-a6f8-d3af80d26e0f"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            },
+            {
+              "name": "tag_procurada",
+              "value": "reagendou"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "33e612a1-f025-4301-9fc7-fc016dd3cfb0",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -3880,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "agendamentos",
+          "mode": "list",
+          "cachedResultName": "agendamentos"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_agendamento",
+        "valueToMatchOn": "={{ $node[\"pesquisa_agendamento_antigo\"].json[\"id_agendamento\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Evento\"] }}"
+            },
+            {
+              "column": "id_cliente",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"ID do Cliente\"] }}"
+            },
+            {
+              "column": "id_lead",
+              "value": "={{ $node[\"pesquisa_lead4\"].json[\"id_lead\"] }}"
+            },
+            {
+              "column": "status_evento",
+              "value": "Reagendado"
+            },
+            {
+              "column": "data_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "hora_de_inicio",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "link_reuniao",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Link da Reunião Antigo\"] }}"
+            },
+            {
+              "column": "servico",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}"
+            },
+            {
+              "column": "dia_da_semana_evento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Dia da Semana de Início do Evento Antigo\"] }}"
+            },
+            {
+              "column": "data_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data em que foi feito o Reagendamento\"] }}"
+            },
+            {
+              "column": "motivo_cancelamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Motivo do Reagendamento\"] }}"
+            },
+            {
+              "column": "data_agendamento",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Data do Agendamento Antigo\"] }}"
+            },
+            {
+              "column": "id_responsavel",
+              "value": "={{ $json[\"id_colaborador\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "35ebc885-14c1-40dd-8f98-1393991708e7",
+      "name": "update_data_agendamento",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -520,
+        1140
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"fields\"][\"redelivered\"] }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "faa045ad-cd9d-4497-a542-e5a5eac8065a",
+      "name": "segundo_ou_mais_erro",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -5600,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "826a559b-fd82-4333-b21f-5687494d117d",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -880,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "96c5d455-b450-4183-8d66-cd6954885aa7",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1420,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "48d5ce97-e319-4b40-b5c1-c5e50d842165",
+      "name": "Item Lists2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        1360,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "30b1fe8e-5eb2-4b0e-aaac-47ea4b332407",
+      "name": "um_item",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -5780,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "664a35ed-bae3-4ff4-854b-d75584c162fd",
+      "name": "um_item2",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -1440,
+        1660
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "e04887e4-c65c-448d-b95b-eb5b0bccf7bf",
+      "name": "um_item3",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -1160,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "39d999a8-d818-4544-8bfa-24bbf66b0bfb",
+      "name": "um_item4",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -1160,
+        1660
+      ]
+    },
+    {
+      "parameters": {
+        "keep": "lastItems"
+      },
+      "id": "9db93dd6-c63b-418f-b249-b5ec403b6bcf",
+      "name": "um_item5",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        -1440,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "url_base",
+              "value": "https://wizardevolution.automagicbots.com.br/"
+            },
+            {
+              "name": "apikey",
+              "value": "tonsb6jcp9gctcnsekdb8"
+            },
+            {
+              "name": "instancia",
+              "value": "FabricaDeVendas"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "26b8c257-606f-4aa4-8cbf-d0e97f34a38c",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        3240,
+        1220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"dados\"].json[\"url_base\"] }}message/sendText/{{ $node[\"dados\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $node[\"dados\"].json[\"apikey\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "textMessage.text",
+              "value": "=Fala {{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}! Aqui é o Roberto, da equipe do Wizard.\n\nEstou passando aqui para confirmar contigo o agendamento da sua reunião, que ficou marcada para {{ $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] }}.\n\nPosso confirmar o horário?"
+            },
+            {
+              "name": "options.delay",
+              "value": "={{ 1200 }}"
+            },
+            {
+              "name": "options.presence",
+              "value": "composing"
+            },
+            {
+              "name": "options.linkPreview",
+              "value": "={{ true }}"
+            },
+            {
+              "name": "=options.mentions.everyOne",
+              "value": "={{ true }}"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "3a1162ed-b64c-4502-9bcc-bb057dcb5e18",
+      "name": "envia_msg1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3460,
+        1220
+      ],
+      "typeVersion": 4
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "6463c2b1-20a8-4376-bf05-a1cc2f70ac48",
+      "name": "update_task3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3920,
+        1040
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n    \"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\", \n    \"value\": \"{{$node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"]}}\" \n}\n]\n"
+        }
+      },
+      "id": "f9896d82-3fbf-4a75-98f5-af9141113886",
+      "name": "cria_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -4100,
+        1040
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "nome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(' ')[0] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"].split(\" \").slice(1).join(\" \") }}"
+            },
+            {
+              "column": "update_time",
+              "value": "={{ $now.toFormat('yyyy-MM-dd HH:mm:ss') }}"
+            },
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task3\"].runIndex >= 0      ?   $node[\"cria_task3\"].json[\"id\"] : $node[\"cria_task\"].json[\"id\"]  }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "09c1c865-ec95-42cf-9d3e-a47fa5bb89a7",
+      "name": "insere_dados",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3740,
+        1040
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_lead2\"].json[\"id_clickup\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "7e4129e9-e64b-47f6-9522-54b6297c961a",
+      "name": "clickup_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4280,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "7b0b0ef8-7948-4975-9456-4c24504fb512",
+      "name": "3_segun",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        -3420,
+        1740
+      ],
+      "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
+    },
+    {
+      "parameters": {
+        "jsCode": "let fields = [\n  { id: 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126', value: $node[\"entra_na_fila\"].json[\"E-mail do Cliente\"] || \"\" },\n  { id: '146e6a0b-d2f6-4c77-9ca7-c5214de84776', value:  'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\"},\n  { id: '667c5680-e9e2-4527-a7f2-3a13597398ae', value: '+' + $node[\"entra_na_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"entra_na_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n  { id: 'b3c89f54-d6ab-4a13-a96f-387f13cf259d', value: '310aec21-c536-4db3-aa29-1cfbe53b2b28' || \"\" },\n    { id: 'f82979a8-dad0-4e60-8517-f4c967033fc8', value: $node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"] || \"\" }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
+      },
+      "id": "e7a622f7-c3de-41f3-941a-3b9bd39e8298",
+      "name": "campos_para_update",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -4100,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "5d91bf2b-1fde-4139-8b24-712835d65238",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        -3580,
+        1940
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "a3f26e62-3ebe-4e64-a1cc-bf5a54251c21",
+      "name": "divide_campos",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        -3840,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "setCustomField",
+        "task": "={{ $node[\"pesquisa_lead2\"].json[\"id_clickup\"] }}",
+        "field": "={{ $node[\"divide_campos\"].json[\"id\"] }}",
+        "value": "={{ $node[\"divide_campos\"].json[\"value\"] }}"
+      },
+      "id": "a4834291-96b5-4e87-8dd9-398f7b219495",
+      "name": "add_ids",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3600,
+        1740
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"pesquisa_lead2\"].json[\"id_clickup\"] }}",
+        "updateFields": {
+          "addAssignees": "=96789246"
+        }
+      },
+      "id": "5d91bb24-e3dc-45f9-9158-dbbd823e724a",
+      "name": "update_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3400,
+        1940
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task1\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "1b912f00-582f-4137-9cf0-531eec540d85",
+      "name": "update_task4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3740,
+        1560
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304519528",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n      \"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\", \n      \"value\": \"{{$node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"]}}\" \n}\n]\n"
+        }
+      },
+      "id": "2f34e8d0-1160-4ab3-943d-c09c8ec7dca5",
+      "name": "cria_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3920,
+        1560
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task1\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "cdc983f7-9823-4bfb-bbdd-4f24875cdc6b",
+      "name": "atualiza_clickup",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3540,
+        1560
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a0ffba42-d6b8-466d-8609-c2dd61cdff11",
+      "name": "buscarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -5380,
+        1180
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "77cd0439-9e49-4f80-b99d-aa28a8505be6",
+              "leftValue": "={{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7d822aa4-7ce3-4d11-91b1-8ee590d10272",
+      "name": "existe_chatwoot1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -5160,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts/{{ $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "77e1d0b6-5db0-4be9-bae4-5b0d4711c318",
+      "name": "atualizarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -5000,
+        1040
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://atendimento-wizard.automagicbots.com.br/api/v1/accounts/3/contacts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "cbxh53YtaByfsUj9vQ1Qn4zm"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
+        "options": {}
+      },
+      "id": "4516ee06-af19-4abb-be17-529a993b7b09",
+      "name": "criarContatoChatwoot1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -5000,
+        1260
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task3\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "3a96df62-a94f-4aa9-8e31-42cdae86ffb5",
+      "name": "update_task5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3920,
+        880
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304752326",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n\"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\",\n        \"value\": \"{{$node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"]}}\" \n}\n]\n"
+        }
+      },
+      "id": "c5b11b87-2747-4d08-bcd1-37d00892cd54",
+      "name": "cria_task3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -4100,
+        880
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}",
+              "value2": "[OD] - Jornada dos Pioneiros"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "3c1e6977-9091-4d0d-a4d4-df66ab6d3aa2",
+      "name": "é_oferta_direta1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4280,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task2\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96789246"
+        }
+      },
+      "id": "6220e260-55f1-4ac3-9eee-19d551138435",
+      "name": "update_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3740,
+        1380
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131406741",
+        "folder": "90132454606",
+        "list": "901304752326",
+        "name": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Nome do Cliente\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n    {\n        \"id\": \"e85a521d-ed4b-4de5-a533-ccaaeb4a4126\",\n        \"value\": \"{{ $node[\"entra_na_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"146e6a0b-d2f6-4c77-9ca7-c5214de84776\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"667c5680-e9e2-4527-a7f2-3a13597398ae\",\n        \"value\": \"+{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"entra_na_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n{\n\"id\": \"b3c89f54-d6ab-4a13-a96f-387f13cf259d\",\n        \"value\": \"310aec21-c536-4db3-aa29-1cfbe53b2b28\"\n},\n    { \n\"id\": \"f82979a8-dad0-4e60-8517-f4c967033fc8\",\n        \"value\": \"{{$node[\"entra_na_fila\"].json[\"content\"][\"Data de Início\"]}}\" \n}\n]\n"
+        }
+      },
+      "id": "64a53d2d-40c2-4bf5-ad47-f4dabc059931",
+      "name": "cria_task2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        -3920,
+        1380
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "list",
+          "cachedResultName": "leads"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id_lead",
+        "valueToMatchOn": "={{ $node[\"pesquisa_lead2\"].json[\"id_lead\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_clickup",
+              "value": "={{ $node[\"cria_task2\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "63976ab1-6578-484b-ad66-2a41112eed38",
+      "name": "atualiza_clickup1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.1,
+      "position": [
+        -3540,
+        1380
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "VlG3zZZd5ROuQOT2",
+          "name": "[MySQL] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"entra_na_fila\"].json[\"content\"][\"Tipo de Evento\"] }}",
+              "value2": "[OD] - Jornada dos Pioneiros"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1b7383d8-fb48-44c4-b594-4c5730ec8023",
+      "name": "é_oferta_direta",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -4120,
+        1480
+      ]
+    }
+  ],
+  "pinData": {
+    "entra_na_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag--KSsAxFByfi5hNhouQZ9Jw",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Calendly - Reagendamentos"
+          },
+          "properties": {
+            "headers": {
+              "x-delivery-count": 16
+            }
+          },
+          "content": {
+            "Nome do Cliente": "Mateus Diniz (automagic Bots)",
+            "E-mail do Cliente": "mateusdiniz@automagicbots.com.br",
+            "Telefone do Cliente - Formato BC": "+556281196678",
+            "Telefone do Cliente - Formato Z-API": "556281196678",
+            "ID do Evento": "b2aa8646-05da-452d-8474-7c2e4b175cd3",
+            "Responsável pelo Evento": "MARCIO TIAGO",
+            "E-mail do Responsável": "marcio.tiago2016@gmail.com",
+            "Data de Início": "27/07/2024, 10:00",
+            "Data em que foi feito o Reagendamento": "2024-07-25",
+            "Data de Término": "27/07/2024, 10:40",
+            "Dia da Semana de Início do Evento": "Sábado",
+            "utm_source": null,
+            "utm_campaign": null,
+            "utm_term": null,
+            "utm_medium": null,
+            "utm_content": null,
+            "Motivo do Reagendamento": "teste automação",
+            "ID do Cliente": "c15fe58b-3232-4694-ace8-e309b2e9c8e7",
+            "ID do Evento Antigo": "d0e8dc43-1516-45b2-a742-ca542fbfd3f5",
+            "Tipo de Evento": "[OD] - Jornada dos Pioneiros",
+            "API-KEY": "e9072792-f5ae-4bce-8b48-f3e70109c213",
+            "id_do_campo_id_do_agendamento_bot_conversa": "",
+            "id_do_campo_inviteeid_bot_conversa": "1139629",
+            "id_do_campo_horario_agendado_bot_conversa": "1139625",
+            "id_do_campo_data_do_agendamento_bot_conversa": "1139612",
+            "id_do_campo_dia_da_semana_do_agendamento_bot_conversa": "1139616",
+            "fluxo_de_confirmacao_de_reagendamento": "2360303",
+            "Link da Reunião": "https://calendly.com/events/b2aa8646-05da-452d-8474-7c2e4b175cd3/google_meet",
+            "ID do Cliente Antigo": "9d27e073-e018-4ead-9237-4c1d86f1c3d6",
+            "data_de_inicio_antigo": "2024-07-27",
+            "hora_de_inicio_antigo": "16:20:00",
+            "Link da Reunião Antigo": "https://calendly.com/events/d0e8dc43-1516-45b2-a742-ca542fbfd3f5/google_meet",
+            "Dia da Semana de Início do Evento Antigo": "Sábado",
+            "Data do Agendamento Antigo": "2024-07-25 14:41:19",
+            "Responsável pelo Evento Antigo": "Emerson Arcanjo",
+            "E-mail do Responsável Antigo": "emerson.arcanjo@integralmidia.com.br",
+            "data_de_inicio_novo": "2024-07-27",
+            "data_agendamento_novo": "2024-07-25 15:04:30",
+            "hora_de_inicio_novo": "10:00:00",
+            "id_campo_id_banco_de_dados_bot_conversa": "1333394",
+            "id_campo_tipo_evento_se_ac": "5",
+            "id_campo_id_do_evento_se_ac": "6",
+            "id_campo_dia_semana_agendamento_se_ac": "7",
+            "id_campo_data_e_hora_de_inicio_se_ac": "8",
+            "id_campo_data_de_inicio_se_ac": "9",
+            "id_campo_data_do_agendamento_se_ac": "10",
+            "id_campo_email_do_responsavel_se_ac": "11",
+            "id_campo_data_de_termino_se_ac": "12",
+            "id_campo_link_da_reuniao_se_ac": "13",
+            "id_campo_tipo_do_evento_se_ac": "14",
+            "id_campo_link_de_reagendamento_se_ac": "15",
+            "id_campo_link_de_cancelamento_se_ac": "16",
+            "id_campo_id_do_cliente_se_ac": "17",
+            "id_campo_data_e_hora_de_termino_se_ac": "18",
+            "id_campo_utm_source_se_ac": "32",
+            "id_campo_utm_campaign_se_ac": "33",
+            "id_campo_utm_term_se_ac": "34",
+            "id_campo_utm_medium_se_ac": "35",
+            "id_campo_utm_content_se_ac": "36",
+            "id_campo_utm_fun_se_ac": "40",
+            "id_campo_utm_var_se_ac": "41",
+            "id_campo_id_banco_de_dados_ac": "39",
+            "id_pipeline_se_ac": "8",
+            "id_sdr": "emerson.arcanjo@integralmidia.com.br",
+            "valor_produto_principal_em_centavos": "720000",
+            "id_stage_agendou_reuniao_se_ac": "29",
+            "funil": "sessao_estrategica",
+            "variacao_do_funil": "v1",
+            "id_campo_idleadac_bot_conversa": "1343869",
+            "id_campo_iddealac_bot_conversa": "1343862",
+            "url_api_activecampaign": "futureminds14016",
+            "id_task_reuniao_ac": "",
+            "id_do_campo_link_da_reuniao_bot_conversa": "",
+            "id_campo_tipo_evento_app_ac": "",
+            "id_campo_id_do_evento_app_ac": "",
+            "id_campo_dia_semana_agendamento_app_ac": "",
+            "id_campo_data_e_hora_de_inicio_app_ac": "",
+            "id_campo_data_de_inicio_app_ac": "",
+            "id_campo_data_do_agendamento_app_ac": "",
+            "id_campo_email_do_responsavel_app_ac": "",
+            "id_campo_data_de_termino_app_ac": "",
+            "id_campo_link_da_reuniao_app_ac": "",
+            "id_campo_tipo_do_evento_app_ac": "",
+            "id_campo_link_de_reagendamento_app_ac": "",
+            "id_campo_link_de_cancelamento_app_ac": "",
+            "id_campo_id_do_cliente_app_ac": "",
+            "id_campo_data_e_hora_de_termino_app_ac": "",
+            "id_campo_utm_source_app_ac": "",
+            "id_campo_utm_campaign_app_ac": "",
+            "id_campo_utm_term_app_ac": "",
+            "id_campo_utm_medium_app_ac": "",
+            "id_campo_utm_content_app_ac": "",
+            "id_campo_utm_fun_app_ac": "",
+            "id_campo_utm_var_app_ac": "",
+            "id_stage_agendou_reuniao_app_ac": "",
+            "id_pipeline_app_ac": ""
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-07-25T14:26:42.069Z",
+      "updatedAt": "2024-07-25T14:26:42.069Z",
+      "id": "wmjovYZV7zBaApaS",
+      "name": "[CALENDLY]"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-07-25T18:51:37.491Z",
+  "versionId": "1620f879-922b-46fd-afbc-dc446189827e"
+}
