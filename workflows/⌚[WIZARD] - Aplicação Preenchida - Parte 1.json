@@ -1,0 +1,3344 @@
+{
+  "active": true,
+  "connections": {
+    "formata_dados": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Campos Personalizados de Deals da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Listar Pipelines e Status da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Listar Pipelines e Status da Conta3": {
+      "main": [
+        [
+          {
+            "node": "Consulta Users da Conta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Listar Campos Personalizados de Deals da Conta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "app_preenchida_v1_(pAwECWHC)": {
+      "main": [
+        [
+          {
+            "node": "formata_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados_validados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados3": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "app_preenchida_v1_OD": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-07-12T22:35:30.855Z",
+  "id": "pyOG0io4Rpui9bdG",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[WIZARD] - Aplicação Preenchida - Parte 1",
+  "nodes": [
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body.form_response.answers;\n\n// Função para extrair o DDD e formatar o telefone\nfunction extrairDddETelefone(telefone) {\n  if (!telefone) return \"\";\n\n  const telefoneLimpo = telefone.replace(/\\D/g, \"\");\n  const ddd = telefoneLimpo.slice(2, 4);\n  const ddi = telefoneLimpo.slice(0, 2);\n\n  let telefoneFormatado;\n  if (parseInt(ddd) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n\n  return telefoneFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\n// Função para extrair as UTMs do objeto JSON\nfunction extractUTMs(json) {\n  const utmParams = {};\n\n  function searchUTMs(obj) {\n    for (const key in obj) {\n      if (key.startsWith('utm_')) {\n        utmParams[key] = obj[key];\n      } else if (typeof obj[key] === 'object') {\n        searchUTMs(obj[key]);\n      }\n    }\n  }\n\n  searchUTMs(json);\n\n  return utmParams;\n}\n\n// Função para traduzir booleanos para Português\nfunction traduzirBooleano(valor) {\n  return valor ? \"Sim\" : \"Não\";\n}\n\n// Função para converter número em reais\nfunction formatarValorEmReal(valor) {\n  if (valor === null || valor === undefined) return \"\";\n  return `R$ ${valor.toFixed(2)}`;\n}\n\nconst oferta = (respostas.find(answer => answer.field.ref === \"84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61\")?.choice.label) || '';\n\nlet qualificacao;\n\nif (oferta.includes('Ainda não possuo o valor do investimento disponível')) {\n  qualificacao = 'Desqualificado';\n} else if (oferta === '') {\n  qualificacao = '';\n} else {\n  qualificacao = 'Qualificado';\n}\n\n\n// Extrair o telefone e formatá-lo\nconst telefoneAnswer = respostas.find(answer => answer.field.ref === \"559c2fe3-f107-410d-8fb8-6b87c37823d4\");\nconst telefoneFormatado = telefoneAnswer ? extrairDddETelefone(telefoneAnswer.phone_number) : \"\";\n\n// Extrair as UTMs do objeto JSON de entrada\nconst utms = extractUTMs(inputData);\n\n// Atribuir os valores das UTMs às variáveis correspondentes\nconst utmContent = utms.utm_content || '';\nconst utmSource = utms.utm_source || '';\nconst utmCampaign = utms.utm_campaign || '';\nconst utmMedium = utms.utm_medium || '';\nconst utmTerm = utms.utm_term || '';\n\n\n// Extrair o telefone e formatá-lo\n// const telefoneAnswer = $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"hidden\"][\"phone\"] || \"\";\nconst Ending = $node[\"app_preenchida_v1_(pAwECWHC)\"].json.body.form_response.ending.ref || '';\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\nconst dataAplicacao = $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(8,10) + '/' + $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(5,7) + '/' + $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(0,4) + ' ' + $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(11,16) || '';\n\nlet phone2 \n{\nif  (telefoneFormatado === '') phone2 = ''; \n  else (phone2 = '+' + extrairDddETelefone(telefoneFormatado))}\n\n// Montar o objeto de output\nlet output = {\n  \"Nome do Cliente\": formatarNome(respostas.find(answer => answer.field.ref === \"01J2KSJJ5N8DWHHNB0GQG1XK8W\")?.text) || \"\",\n  \"Telefone do Cliente - Formato Z-API\": extrairDddETelefone(telefoneFormatado) || '',\n  \"Telefone do Cliente - Formato BC\": phone2 || '',\n  \"E-mail do Cliente\": respostas.find(answer => answer.field.ref === \"2687c4a2-ed0f-4e98-b62c-35f3c51b25a2\")?.email || '', \n  pergunta0: respostas.find(answer => answer.field.ref === \"bd23e466-b17c-4ade-9e31-18df4d724c21\")?.choice.label || '',\n  pergunta1: respostas.find(answer => answer.field.ref === \"7b6b2293-473b-4653-bf5a-1903b3cc1eff\")?.date || '',\n  pergunta2: (respostas.find(answer => answer.field.ref === \"f25a9ee7-130a-48aa-b1b0-3b1baed43068\")?.choice.label) || '',\n  segmento: respostas.find(answer => answer.field.ref === \"055edb0d-821f-4d63-9dd1-27bcad1200b1\")?.text || '',\n  faturamento: (respostas.find(answer => answer.field.ref === \"35af0dbc-8f6f-4ee4-aa6a-835a19afcc83\")?.choice.label) || '',\n  meta_faturamento: (respostas.find(answer => answer.field.ref === \"d84b56ad-7270-4368-bd88-270093307220\")?.choice.label) || '',\n  pergunta6: (respostas.find(answer => answer.field.ref === \"1e9546dc-195d-4962-98d9-dd354ca6d302\")?.choice.label) || '',\n  desenvolver_prosperar: respostas.find(answer => answer.field.ref === \"00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c\")?.text || '',\n  pergunta8: respostas.find(answer => answer.field.ref === \"43ead520-16da-4ed4-926a-bd760e753182\")?.text || '',\n  maior_desafio: respostas.find(answer => answer.field.ref === \"26555462-1ca2-4fd1-8a1b-f05e06348ff6\")?.text || '',\n  porque_acredita: respostas.find(answer => answer.field.ref === \"1fa59597-6372-4e52-88cb-98899a431381\")?.text || '',\n  expectativa: respostas.find(answer => answer.field.ref === \"eaf0cda6-e068-4383-a342-2ae40e2372b8\")?.text || '',\n  pergunta12: respostas.find(answer => answer.field.ref === \"134746ee-0316-4cc2-94be-870bf9971b2e\")?.text || '',\n  porque_voce: respostas.find(answer => answer.field.ref === \"ce8f28ed-707f-438f-9126-03ead6644650\")?.text || '',\n  comprometimento: (respostas.find(answer => answer.field.ref === \"6d2d633e-af60-465f-9c22-4f95d1eebe4a\")?.choice.label) || '',\n  investimento: respostas.find(answer => answer.field.ref === \"84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61\")?.choice.label || '',\n  pergunta16: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta17: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta18: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta19: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta20: respostas.find(answer => answer.field.ref === \"\")?.text || '', \n  data_ultima_quinzena: dataFormatada,  \n  utm_content: utmContent || \"\",\n  utm_source: utmSource || \"\",\n  utm_campaign: utmCampaign || \"\",\n  utm_medium: utmMedium || \"\",\n  utm_term: utmTerm || \"\",\n  data_aplicacao: dataAplicacao,\n  Ending: Ending || \"\",\n  qualificacao\n};\n\nreturn [output];"
+      },
+      "id": "d0935535-561e-48bb-bf15-ca11be1a9019",
+      "name": "formata_dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados2\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados2\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Instagram\"].replace('@','') }}"
+            },
+            {
+              "name": "ID EmailSE",
+              "value": "973322"
+            },
+            {
+              "name": "ID do Fluxo de Ajuda Agendamento",
+              "value": "1611462"
+            },
+            {
+              "name": "API-KEY",
+              "value": "d241868f-0b6e-4974-b2ae-f2ad1b5e5e25"
+            },
+            {
+              "name": "PrincipaisObjetivos",
+              "value": "={{ $node[\"formata_dados2\"].json[\"PrincipaisObjetivos\"] }}"
+            },
+            {
+              "name": "Investimento",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Investimento\"] }}"
+            },
+            {
+              "name": "renda mensal",
+              "value": "={{ $node[\"formata_dados2\"].json[\"RendaMensal\"] }}"
+            },
+            {
+              "name": "OperaçõesAtivas",
+              "value": "={{ $node[\"formata_dados2\"].json[\"OperaçõesAtivas\"] }}"
+            },
+            {
+              "name": "site da sua loja",
+              "value": "="
+            },
+            {
+              "name": "NivelExperiencia",
+              "value": "={{ $node[\"formata_dados2\"].json[\"NivelExperiencia\"] }}"
+            },
+            {
+              "name": "Preferência",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Preferência\"] }}"
+            },
+            {
+              "name": "JáConheceaMentoria",
+              "value": "={{ $node[\"formata_dados2\"].json[\"JáConheceaMentoria\"] }}"
+            },
+            {
+              "name": "FaturamentoMédioMensal6Meses",
+              "value": "={{ $node[\"formata_dados2\"].json[\"FaturamentoMédioMensal6Meses\"] }}"
+            },
+            {
+              "name": "ID do Campo instagram",
+              "value": "1146688"
+            },
+            {
+              "name": "ID do Campo Operações Ativas",
+              "value": "1146644"
+            },
+            {
+              "name": "ID do Campo Nível de Experiência",
+              "value": "1146645"
+            },
+            {
+              "name": "ID do Campo Dificuldades",
+              "value": "1146635"
+            },
+            {
+              "name": "ID do Campo Objetivo",
+              "value": "1146634"
+            },
+            {
+              "name": "ID do Campo Site da Loja",
+              "value": "1146646"
+            },
+            {
+              "name": "ID do Campo Renda Média Mensal",
+              "value": "1146636"
+            },
+            {
+              "name": "ID do Campo Lucro Líquido ",
+              "value": "1146672"
+            },
+            {
+              "name": "ID do Campo Renda Mensal",
+              "value": "1146673"
+            },
+            {
+              "name": "ID do Campo Escolha preferida",
+              "value": "1146675"
+            },
+            {
+              "name": "ID do Campo Conhece a mentoria?",
+              "value": "1146676"
+            },
+            {
+              "name": "ID do Campo Modelo de Negócio",
+              "value": "1146677"
+            },
+            {
+              "name": "ID do Campo Disposto a investir?",
+              "value": "1146678"
+            },
+            {
+              "name": "ID do Campo Data Resposta Type",
+              "value": "1146728"
+            },
+            {
+              "name": "Data Resposta Type",
+              "value": "={{ $node[\"sessao_preenchidav2\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(8,10) }}/{{ $node[\"sessao_preenchidav2\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(5,7) }}/{{ $node[\"sessao_preenchidav2\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(0,4) }} {{ $node[\"sessao_preenchidav2\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(11,16) }}"
+            },
+            {
+              "name": "ID do Campo utm_term",
+              "value": "1146796"
+            },
+            {
+              "name": "ID do Campo utm_source",
+              "value": "1146795"
+            },
+            {
+              "name": "ID do Campo utm_medium",
+              "value": "1146797"
+            },
+            {
+              "name": "ID do Campo  utm_content",
+              "value": "1146799"
+            },
+            {
+              "name": "ID do Campo utm_campaign",
+              "value": "1146800"
+            },
+            {
+              "name": "MargemLucro",
+              "value": "={{ $node[\"formata_dados2\"].json[\"MargemLucro\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"formata_dados2\"].json[\"Ending\"] }}"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "8676323"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6833cf3d-3892-4263-a16c-01de960e67ad",
+      "name": "dados_validados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Para consulta\n\npergunta0 -  ProfissãoSE\npergunta1 -  PqOportunidadeSE\npergunta2 -  MelhorHorarioSE\npergunta3 -  MaiorDificuldadeSE\npergunta4 -  MaiorDesafioSE\npergunta5 -  FaturamentoSE\npergunta6 -  ConheceaJuHáSE\npergunta7 -  Produtos/Serviços\npergunta8 -  FormaPagamento\npergunta9 -  TrêsPerguntas\npergunta10 - Por quê é oportunidade?\npergunta11 - De acordo?\npergunta12 -\npergunta13 -\npergunta14 -\npergunta15 -\npergunta16 -\npergunta17 - \npergunta18 - \npergunta19 - \npergunta20 -\n",
+        "height": 517.4010857550991,
+        "width": 1350.4065409393916
+      },
+      "id": "cef2a16e-9b55-4481-9cec-242a704eea82",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        920,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealCustomFieldMeta",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Campos Personalizados de Deals da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        260
+      ],
+      "id": "db65a01e-3072-46a8-846a-73964d1f9828"
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/dealGroups",
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        }
+      },
+      "name": "Listar Pipelines e Status da Conta3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1740,
+        260
+      ],
+      "id": "f341728e-6bd3-4821-b25f-d93ab2e06cac"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "Api-Token",
+              "value": "f855a9327a9219d27bf8713569e0f7e926110f6bbe180b11ad6c3a9bdb922fd7f05402c9"
+            },
+            {
+              "name": "url_api_activecampaign",
+              "value": "futureminds14016"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d968b4d-bcbe-430e-8dc9-d24b903f351f",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $node[\"Set\"].json[\"url_api_activecampaign\"] }}.api-us1.com/api/3/users",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Api-Token",
+              "value": "={{ $node[\"Set\"].json[\"Api-Token\"] }}"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6d8b543c-f330-41ff-93f7-3d979e144c08",
+      "name": "Consulta Users da Conta",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1940,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Não Agendamentos - Parte 2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "8edc05db-164a-4536-9750-2f4110f50c92",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        880
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados1\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Instagram\"].replace('@','') }}"
+            },
+            {
+              "name": "ID EmailSE",
+              "value": "973322"
+            },
+            {
+              "name": "ID do Fluxo de Ajuda Agendamento",
+              "value": "1611462"
+            },
+            {
+              "name": "API-KEY",
+              "value": "d241868f-0b6e-4974-b2ae-f2ad1b5e5e25"
+            },
+            {
+              "name": "PrincipaisObjetivos",
+              "value": "={{ $node[\"formata_dados1\"].json[\"PrincipaisObjetivos\"] }}"
+            },
+            {
+              "name": "Investimento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Investimento\"] }}"
+            },
+            {
+              "name": "renda mensal",
+              "value": "={{ $node[\"formata_dados1\"].json[\"RendaMensal\"] }}"
+            },
+            {
+              "name": "OperaçõesAtivas",
+              "value": "={{ $node[\"formata_dados1\"].json[\"OperaçõesAtivas\"] }}"
+            },
+            {
+              "name": "site da sua loja",
+              "value": "="
+            },
+            {
+              "name": "NivelExperiencia",
+              "value": "={{ $node[\"formata_dados1\"].json[\"NivelExperiencia\"] }}"
+            },
+            {
+              "name": "Preferência",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Preferência\"] }}"
+            },
+            {
+              "name": "JáConheceaMentoria",
+              "value": "={{ $node[\"formata_dados1\"].json[\"JáConheceaMentoria\"] }}"
+            },
+            {
+              "name": "FaturamentoMédioMensal6Meses",
+              "value": "={{ $node[\"formata_dados1\"].json[\"FaturamentoMédioMensal6Meses\"] }}"
+            },
+            {
+              "name": "ID do Campo instagram",
+              "value": "1146688"
+            },
+            {
+              "name": "ID do Campo Operações Ativas",
+              "value": "1146644"
+            },
+            {
+              "name": "ID do Campo Nível de Experiência",
+              "value": "1146645"
+            },
+            {
+              "name": "ID do Campo Dificuldades",
+              "value": "1146635"
+            },
+            {
+              "name": "ID do Campo Objetivo",
+              "value": "1146634"
+            },
+            {
+              "name": "ID do Campo Site da Loja",
+              "value": "1146646"
+            },
+            {
+              "name": "ID do Campo Renda Média Mensal",
+              "value": "1146636"
+            },
+            {
+              "name": "ID do Campo Lucro Líquido ",
+              "value": "1146672"
+            },
+            {
+              "name": "ID do Campo Renda Mensal",
+              "value": "1146673"
+            },
+            {
+              "name": "ID do Campo Escolha preferida",
+              "value": "1146675"
+            },
+            {
+              "name": "ID do Campo Conhece a mentoria?",
+              "value": "1146676"
+            },
+            {
+              "name": "ID do Campo Modelo de Negócio",
+              "value": "1146677"
+            },
+            {
+              "name": "ID do Campo Disposto a investir?",
+              "value": "1146678"
+            },
+            {
+              "name": "ID do Campo Data Resposta Type",
+              "value": "1146728"
+            },
+            {
+              "name": "Data Resposta Type",
+              "value": "={{ $node[\"se_preenchidav3\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(8,10) }}/{{ $node[\"se_preenchidav3\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(5,7) }}/{{ $node[\"se_preenchidav3\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(0,4) }} {{ $node[\"se_preenchidav3\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(11,16) }}"
+            },
+            {
+              "name": "ID do Campo utm_term",
+              "value": "1146796"
+            },
+            {
+              "name": "ID do Campo utm_source",
+              "value": "1146795"
+            },
+            {
+              "name": "ID do Campo utm_medium",
+              "value": "1146797"
+            },
+            {
+              "name": "ID do Campo  utm_content",
+              "value": "1146799"
+            },
+            {
+              "name": "ID do Campo utm_campaign",
+              "value": "1146800"
+            },
+            {
+              "name": "MargemLucro",
+              "value": "={{ $node[\"formata_dados1\"].json[\"MargemLucro\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Ending\"] }}"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "8676323"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5e275b21-134c-4c6f-9bb5-1b2acd015e20",
+      "name": "dados_validados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"Nome\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"Email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "Instagram",
+              "value": "={{ $node[\"formata_dados\"].json[\"Instagram\"].replace('@','') }}"
+            },
+            {
+              "name": "ID EmailSE",
+              "value": "973322"
+            },
+            {
+              "name": "ID do Fluxo de Ajuda Agendamento",
+              "value": "1611462"
+            },
+            {
+              "name": "API-KEY",
+              "value": "d241868f-0b6e-4974-b2ae-f2ad1b5e5e25"
+            },
+            {
+              "name": "PrincipaisObjetivos",
+              "value": "={{ $node[\"formata_dados\"].json[\"PrincipaisObjetivos\"] }}"
+            },
+            {
+              "name": "Investimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"Investimento\"] }}"
+            },
+            {
+              "name": "renda mensal",
+              "value": "={{ $node[\"formata_dados\"].json[\"RendaMensal\"] }}"
+            },
+            {
+              "name": "OperaçõesAtivas",
+              "value": "={{ $node[\"formata_dados\"].json[\"OperaçõesAtivas\"] }}"
+            },
+            {
+              "name": "site da sua loja",
+              "value": "="
+            },
+            {
+              "name": "NivelExperiencia",
+              "value": "={{ $node[\"formata_dados\"].json[\"NivelExperiencia\"] }}"
+            },
+            {
+              "name": "Preferência",
+              "value": "={{ $node[\"formata_dados\"].json[\"Preferência\"] }}"
+            },
+            {
+              "name": "JáConheceaMentoria",
+              "value": "={{ $node[\"formata_dados\"].json[\"JáConheceaMentoria\"] }}"
+            },
+            {
+              "name": "FaturamentoMédioMensal6Meses",
+              "value": "={{ $node[\"formata_dados\"].json[\"FaturamentoMédioMensal6Meses\"] }}"
+            },
+            {
+              "name": "ID do Campo instagram",
+              "value": "1146688"
+            },
+            {
+              "name": "ID do Campo Operações Ativas",
+              "value": "1146644"
+            },
+            {
+              "name": "ID do Campo Nível de Experiência",
+              "value": "1146645"
+            },
+            {
+              "name": "ID do Campo Dificuldades",
+              "value": "1146635"
+            },
+            {
+              "name": "ID do Campo Objetivo",
+              "value": "1146634"
+            },
+            {
+              "name": "ID do Campo Site da Loja",
+              "value": "1146646"
+            },
+            {
+              "name": "ID do Campo Renda Média Mensal",
+              "value": "1146636"
+            },
+            {
+              "name": "ID do Campo Lucro Líquido ",
+              "value": "1146672"
+            },
+            {
+              "name": "ID do Campo Renda Mensal",
+              "value": "1146673"
+            },
+            {
+              "name": "ID do Campo Escolha preferida",
+              "value": "1146675"
+            },
+            {
+              "name": "ID do Campo Conhece a mentoria?",
+              "value": "1146676"
+            },
+            {
+              "name": "ID do Campo Modelo de Negócio",
+              "value": "1146677"
+            },
+            {
+              "name": "ID do Campo Disposto a investir?",
+              "value": "1146678"
+            },
+            {
+              "name": "ID do Campo Data Resposta Type",
+              "value": "1146728"
+            },
+            {
+              "name": "Data Resposta Type",
+              "value": "={{ $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(8,10) }}/{{ $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(5,7) }}/{{ $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(0,4) }} {{ $node[\"app_preenchida_v1_(pAwECWHC)\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(11,16) }}"
+            },
+            {
+              "name": "ID do Campo utm_term",
+              "value": "1146796"
+            },
+            {
+              "name": "ID do Campo utm_source",
+              "value": "1146795"
+            },
+            {
+              "name": "ID do Campo utm_medium",
+              "value": "1146797"
+            },
+            {
+              "name": "ID do Campo  utm_content",
+              "value": "1146799"
+            },
+            {
+              "name": "ID do Campo utm_campaign",
+              "value": "1146800"
+            },
+            {
+              "name": "MargemLucro",
+              "value": "={{ $node[\"formata_dados\"].json[\"MargemLucro\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"formata_dados\"].json[\"Ending\"] }}"
+            },
+            {
+              "name": "id_tag_desqualificado_bot_conversa",
+              "value": "8676323"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5f5c0c70-f135-41e7-abff-bc877610d3dd",
+      "name": "dados_validados4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "=Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "segmento",
+              "value": "={{ $node[\"formata_dados\"].json[\"segmento\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"faturamento\"] }}"
+            },
+            {
+              "name": "meta_faturamento",
+              "value": "={{ $node[\"formata_dados\"].json[\"meta_faturamento\"] }}"
+            },
+            {
+              "name": "desenvolver_prosperar",
+              "value": "={{ $node[\"formata_dados\"].json[\"desenvolver_prosperar\"] }}"
+            },
+            {
+              "name": "maior_desafio",
+              "value": "={{ $node[\"formata_dados\"].json[\"maior_desafio\"] }}"
+            },
+            {
+              "name": "porque_acredita",
+              "value": "={{ $node[\"formata_dados\"].json[\"porque_acredita\"] }}"
+            },
+            {
+              "name": "expectativa",
+              "value": "={{ $node[\"formata_dados\"].json[\"expectativa\"] }}"
+            },
+            {
+              "name": "porque_voce",
+              "value": "={{ $node[\"formata_dados\"].json[\"porque_voce\"] }}"
+            },
+            {
+              "name": "comprometimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"comprometimento\"] }}"
+            },
+            {
+              "name": "investimento",
+              "value": "={{ $node[\"formata_dados\"].json[\"investimento\"] }}"
+            },
+            {
+              "name": "id_campo_segmento_clickup",
+              "value": "08279b52-51d7-4bf6-bddc-9f6ade0bbbf2"
+            },
+            {
+              "name": "id_campo_faturamento_clickup",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_meta_faturamento_clickup",
+              "value": "e0db01cd-81a3-47c9-a0cc-6ba43575d921"
+            },
+            {
+              "name": "id_campo_desenvolver_prosperar_clickup",
+              "value": "81b51f94-7551-4e1c-8ef0-d193d981023c"
+            },
+            {
+              "name": "id_campo_maior_desafio_clickup",
+              "value": "c9244aac-7fdc-4c45-92c1-61bd5e159d02"
+            },
+            {
+              "name": "id_campo_porque_acredita_clickup",
+              "value": "443985b5-ca79-4188-a7cb-899f1b3ecdcd"
+            },
+            {
+              "name": "id_campo_expectativa_clickup",
+              "value": "ac7efa91-935e-4443-bffa-0dd77207dcfa"
+            },
+            {
+              "name": "id_campo_porque_voce_clickup",
+              "value": "929d45b1-2256-42cc-9abf-00f649e57ab4"
+            },
+            {
+              "name": "id_campo_comprometimento_clickup",
+              "value": "a59d4006-877c-44b9-b1e2-39f119f946b0"
+            },
+            {
+              "name": "id_campo_investimento_clickup",
+              "value": "41ff8e34-078d-479e-ac1f-c50f36a5d0fc"
+            },
+            {
+              "name": "id_campo_email_clickup",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_telefone_clickup",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_campo_link_whatsapp_clickup",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_situacao_atual_clickup",
+              "value": "be6701f6-e745-4613-b71c-2648ac9e9380"
+            },
+            {
+              "name": "id_campo_visto_clickup",
+              "value": "68ea5ae1-72d7-43d0-92d3-ee74b73db741"
+            },
+            {
+              "name": "link_whatsapp",
+              "value": "=wa.me/{{ $json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "id_campo_jdp_clickup",
+              "value": "b3c89f54-d6ab-4a13-a96f-387f13cf259d"
+            },
+            {
+              "name": "valor_jdp",
+              "value": "4a24666b-e2b6-4d73-9fb4-3d6288dc6450"
+            },
+            {
+              "name": "funil",
+              "value": "=webinario"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "JDP-Webinario"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{ $node[\"formata_dados\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"formata_dados\"].json[\"Ending\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "19f0f81e-38dd-4bd0-9cd0-a1f7e28e5ab7",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "e4635b4f-efee-4aed-969c-c923b25c4bd1",
+      "name": "qualificado (OSTpdqxW)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1320,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "226a6e84-08b3-4855-a713-145c5ded305e",
+      "name": "qualificado (KscRSbSl)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1740,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": []
+        },
+        "options": {}
+      },
+      "id": "c525d505-f999-43a1-a687-9684cd6cdfab",
+      "name": "desqualificado (KscRSbSl)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1940,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": []
+        },
+        "options": {}
+      },
+      "id": "f6543909-8e57-4f8f-af71-49e71167b108",
+      "name": "desqualificado (OSTpdqxW)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        1520,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "aplicacao-preenchida-webinar",
+        "options": {}
+      },
+      "id": "6e61ffdf-89fe-4c59-afb2-054bff2b362b",
+      "name": "app_preenchida_v1_(pAwECWHC)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        980,
+        820
+      ],
+      "webhookId": "bfd6aea6-0afa-41dd-8790-c03fc17d1dd4"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extrair informações do input\nconst inputData = items[0].json;\nconst respostas = inputData.body.form_response.answers;\n\n// Função para extrair o DDD e formatar o telefone\nfunction extrairDddETelefone(telefone) {\n  if (!telefone) return \"\";\n\n  const telefoneLimpo = telefone.replace(/\\D/g, \"\");\n  const ddd = telefoneLimpo.slice(2, 4);\n  const ddi = telefoneLimpo.slice(0, 2);\n\n  let telefoneFormatado;\n  if (parseInt(ddd) > 28) {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-8);\n  } else {\n    telefoneFormatado = ddi + ddd + telefoneLimpo.slice(-9);\n  }\n\n  return telefoneFormatado;\n}\n\n// Função para formatação de nomes\nfunction formatarNome(nome) {\n  if (nome) {\n    const palavras = nome.trim().split(/\\s+/);\n\n    const palavrasMinusculas = ['de', 'dos', 'da', 'e', 'do', 'das', 'di', 'du', 'o', 'a', 'u'];\n\n    for (let i = 0; i < palavras.length; i++) {\n      const palavraAtual = palavras[i].toLowerCase();\n      if (i === 0 || i === palavras.length - 1 || !palavrasMinusculas.includes(palavraAtual)) {\n        palavras[i] = palavraAtual.charAt(0).toUpperCase() + palavraAtual.slice(1);\n      } else {\n        palavras[i] = palavraAtual;\n      }\n    }\n\n    return palavras.join(\" \");\n  }\n  return '';\n}\n\n// Função para extrair as UTMs do objeto JSON\nfunction extractUTMs(json) {\n  const utmParams = {};\n\n  function searchUTMs(obj) {\n    for (const key in obj) {\n      if (key.startsWith('utm_')) {\n        utmParams[key] = obj[key];\n      } else if (typeof obj[key] === 'object') {\n        searchUTMs(obj[key]);\n      }\n    }\n  }\n\n  searchUTMs(json);\n\n  return utmParams;\n}\n\n// Função para traduzir booleanos para Português\nfunction traduzirBooleano(valor) {\n  return valor ? \"Sim\" : \"Não\";\n}\n\n// Função para converter número em reais\nfunction formatarValorEmReal(valor) {\n  if (valor === null || valor === undefined) return \"\";\n  return `R$ ${valor.toFixed(2)}`;\n}\n\nconst oferta = (respostas.find(answer => answer.field.ref === \"84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61\")?.choice.label) || '';\n\nlet qualificacao;\n\nif (oferta.includes('Ainda não possuo o valor do investimento disponível')) {\n  qualificacao = 'Desqualificado';\n} else if (oferta === '') {\n  qualificacao = '';\n} else {\n  qualificacao = 'Qualificado';\n}\n\n\n// Extrair o telefone e formatá-lo\nconst telefoneAnswer = respostas.find(answer => answer.field.ref === \"559c2fe3-f107-410d-8fb8-6b87c37823d4\");\nconst telefoneFormatado = telefoneAnswer ? extrairDddETelefone(telefoneAnswer.phone_number) : \"\";\n\n// Extrair as UTMs do objeto JSON de entrada\nconst utms = extractUTMs(inputData);\n\n// Atribuir os valores das UTMs às variáveis correspondentes\nconst utmContent = utms.utm_content || '';\nconst utmSource = utms.utm_source || '';\nconst utmCampaign = utms.utm_campaign || '';\nconst utmMedium = utms.utm_medium || '';\nconst utmTerm = utms.utm_term || '';\n\n\n// Extrair o telefone e formatá-lo\n// const telefoneAnswer = $node[\"app_preenchida_v1_OD\"].json[\"body\"][\"form_response\"][\"hidden\"][\"phone\"] || \"\";\nconst Ending = $node[\"app_preenchida_v1_OD\"].json.body.form_response.ending.ref || '';\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\nconst dataAplicacao = $node[\"app_preenchida_v1_OD\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(8,10) + '/' + $node[\"app_preenchida_v1_OD\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(5,7) + '/' + $node[\"app_preenchida_v1_OD\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(0,4) + ' ' + $node[\"app_preenchida_v1_OD\"].json[\"body\"][\"form_response\"][\"submitted_at\"].slice(11,16) || '';\n\nlet phone2 \n{\nif  (telefoneFormatado === '') phone2 = ''; \n  else (phone2 = '+' + extrairDddETelefone(telefoneFormatado))}\n\n// Montar o objeto de output\nlet output = {\n  \"Nome do Cliente\": formatarNome(respostas.find(answer => answer.field.ref === \"01J2KSJJ5N8DWHHNB0GQG1XK8W\")?.text) || \"\",\n  \"Telefone do Cliente - Formato Z-API\": extrairDddETelefone(telefoneFormatado) || '',\n  \"Telefone do Cliente - Formato BC\": phone2 || '',\n  \"E-mail do Cliente\": respostas.find(answer => answer.field.ref === \"2687c4a2-ed0f-4e98-b62c-35f3c51b25a2\")?.email || '', \n  pergunta0: respostas.find(answer => answer.field.ref === \"bd23e466-b17c-4ade-9e31-18df4d724c21\")?.choice.label || '',\n  pergunta1: respostas.find(answer => answer.field.ref === \"7b6b2293-473b-4653-bf5a-1903b3cc1eff\")?.date || '',\n  pergunta2: (respostas.find(answer => answer.field.ref === \"f25a9ee7-130a-48aa-b1b0-3b1baed43068\")?.choice.label) || '',\n  segmento: respostas.find(answer => answer.field.ref === \"055edb0d-821f-4d63-9dd1-27bcad1200b1\")?.text || '',\n  faturamento: (respostas.find(answer => answer.field.ref === \"35af0dbc-8f6f-4ee4-aa6a-835a19afcc83\")?.choice.label) || '',\n  meta_faturamento: (respostas.find(answer => answer.field.ref === \"d84b56ad-7270-4368-bd88-270093307220\")?.choice.label) || '',\n  pergunta6: (respostas.find(answer => answer.field.ref === \"1e9546dc-195d-4962-98d9-dd354ca6d302\")?.choice.label) || '',\n  desenvolver_prosperar: respostas.find(answer => answer.field.ref === \"00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c\")?.text || '',\n  pergunta8: respostas.find(answer => answer.field.ref === \"43ead520-16da-4ed4-926a-bd760e753182\")?.text || '',\n  maior_desafio: respostas.find(answer => answer.field.ref === \"26555462-1ca2-4fd1-8a1b-f05e06348ff6\")?.text || '',\n  porque_acredita: respostas.find(answer => answer.field.ref === \"1fa59597-6372-4e52-88cb-98899a431381\")?.text || '',\n  expectativa: respostas.find(answer => answer.field.ref === \"eaf0cda6-e068-4383-a342-2ae40e2372b8\")?.text || '',\n  pergunta12: respostas.find(answer => answer.field.ref === \"134746ee-0316-4cc2-94be-870bf9971b2e\")?.text || '',\n  porque_voce: respostas.find(answer => answer.field.ref === \"ce8f28ed-707f-438f-9126-03ead6644650\")?.text || '',\n  comprometimento: (respostas.find(answer => answer.field.ref === \"6d2d633e-af60-465f-9c22-4f95d1eebe4a\")?.choice.label) || '',\n  investimento: respostas.find(answer => answer.field.ref === \"84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61\")?.choice.label || '',\n  pergunta16: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta17: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta18: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta19: respostas.find(answer => answer.field.ref === \"\")?.text || '',\n  pergunta20: respostas.find(answer => answer.field.ref === \"\")?.text || '', \n  data_ultima_quinzena: dataFormatada,  \n  utm_content: utmContent || \"\",\n  utm_source: utmSource || \"\",\n  utm_campaign: utmCampaign || \"\",\n  utm_medium: utmMedium || \"\",\n  utm_term: utmTerm || \"\",\n  data_aplicacao: dataAplicacao,\n  Ending: Ending || \"\",\n  qualificacao\n};\n\nreturn [output];"
+      },
+      "id": "23689e7f-b17a-495c-8973-c24d4402af4d",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Nome do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Nome do Cliente\"] }}"
+            },
+            {
+              "name": "E-mail do Cliente",
+              "value": "={{ $node[\"formata_dados1\"].json[\"E-mail do Cliente\"] }}"
+            },
+            {
+              "name": "=Telefone do Cliente - Formato BC",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Telefone do Cliente - Formato BC\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato Z-API",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "segmento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"segmento\"] }}"
+            },
+            {
+              "name": "faturamento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"faturamento\"] }}"
+            },
+            {
+              "name": "meta_faturamento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"meta_faturamento\"] }}"
+            },
+            {
+              "name": "desenvolver_prosperar",
+              "value": "={{ $node[\"formata_dados1\"].json[\"desenvolver_prosperar\"] }}"
+            },
+            {
+              "name": "maior_desafio",
+              "value": "={{ $node[\"formata_dados1\"].json[\"maior_desafio\"] }}"
+            },
+            {
+              "name": "porque_acredita",
+              "value": "={{ $node[\"formata_dados1\"].json[\"porque_acredita\"] }}"
+            },
+            {
+              "name": "expectativa",
+              "value": "={{ $node[\"formata_dados1\"].json[\"expectativa\"] }}"
+            },
+            {
+              "name": "porque_voce",
+              "value": "={{ $node[\"formata_dados1\"].json[\"porque_voce\"] }}"
+            },
+            {
+              "name": "comprometimento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"comprometimento\"] }}"
+            },
+            {
+              "name": "investimento",
+              "value": "={{ $node[\"formata_dados1\"].json[\"investimento\"] }}"
+            },
+            {
+              "name": "id_campo_segmento_clickup",
+              "value": "08279b52-51d7-4bf6-bddc-9f6ade0bbbf2"
+            },
+            {
+              "name": "id_campo_faturamento_clickup",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_meta_faturamento_clickup",
+              "value": "e0db01cd-81a3-47c9-a0cc-6ba43575d921"
+            },
+            {
+              "name": "id_campo_desenvolver_prosperar_clickup",
+              "value": "81b51f94-7551-4e1c-8ef0-d193d981023c"
+            },
+            {
+              "name": "id_campo_maior_desafio_clickup",
+              "value": "c9244aac-7fdc-4c45-92c1-61bd5e159d02"
+            },
+            {
+              "name": "id_campo_porque_acredita_clickup",
+              "value": "443985b5-ca79-4188-a7cb-899f1b3ecdcd"
+            },
+            {
+              "name": "id_campo_expectativa_clickup",
+              "value": "ac7efa91-935e-4443-bffa-0dd77207dcfa"
+            },
+            {
+              "name": "id_campo_porque_voce_clickup",
+              "value": "929d45b1-2256-42cc-9abf-00f649e57ab4"
+            },
+            {
+              "name": "id_campo_comprometimento_clickup",
+              "value": "a59d4006-877c-44b9-b1e2-39f119f946b0"
+            },
+            {
+              "name": "id_campo_investimento_clickup",
+              "value": "41ff8e34-078d-479e-ac1f-c50f36a5d0fc"
+            },
+            {
+              "name": "id_campo_email_clickup",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_telefone_clickup",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{$now.toFormat('dd/MM/yyyy HH:mm')}}"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "id_campo_link_whatsapp_clickup",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_situacao_atual_clickup",
+              "value": "be6701f6-e745-4613-b71c-2648ac9e9380"
+            },
+            {
+              "name": "id_campo_visto_clickup",
+              "value": "68ea5ae1-72d7-43d0-92d3-ee74b73db741"
+            },
+            {
+              "name": "link_whatsapp",
+              "value": "=wa.me/{{ $json[\"Telefone do Cliente - Formato Z-API\"] }}"
+            },
+            {
+              "name": "id_campo_se_clickup",
+              "value": "b3c89f54-d6ab-4a13-a96f-387f13cf259d"
+            },
+            {
+              "name": "valor_SE",
+              "value": "4a24666b-e2b6-4d73-9fb4-3d6288dc6450"
+            },
+            {
+              "name": "funil",
+              "value": "=Oferta_Direta"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "OD_V1"
+            },
+            {
+              "name": "qualificacao",
+              "value": "={{ $node[\"formata_dados1\"].json[\"qualificacao\"] }}"
+            },
+            {
+              "name": "data_resposta_type",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_aplicacao\"] }}"
+            },
+            {
+              "name": "id_ending_typeform",
+              "value": "={{ $node[\"formata_dados1\"].json[\"Ending\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "17285a8c-0733-41e4-846c-3056726cd612",
+      "name": "dados_validados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "aplicacao-preenchida-se",
+        "options": {}
+      },
+      "id": "3bd4b757-9b17-4dcd-95f8-77bf184c9ffd",
+      "name": "app_preenchida_v1_OD",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        980,
+        1020
+      ],
+      "webhookId": "bfd6aea6-0afa-41dd-8790-c03fc17d1dd4"
+    }
+  ],
+  "pinData": {
+    "qualificado (OSTpdqxW)": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookjumarques.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "5114",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-d48e56a197aec33b9a40c805b74c6de6-2d64cad7c8e9a9e5-01",
+            "x-forwarded-for": "18.204.78.134",
+            "x-forwarded-host": "n8nwebhookjumarques.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8d715749cb3a",
+            "x-real-ip": "18.204.78.134"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01HYDTY53S8144AGR8MPK63NCD",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "OSTpdqxW",
+              "token": "jb1xje1n0yobomv3so1tljb1xje6s28v",
+              "landed_at": "2024-05-21T15:03:37Z",
+              "submitted_at": "2024-05-21T15:04:53Z",
+              "hidden": {
+                "fonte": "xxxxx",
+                "utm_campaign": "xxxxx",
+                "utm_content": "xxxxx",
+                "utm_medium": "xxxxx",
+                "utm_source": "xxxxx",
+                "utm_term": "xxxxx"
+              },
+              "definition": {
+                "id": "OSTpdqxW",
+                "title": "[JM} Aplicação Sessão Estratégica 2024 (copy)",
+                "fields": [
+                  {
+                    "id": "WGt2wV9zH5Q0",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B",
+                    "type": "short_text",
+                    "title": "Qual o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "9mnI6X3DNOfN",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08",
+                    "type": "phone_number",
+                    "title": "Qual seu número de WhatsApp com DDD/DDI?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "DHKYHYvNPXdU",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978",
+                    "type": "email",
+                    "title": "E o seu E-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7SrXkkJpq1d7",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152",
+                    "type": "short_text",
+                    "title": "Qual seu @ do instagram?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "50b2GPRY81gB",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6",
+                    "type": "short_text",
+                    "title": "Qual sua profissão?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "GvbZzWHZNFaJ",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25",
+                    "type": "short_text",
+                    "title": "Qual seu maior desafio com a sua marca pessoal hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7zzJ35y5qkeA",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4",
+                    "type": "short_text",
+                    "title": "Qual sua maior dificuldade no seu negócio hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "hHhxdHqsP6Td",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe",
+                    "type": "short_text",
+                    "title": "Quais os seus serviços/infoprodutos hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "Yv2vKzC68P5Z",
+                    "ref": "3c658fe2-8bf0-470a-bfe9-17dd694326e6",
+                    "type": "multiple_choice",
+                    "title": "Quanto tempo você conhece a Ju Marques?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "rGbGhZ1hJoDR",
+                        "ref": "9955382f-46c5-441e-afbf-aa5595c8c66e",
+                        "label": "Não conheço, vim pelo anúncio"
+                      },
+                      {
+                        "id": "fILq0dALJRN7",
+                        "ref": "29f78950-0b21-4566-9fbf-3892a7d412c9",
+                        "label": "Menos de 3 meses"
+                      },
+                      {
+                        "id": "CghzE8TLzqQO",
+                        "ref": "3a532e76-7cab-4f8a-8000-1553425587ed",
+                        "label": "Entre 3 e 6 meses"
+                      },
+                      {
+                        "id": "qVifoJwbvKWs",
+                        "ref": "7db91e38-e570-4675-9411-a3e6adf16b90",
+                        "label": "Mais de 6 meses"
+                      },
+                      {
+                        "id": "WvDwJyakR6L2",
+                        "ref": "b0a26553-d5d0-4435-938d-081b9e04e8f8",
+                        "label": "Mais de 1 ano"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "N37lpQbDkEBU",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402",
+                    "type": "multiple_choice",
+                    "title": "Qual seu faturamento ou salário mensal?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "5vj0XMK0wdpd",
+                        "ref": "92b9fcec-9637-4f0e-bbff-230fbaff2ded",
+                        "label": "Até R$ 3.000,00"
+                      },
+                      {
+                        "id": "HMahdI6ve24q",
+                        "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2",
+                        "label": "De R$ 3.001,00 a R$ 5.000,00"
+                      },
+                      {
+                        "id": "3a6UYSiqYWSf",
+                        "ref": "1193d9a7-199b-4a2d-9226-473e4dc2db5a",
+                        "label": "De R$ 5.001,00 a R$ 10.000,00"
+                      },
+                      {
+                        "id": "fTFJIfC0mGZr",
+                        "ref": "5e4f439a-470a-4447-bb1e-4adba7b47bc5",
+                        "label": "De  R$ 10.001,00 a R$ 30.000,00"
+                      },
+                      {
+                        "id": "GwFiJckkP6Po",
+                        "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df",
+                        "label": "Mais de R$ 30.000,00"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "wbcH8o718US2",
+                    "ref": "361f7d02-2333-4047-83cd-31088b790076",
+                    "title": "Consultoria de Posicionamento - Juliana Marques",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://calendly.com/jumarquesbrand/consultoria-de-posicionamento-juliana-marques/?name={{field:01HKA5YZ3YTM0GH2FCA3H39W6B}}&email={{field:3012b8d0-5769-48ce-8ccf-ae4026c37978}}&a1={{field:f5d501c4-d5cf-4436-ba57-73f376b25c08}}&a2={{field:3e0af1be-ca43-4fd6-8a4f-3aa872821152}}&a3={{field:6427ecbd-23cd-4490-8e10-483b8212e402}}"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Jailson Testes",
+                  "field": {
+                    "id": "WGt2wV9zH5Q0",
+                    "type": "short_text",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5571992594557",
+                  "field": {
+                    "id": "9mnI6X3DNOfN",
+                    "type": "phone_number",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "jailsontestes@gmail.com",
+                  "field": {
+                    "id": "DHKYHYvNPXdU",
+                    "type": "email",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testesjailson",
+                  "field": {
+                    "id": "7SrXkkJpq1d7",
+                    "type": "short_text",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Profissão Teste",
+                  "field": {
+                    "id": "50b2GPRY81gB",
+                    "type": "short_text",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Maior desafio aqui",
+                  "field": {
+                    "id": "GvbZzWHZNFaJ",
+                    "type": "short_text",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Maior dificuldade aqui",
+                  "field": {
+                    "id": "7zzJ35y5qkeA",
+                    "type": "short_text",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Serviços aqui",
+                  "field": {
+                    "id": "hHhxdHqsP6Td",
+                    "type": "short_text",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "WvDwJyakR6L2",
+                    "label": "Mais de 1 ano",
+                    "ref": "b0a26553-d5d0-4435-938d-081b9e04e8f8"
+                  },
+                  "field": {
+                    "id": "Yv2vKzC68P5Z",
+                    "type": "multiple_choice",
+                    "ref": "3c658fe2-8bf0-470a-bfe9-17dd694326e6"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "GwFiJckkP6Po",
+                    "label": "Mais de R$ 30.000,00",
+                    "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df"
+                  },
+                  "field": {
+                    "id": "N37lpQbDkEBU",
+                    "type": "multiple_choice",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "wbcH8o718US2",
+                "ref": "361f7d02-2333-4047-83cd-31088b790076"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookjumarques.automagicbots.com.br/webhook/aplicacao-preenchida",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "qualificado (KscRSbSl)": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookjumarques.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "5097",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-71b0d149e35e9a9e3e87ee844d717edc-1a16a487cd5ae95d-01",
+            "x-forwarded-for": "34.230.177.131",
+            "x-forwarded-host": "n8nwebhookjumarques.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8d715749cb3a",
+            "x-real-ip": "34.230.177.131"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01HYDV5G6MYY7QJVD2D7S46EKP",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "KscRSbSl",
+              "token": "9wuzpx7gdqn7o3rft9wuzprsbtdajx0y",
+              "landed_at": "2024-05-21T15:06:40Z",
+              "submitted_at": "2024-05-21T15:08:54Z",
+              "hidden": {
+                "fonte": "xxxxx"
+              },
+              "definition": {
+                "id": "KscRSbSl",
+                "title": "[JM} Aplicação mentoria 2024 (copy)",
+                "fields": [
+                  {
+                    "id": "00NiJ1ljX0XO",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B",
+                    "type": "short_text",
+                    "title": "Qual o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "dNaCHA80vr12",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08",
+                    "type": "phone_number",
+                    "title": "Qual seu número de WhatsApp com DDD/DDI?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "HBqEk2Ys2SGk",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978",
+                    "type": "email",
+                    "title": "E o seu E-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7dkIDq3G233E",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152",
+                    "type": "short_text",
+                    "title": "Qual seu @ do instagram?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "aXIZRfxzgfus",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6",
+                    "type": "short_text",
+                    "title": "Qual sua profissão?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "Ggn1SortyZAa",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe",
+                    "type": "short_text",
+                    "title": "Quais os seus serviços/infoprodutos hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "lS5nj4T431TY",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25",
+                    "type": "short_text",
+                    "title": "Qual seu maior desafio com a sua marca pessoal hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "K2Vyd6aJBrz9",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4",
+                    "type": "short_text",
+                    "title": "Qual sua maior dificuldade no seu negócio hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "plLXYwdFkEzl",
+                    "ref": "91a49f38-ed36-4551-a8b4-4b9e4d3b6632",
+                    "type": "short_text",
+                    "title": "Por que você acredita que participar da mentoria é a oportunidade ideal para você e para o crescimento do seu negócio?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "zPqg0bV1kcBH",
+                    "ref": "0d3ff1da-66e3-44f6-aebd-f6c21f7185a4",
+                    "type": "short_text",
+                    "title": "Eu tenho recursos financeiros para investir na orientação da Ju, agora.Também reconheço que ter o olhar da Ju me poupará custos inestimáveis de tempo, falhas desnecessárias e crescimento lento.Eu concordo que esse é o meu momento para esse investimento.Qual seu pensamento sobre essa afirmação?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "cWyoEJ0uHcqM",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402",
+                    "type": "multiple_choice",
+                    "title": "Qual seu faturamento ou salário mensal?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "pIM6ntrUAkaX",
+                        "ref": "92b9fcec-9637-4f0e-bbff-230fbaff2ded",
+                        "label": "Até R$ 3.000,00"
+                      },
+                      {
+                        "id": "OW4EV84492ZH",
+                        "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2",
+                        "label": "De R$ 3.001,00 a R$ 5.000,00"
+                      },
+                      {
+                        "id": "GxQZe01OPcAV",
+                        "ref": "1193d9a7-199b-4a2d-9226-473e4dc2db5a",
+                        "label": "De R$ 5.001,00 a R$ 10.000,00"
+                      },
+                      {
+                        "id": "yXD8BE8zrO4S",
+                        "ref": "5e4f439a-470a-4447-bb1e-4adba7b47bc5",
+                        "label": "De  R$ 10.001,00 a R$ 30.000,00"
+                      },
+                      {
+                        "id": "lISKemW3yEYA",
+                        "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df",
+                        "label": "Mais de R$ 30.000,00"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "zwGNAiUu1My2",
+                    "ref": "e1334e75-7137-403a-8c6b-f50174ad52f3",
+                    "title": "Consultoria de Posicionamento - Juliana Marques",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://calendly.com/jumarquesbrand/consultoria-de-posicionamento-juliana-marques/?name={{field:01HKA5YZ3YTM0GH2FCA3H39W6B}}&email={{field:3012b8d0-5769-48ce-8ccf-ae4026c37978}}&a1={{field:f5d501c4-d5cf-4436-ba57-73f376b25c08}}&a2={{field:3e0af1be-ca43-4fd6-8a4f-3aa872821152}}&a3={{field:6427ecbd-23cd-4490-8e10-483b8212e402}}"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Jailson Teste Desqualificados",
+                  "field": {
+                    "id": "00NiJ1ljX0XO",
+                    "type": "short_text",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5571992594557",
+                  "field": {
+                    "id": "dNaCHA80vr12",
+                    "type": "phone_number",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "jailsontestesdesqualificados@teste.com",
+                  "field": {
+                    "id": "HBqEk2Ys2SGk",
+                    "type": "email",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testededesqualififcados@gmail.br",
+                  "field": {
+                    "id": "7dkIDq3G233E",
+                    "type": "short_text",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Profissãoa Aqui",
+                  "field": {
+                    "id": "aXIZRfxzgfus",
+                    "type": "short_text",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Serviços aqui",
+                  "field": {
+                    "id": "Ggn1SortyZAa",
+                    "type": "short_text",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Maior desafio aqui",
+                  "field": {
+                    "id": "lS5nj4T431TY",
+                    "type": "short_text",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Maior dificuldade aqui",
+                  "field": {
+                    "id": "K2Vyd6aJBrz9",
+                    "type": "short_text",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Maior desafio aqui",
+                  "field": {
+                    "id": "plLXYwdFkEzl",
+                    "type": "short_text",
+                    "ref": "91a49f38-ed36-4551-a8b4-4b9e4d3b6632"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Afirmativo",
+                  "field": {
+                    "id": "zPqg0bV1kcBH",
+                    "type": "short_text",
+                    "ref": "0d3ff1da-66e3-44f6-aebd-f6c21f7185a4"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "lISKemW3yEYA",
+                    "label": "Mais de R$ 30.000,00",
+                    "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df"
+                  },
+                  "field": {
+                    "id": "cWyoEJ0uHcqM",
+                    "type": "multiple_choice",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "zwGNAiUu1My2",
+                "ref": "e1334e75-7137-403a-8c6b-f50174ad52f3"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookjumarques.automagicbots.com.br/webhook/aplicacao-preenchida_v2",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "desqualificado (KscRSbSl)": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookjumarques.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "4782",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-e99a0ce374d3608560e1508477480940-a135fb29f40a989c-01",
+            "x-forwarded-for": "18.204.78.134",
+            "x-forwarded-host": "n8nwebhookjumarques.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8d715749cb3a",
+            "x-real-ip": "18.204.78.134"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01HYDVEZBQVAT5YXZ3RDS0B2HH",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "KscRSbSl",
+              "token": "c8zf7idons417ncuuk62c8zf7it95eyh",
+              "landed_at": "2024-05-21T15:11:37Z",
+              "submitted_at": "2024-05-21T15:14:04Z",
+              "hidden": {
+                "fonte": ""
+              },
+              "definition": {
+                "id": "KscRSbSl",
+                "title": "[JM} Aplicação mentoria 2024 (copy)",
+                "fields": [
+                  {
+                    "id": "00NiJ1ljX0XO",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B",
+                    "type": "short_text",
+                    "title": "Qual o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "dNaCHA80vr12",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08",
+                    "type": "phone_number",
+                    "title": "Qual seu número de WhatsApp com DDD/DDI?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "HBqEk2Ys2SGk",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978",
+                    "type": "email",
+                    "title": "E o seu E-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7dkIDq3G233E",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152",
+                    "type": "short_text",
+                    "title": "Qual seu @ do instagram?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "aXIZRfxzgfus",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6",
+                    "type": "short_text",
+                    "title": "Qual sua profissão?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "Ggn1SortyZAa",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe",
+                    "type": "short_text",
+                    "title": "Quais os seus serviços/infoprodutos hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "lS5nj4T431TY",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25",
+                    "type": "short_text",
+                    "title": "Qual seu maior desafio com a sua marca pessoal hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "K2Vyd6aJBrz9",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4",
+                    "type": "short_text",
+                    "title": "Qual sua maior dificuldade no seu negócio hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "plLXYwdFkEzl",
+                    "ref": "91a49f38-ed36-4551-a8b4-4b9e4d3b6632",
+                    "type": "short_text",
+                    "title": "Por que você acredita que participar da mentoria é a oportunidade ideal para você e para o crescimento do seu negócio?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "zPqg0bV1kcBH",
+                    "ref": "0d3ff1da-66e3-44f6-aebd-f6c21f7185a4",
+                    "type": "short_text",
+                    "title": "Eu tenho recursos financeiros para investir na orientação da Ju, agora.Também reconheço que ter o olhar da Ju me poupará custos inestimáveis de tempo, falhas desnecessárias e crescimento lento.Eu concordo que esse é o meu momento para esse investimento.Qual seu pensamento sobre essa afirmação?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "cWyoEJ0uHcqM",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402",
+                    "type": "multiple_choice",
+                    "title": "Qual seu faturamento ou salário mensal?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "pIM6ntrUAkaX",
+                        "ref": "92b9fcec-9637-4f0e-bbff-230fbaff2ded",
+                        "label": "Até R$ 3.000,00"
+                      },
+                      {
+                        "id": "OW4EV84492ZH",
+                        "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2",
+                        "label": "De R$ 3.001,00 a R$ 5.000,00"
+                      },
+                      {
+                        "id": "GxQZe01OPcAV",
+                        "ref": "1193d9a7-199b-4a2d-9226-473e4dc2db5a",
+                        "label": "De R$ 5.001,00 a R$ 10.000,00"
+                      },
+                      {
+                        "id": "yXD8BE8zrO4S",
+                        "ref": "5e4f439a-470a-4447-bb1e-4adba7b47bc5",
+                        "label": "De  R$ 10.001,00 a R$ 30.000,00"
+                      },
+                      {
+                        "id": "lISKemW3yEYA",
+                        "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df",
+                        "label": "Mais de R$ 30.000,00"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "1f6Oe24aU63J",
+                    "ref": "275840a9-706e-4a24-b367-4e78cd534f56",
+                    "title": "https://www.jumarques.com/aplicacao-mentoria-obrigada/",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://www.jumarques.com/aplicacao-mentoria-obrigada/"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Jailson Teste",
+                  "field": {
+                    "id": "00NiJ1ljX0XO",
+                    "type": "short_text",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5571992594557",
+                  "field": {
+                    "id": "dNaCHA80vr12",
+                    "type": "phone_number",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "jailsontestequalificado@gmail.com",
+                  "field": {
+                    "id": "HBqEk2Ys2SGk",
+                    "type": "email",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testequalificado.br",
+                  "field": {
+                    "id": "7dkIDq3G233E",
+                    "type": "short_text",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Profissão aqui",
+                  "field": {
+                    "id": "aXIZRfxzgfus",
+                    "type": "short_text",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Serviços aqui",
+                  "field": {
+                    "id": "Ggn1SortyZAa",
+                    "type": "short_text",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Desafio aqui",
+                  "field": {
+                    "id": "lS5nj4T431TY",
+                    "type": "short_text",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Dificuldade aqui",
+                  "field": {
+                    "id": "K2Vyd6aJBrz9",
+                    "type": "short_text",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Pq oportunidade",
+                  "field": {
+                    "id": "plLXYwdFkEzl",
+                    "type": "short_text",
+                    "ref": "91a49f38-ed36-4551-a8b4-4b9e4d3b6632"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Concordo",
+                  "field": {
+                    "id": "zPqg0bV1kcBH",
+                    "type": "short_text",
+                    "ref": "0d3ff1da-66e3-44f6-aebd-f6c21f7185a4"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "OW4EV84492ZH",
+                    "label": "De R$ 3.001,00 a R$ 5.000,00",
+                    "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2"
+                  },
+                  "field": {
+                    "id": "cWyoEJ0uHcqM",
+                    "type": "multiple_choice",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "1f6Oe24aU63J",
+                "ref": "275840a9-706e-4a24-b367-4e78cd534f56"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookjumarques.automagicbots.com.br/webhook/aplicacao-preenchida_v2",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "desqualificado (OSTpdqxW)": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookjumarques.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "5570",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-1fd6eac99703622a5b7bdca47764e901-574db037029e8682-01",
+            "x-forwarded-for": "18.210.136.162",
+            "x-forwarded-host": "n8nwebhookjumarques.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8d715749cb3a",
+            "x-real-ip": "18.210.136.162"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01HYDVPXY1Q55Z9QRREVSZGWCN",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "OSTpdqxW",
+              "token": "a9fkzpa4b4cno2hid6rva9fkz8aezplj",
+              "landed_at": "2024-05-21T15:16:37Z",
+              "submitted_at": "2024-05-21T15:18:25Z",
+              "hidden": {
+                "fonte": "xxxxx",
+                "utm_campaign": "xxxxx",
+                "utm_content": "xxxxx",
+                "utm_medium": "xxxxx",
+                "utm_source": "xxxxx",
+                "utm_term": "xxxxx"
+              },
+              "definition": {
+                "id": "OSTpdqxW",
+                "title": "[JM} Aplicação Sessão Estratégica 2024 (copy)",
+                "fields": [
+                  {
+                    "id": "WGt2wV9zH5Q0",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B",
+                    "type": "short_text",
+                    "title": "Qual o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "9mnI6X3DNOfN",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08",
+                    "type": "phone_number",
+                    "title": "Qual seu número de WhatsApp com DDD/DDI?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "DHKYHYvNPXdU",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978",
+                    "type": "email",
+                    "title": "E o seu E-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7SrXkkJpq1d7",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152",
+                    "type": "short_text",
+                    "title": "Qual seu @ do instagram?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "50b2GPRY81gB",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6",
+                    "type": "short_text",
+                    "title": "Qual sua profissão?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "GvbZzWHZNFaJ",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25",
+                    "type": "short_text",
+                    "title": "Qual seu maior desafio com a sua marca pessoal hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "7zzJ35y5qkeA",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4",
+                    "type": "short_text",
+                    "title": "Qual sua maior dificuldade no seu negócio hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "hHhxdHqsP6Td",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe",
+                    "type": "short_text",
+                    "title": "Quais os seus serviços/infoprodutos hoje?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "Yv2vKzC68P5Z",
+                    "ref": "3c658fe2-8bf0-470a-bfe9-17dd694326e6",
+                    "type": "multiple_choice",
+                    "title": "Quanto tempo você conhece a Ju Marques?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "rGbGhZ1hJoDR",
+                        "ref": "9955382f-46c5-441e-afbf-aa5595c8c66e",
+                        "label": "Não conheço, vim pelo anúncio"
+                      },
+                      {
+                        "id": "fILq0dALJRN7",
+                        "ref": "29f78950-0b21-4566-9fbf-3892a7d412c9",
+                        "label": "Menos de 3 meses"
+                      },
+                      {
+                        "id": "CghzE8TLzqQO",
+                        "ref": "3a532e76-7cab-4f8a-8000-1553425587ed",
+                        "label": "Entre 3 e 6 meses"
+                      },
+                      {
+                        "id": "qVifoJwbvKWs",
+                        "ref": "7db91e38-e570-4675-9411-a3e6adf16b90",
+                        "label": "Mais de 6 meses"
+                      },
+                      {
+                        "id": "WvDwJyakR6L2",
+                        "ref": "b0a26553-d5d0-4435-938d-081b9e04e8f8",
+                        "label": "Mais de 1 ano"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "N37lpQbDkEBU",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402",
+                    "type": "multiple_choice",
+                    "title": "Qual seu faturamento ou salário mensal?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "5vj0XMK0wdpd",
+                        "ref": "92b9fcec-9637-4f0e-bbff-230fbaff2ded",
+                        "label": "Até R$ 3.000,00"
+                      },
+                      {
+                        "id": "HMahdI6ve24q",
+                        "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2",
+                        "label": "De R$ 3.001,00 a R$ 5.000,00"
+                      },
+                      {
+                        "id": "3a6UYSiqYWSf",
+                        "ref": "1193d9a7-199b-4a2d-9226-473e4dc2db5a",
+                        "label": "De R$ 5.001,00 a R$ 10.000,00"
+                      },
+                      {
+                        "id": "fTFJIfC0mGZr",
+                        "ref": "5e4f439a-470a-4447-bb1e-4adba7b47bc5",
+                        "label": "De  R$ 10.001,00 a R$ 30.000,00"
+                      },
+                      {
+                        "id": "GwFiJckkP6Po",
+                        "ref": "89f43aae-086d-4cce-af71-5dc59c8a29df",
+                        "label": "Mais de R$ 30.000,00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "xP8z7z9GCnTs",
+                    "ref": "f632decb-6f2a-4928-b204-fd887ca4435e",
+                    "type": "multiple_choice",
+                    "title": "Caso você seja selecionada para o Diagnóstico, qual o melhor horário para realizar a vídeo chamada?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "aWJis3CFYZxS",
+                        "ref": "d31a9fae-a1eb-4078-b771-55f43cda14f8",
+                        "label": "Pela manhã"
+                      },
+                      {
+                        "id": "fiW6tsPaEeNr",
+                        "ref": "e191ad77-1a7c-4db3-aec4-1e760c385cc8",
+                        "label": "A tarde"
+                      },
+                      {
+                        "id": "mpHnz5TR3oyZ",
+                        "ref": "2d93c05a-78e4-4948-bb82-64e3e636b9e6",
+                        "label": "A noite"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "CpzTo29KZ3XC",
+                    "ref": "275840a9-706e-4a24-b367-4e78cd534f56",
+                    "title": "https://www.jumarques.com/sessao-estrategica-obrigada",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://www.jumarques.com/sessao-estrategica-obrigada"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Jailson Teste Desqualif",
+                  "field": {
+                    "id": "WGt2wV9zH5Q0",
+                    "type": "short_text",
+                    "ref": "01HKA5YZ3YTM0GH2FCA3H39W6B"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5571992594557",
+                  "field": {
+                    "id": "9mnI6X3DNOfN",
+                    "type": "phone_number",
+                    "ref": "f5d501c4-d5cf-4436-ba57-73f376b25c08"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "jailsontestedesqualif@gmail.com",
+                  "field": {
+                    "id": "DHKYHYvNPXdU",
+                    "type": "email",
+                    "ref": "3012b8d0-5769-48ce-8ccf-ae4026c37978"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testedesqualifi",
+                  "field": {
+                    "id": "7SrXkkJpq1d7",
+                    "type": "short_text",
+                    "ref": "3e0af1be-ca43-4fd6-8a4f-3aa872821152"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Profissaoaqui",
+                  "field": {
+                    "id": "50b2GPRY81gB",
+                    "type": "short_text",
+                    "ref": "446b00e3-ff6b-42d4-b96a-f86222faeca6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "MaiorDesafioAqui",
+                  "field": {
+                    "id": "GvbZzWHZNFaJ",
+                    "type": "short_text",
+                    "ref": "c87d687b-1aa2-4c4d-8eaa-de31cce50d25"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "MaiorDificuldadeAqui",
+                  "field": {
+                    "id": "7zzJ35y5qkeA",
+                    "type": "short_text",
+                    "ref": "390d9ad2-0774-42a0-a806-c651174689e4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "ServiçosAqui",
+                  "field": {
+                    "id": "hHhxdHqsP6Td",
+                    "type": "short_text",
+                    "ref": "b9bbbdf4-d3a4-475f-b05b-4a480c625ffe"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "WvDwJyakR6L2",
+                    "label": "Mais de 1 ano",
+                    "ref": "b0a26553-d5d0-4435-938d-081b9e04e8f8"
+                  },
+                  "field": {
+                    "id": "Yv2vKzC68P5Z",
+                    "type": "multiple_choice",
+                    "ref": "3c658fe2-8bf0-470a-bfe9-17dd694326e6"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "HMahdI6ve24q",
+                    "label": "De R$ 3.001,00 a R$ 5.000,00",
+                    "ref": "81951b72-574a-43ef-a1a6-dd4519f8b7e2"
+                  },
+                  "field": {
+                    "id": "N37lpQbDkEBU",
+                    "type": "multiple_choice",
+                    "ref": "6427ecbd-23cd-4490-8e10-483b8212e402"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "mpHnz5TR3oyZ",
+                    "label": "A noite",
+                    "ref": "2d93c05a-78e4-4948-bb82-64e3e636b9e6"
+                  },
+                  "field": {
+                    "id": "xP8z7z9GCnTs",
+                    "type": "multiple_choice",
+                    "ref": "f632decb-6f2a-4928-b204-fd887ca4435e"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "CpzTo29KZ3XC",
+                "ref": "275840a9-706e-4a24-b367-4e78cd534f56"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookjumarques.automagicbots.com.br/webhook/aplicacao-preenchida",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "app_preenchida_v1_(pAwECWHC)": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "7633",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-0a883db1d3fd0ef2da8be576a5f358a5-964af0c44a86884f-01",
+            "x-forwarded-for": "34.230.177.131",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "34.230.177.131"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01J2XZH866DK1ZYX2K921VJ442",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "MKlUgQzX",
+              "token": "vb8l03gsbk72n5q9zd4p2uvb8l03gppo",
+              "landed_at": "2024-07-16T14:33:51Z",
+              "submitted_at": "2024-07-16T14:35:51Z",
+              "definition": {
+                "id": "MKlUgQzX",
+                "title": "[JDP] - Webinario 12/07/2024",
+                "fields": [
+                  {
+                    "id": "oSGSYugHw1kv",
+                    "ref": "01J2KSJJ5N8DWHHNB0GQG1XK8W",
+                    "type": "short_text",
+                    "title": "Qual é o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "vqBpiznchS5C",
+                    "ref": "2687c4a2-ed0f-4e98-b62c-35f3c51b25a2",
+                    "type": "email",
+                    "title": "Qual é o seu e-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "1iKQqhxypUn1",
+                    "ref": "559c2fe3-f107-410d-8fb8-6b87c37823d4",
+                    "type": "phone_number",
+                    "title": "Qual é o seu telefone?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "T649RQtTqboB",
+                    "ref": "055edb0d-821f-4d63-9dd1-27bcad1200b1",
+                    "type": "short_text",
+                    "title": "Qual é o seu segmento de mercado? (Seja específico)",
+                    "properties": {}
+                  },
+                  {
+                    "id": "8oVuCkzGkILY",
+                    "ref": "35af0dbc-8f6f-4ee4-aa6a-835a19afcc83",
+                    "type": "multiple_choice",
+                    "title": "Qual é o seu faturamento mensal atual?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "Bjue87fUSLjW",
+                        "ref": "f2f8820f-2d3e-45ad-89a3-f12d604c1867",
+                        "label": "Não tenho empresa"
+                      },
+                      {
+                        "id": "lAMz8m9vQPe8",
+                        "ref": "a0a199c9-5f8d-42db-b277-afa79c15edd7",
+                        "label": "Até R$20.000"
+                      },
+                      {
+                        "id": "yy7RlJyzYad5",
+                        "ref": "8b39b85c-6673-491a-8b7c-1ca7dc1246cf",
+                        "label": "De R$20.001 a R$50.000"
+                      },
+                      {
+                        "id": "2K3YRqDicRn1",
+                        "ref": "344c6351-d407-400a-905d-559378aadafd",
+                        "label": "De R$50.001 a R$100.000"
+                      },
+                      {
+                        "id": "iMs5qoQEEkD6",
+                        "ref": "4a782f8f-4490-4bff-bd85-caf805c82bb6",
+                        "label": "De R$100.001 a R$500.000"
+                      },
+                      {
+                        "id": "fvJ1vdrAh1Mt",
+                        "ref": "01b3088e-1603-425c-9122-c1d5a5f8559c",
+                        "label": "De R$500.001 a R$1.000.000"
+                      },
+                      {
+                        "id": "HpYqVML4i94l",
+                        "ref": "d27c93ff-5c75-4645-bd0a-03674b58c7dc",
+                        "label": "De R$1.000.001 a R$5.000.000"
+                      },
+                      {
+                        "id": "8IfDKfKoW25n",
+                        "ref": "6ad0f029-14e2-4008-a077-546d659d1b04",
+                        "label": "De R$5.000.001 a R$10.000.000"
+                      },
+                      {
+                        "id": "Yvqw5InwWa4i",
+                        "ref": "ce4f555a-cffc-4e4b-9e7e-35253bf0b187",
+                        "label": "Acima de R$10.000.000"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "HlX9UhPaUNNv",
+                    "ref": "d84b56ad-7270-4368-bd88-270093307220",
+                    "type": "multiple_choice",
+                    "title": "Qual é a sua meta de faturamento para os próximos 12 meses?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "TXaRKg1D5kWP",
+                        "ref": "0d06cec3-10ac-4379-8cff-3a780f39c8ec",
+                        "label": "Até R$20.000"
+                      },
+                      {
+                        "id": "qq9oK5ngdE85",
+                        "ref": "04f683ba-e39d-462e-b61e-a495474636b9",
+                        "label": "De R$20.001 a R$50.000"
+                      },
+                      {
+                        "id": "DwIt58qZ9CcF",
+                        "ref": "f33415e3-2d0a-45e5-8ca1-cf8ae8336425",
+                        "label": "De R$50.001 a R$100.000"
+                      },
+                      {
+                        "id": "LIGyOe0ZCVdr",
+                        "ref": "647c7b5e-99a7-486f-a5fe-6e2591f4d448",
+                        "label": "De R$100.001 a R$500.000"
+                      },
+                      {
+                        "id": "3qPbMRvZrIVQ",
+                        "ref": "de87369c-0e4b-4866-b754-e9675d61f284",
+                        "label": "De R$500.001 a R$1.000.000"
+                      },
+                      {
+                        "id": "BU392is2toBe",
+                        "ref": "2fb387af-f22d-4c1a-addb-51c22d823528",
+                        "label": "De R$1.000.001 a R$5.000.000"
+                      },
+                      {
+                        "id": "QArMc0wTp02j",
+                        "ref": "39838e7a-ba21-409f-861a-d24b7dc2b898",
+                        "label": "De R$5.000.001 a R$10.000.000"
+                      },
+                      {
+                        "id": "U3HDGKWRvKSv",
+                        "ref": "77d79171-d4b2-48dc-a997-4c881c5a7b80",
+                        "label": "De R$10.000.001 a R$50.000.000"
+                      },
+                      {
+                        "id": "BY9ZytimllAp",
+                        "ref": "ee091421-7260-4fcf-9c71-05309957fc9f",
+                        "label": "Acima de R$50.000.000"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "wstjsN1offak",
+                    "ref": "00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c",
+                    "type": "long_text",
+                    "title": "Em quais áreas da vida você quer desenvolver e prosperar mais?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "tJ7Gp9C7f5D4",
+                    "ref": "26555462-1ca2-4fd1-8a1b-f05e06348ff6",
+                    "type": "long_text",
+                    "title": "Qual é o seu maior desafio atualmente (profissional ou pessoal)?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "W9q6GfSq5sI6",
+                    "ref": "1fa59597-6372-4e52-88cb-98899a431381",
+                    "type": "long_text",
+                    "title": "Por que você acredita que Carlos Wizard e equipe podem ajudar você a superar esse desafio?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "marVu1arR5TL",
+                    "ref": "eaf0cda6-e068-4383-a342-2ae40e2372b8",
+                    "type": "long_text",
+                    "title": "Quais são as suas expectativas para a Jornada dos Pioneiros e o Programa de aceleração?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "N89AndzpxTPv",
+                    "ref": "ce8f28ed-707f-438f-9126-03ead6644650",
+                    "type": "long_text",
+                    "title": "Você sabe que as vagas são *extremamente limitadas* e que a sabedoria entregue nesta jornada *não é para qualquer um*. Por que você deveria ser escolhido?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "neI3KXdp1Ce2",
+                    "ref": "6d2d633e-af60-465f-9c22-4f95d1eebe4a",
+                    "type": "multiple_choice",
+                    "title": "Caso seja aprovado, você se compromete a *investir seu tempo e dedicação*, entregando o seu *máximo* em tudo que for orientado tanto na Jornada quanto no Programa de Aceleração?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "YRabmbdEuohQ",
+                        "ref": "2f2714ec-5c4a-4f5a-ac80-d06b064f29a3",
+                        "label": "Sim"
+                      },
+                      {
+                        "id": "MLSYnMdRtsQX",
+                        "ref": "e07e3ded-f593-4ba5-835b-60d5a3e9f2ac",
+                        "label": "Não"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "G3LivbUGZlO2",
+                    "ref": "84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61",
+                    "type": "multiple_choice",
+                    "title": "Caso aprovado, como você pretende fazer o pagamento do valor inicial?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "v3CTryNIriCm",
+                        "ref": "7c090c83-e6e9-45a2-8256-f1e9ceea6b28",
+                        "label": "R$ 34.900,00 à vista (PIX ou transferência)"
+                      },
+                      {
+                        "id": "sXOE9DBDcsdf",
+                        "ref": "39c6cafc-5f81-4c73-98b0-e3c95981dd02",
+                        "label": "R$ 34.900,00 parcelado (em até 21x)"
+                      },
+                      {
+                        "id": "788uzPIje6jv",
+                        "ref": "864b4a4e-05be-4b47-a4c0-97cfd30b5366",
+                        "label": "Ainda não possuo o valor do investimento disponível"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "p3N4hSOta0ej",
+                    "ref": "thankyou-screen",
+                    "title": "Calendly Jornada",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://calendly.com/d/cn83-s2b-gzr/alinhamento-sobre-jornada-dos-pioneiros"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Mateus Diniz (Automagic Bots)",
+                  "field": {
+                    "id": "oSGSYugHw1kv",
+                    "type": "short_text",
+                    "ref": "01J2KSJJ5N8DWHHNB0GQG1XK8W"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "mateusdiniz@automagicbots.com.br",
+                  "field": {
+                    "id": "vqBpiznchS5C",
+                    "type": "email",
+                    "ref": "2687c4a2-ed0f-4e98-b62c-35f3c51b25a2"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5562981196678",
+                  "field": {
+                    "id": "1iKQqhxypUn1",
+                    "type": "phone_number",
+                    "ref": "559c2fe3-f107-410d-8fb8-6b87c37823d4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "automações digitais",
+                  "field": {
+                    "id": "T649RQtTqboB",
+                    "type": "short_text",
+                    "ref": "055edb0d-821f-4d63-9dd1-27bcad1200b1"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "lAMz8m9vQPe8",
+                    "label": "Até R$20.000",
+                    "ref": "a0a199c9-5f8d-42db-b277-afa79c15edd7"
+                  },
+                  "field": {
+                    "id": "8oVuCkzGkILY",
+                    "type": "multiple_choice",
+                    "ref": "35af0dbc-8f6f-4ee4-aa6a-835a19afcc83"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "DwIt58qZ9CcF",
+                    "label": "De R$50.001 a R$100.000",
+                    "ref": "f33415e3-2d0a-45e5-8ca1-cf8ae8336425"
+                  },
+                  "field": {
+                    "id": "HlX9UhPaUNNv",
+                    "type": "multiple_choice",
+                    "ref": "d84b56ad-7270-4368-bd88-270093307220"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "relacionamento e empresa",
+                  "field": {
+                    "id": "wstjsN1offak",
+                    "type": "long_text",
+                    "ref": "00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "faturar mais",
+                  "field": {
+                    "id": "tJ7Gp9C7f5D4",
+                    "type": "long_text",
+                    "ref": "26555462-1ca2-4fd1-8a1b-f05e06348ff6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "porque são os melhores do mercado",
+                  "field": {
+                    "id": "W9q6GfSq5sI6",
+                    "type": "long_text",
+                    "ref": "1fa59597-6372-4e52-88cb-98899a431381"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "atingir níveis maiores",
+                  "field": {
+                    "id": "marVu1arR5TL",
+                    "type": "long_text",
+                    "ref": "eaf0cda6-e068-4383-a342-2ae40e2372b8"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "porque tenho grande capacidade de crescimento",
+                  "field": {
+                    "id": "N89AndzpxTPv",
+                    "type": "long_text",
+                    "ref": "ce8f28ed-707f-438f-9126-03ead6644650"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "YRabmbdEuohQ",
+                    "label": "Sim",
+                    "ref": "2f2714ec-5c4a-4f5a-ac80-d06b064f29a3"
+                  },
+                  "field": {
+                    "id": "neI3KXdp1Ce2",
+                    "type": "multiple_choice",
+                    "ref": "6d2d633e-af60-465f-9c22-4f95d1eebe4a"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "sXOE9DBDcsdf",
+                    "label": "R$ 34.900,00 parcelado (em até 21x)",
+                    "ref": "39c6cafc-5f81-4c73-98b0-e3c95981dd02"
+                  },
+                  "field": {
+                    "id": "G3LivbUGZlO2",
+                    "type": "multiple_choice",
+                    "ref": "84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "p3N4hSOta0ej",
+                "ref": "thankyou-screen"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/aplicacao-preenchida-webinar",
+          "executionMode": "production"
+        }
+      }
+    ],
+    "app_preenchida_v1_OD": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "user-agent": "Typeform Webhooks",
+            "content-length": "7535",
+            "accept-encoding": "gzip",
+            "content-type": "application/json",
+            "traceparent": "00-5862296963a57463ba6702d93ff7fb0b-cd9c39f60e1e184d-01",
+            "x-forwarded-for": "34.230.177.131",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "b2cb7f3e3187",
+            "x-real-ip": "34.230.177.131"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_id": "01J3N6R48231DJT0N4H3HEZ3P2",
+            "event_type": "form_response",
+            "form_response": {
+              "form_id": "x4NYFd1T",
+              "token": "9bbowcb8aljmyfchd79bbowbol3bybzd",
+              "landed_at": "2024-07-25T15:03:36Z",
+              "submitted_at": "2024-07-25T15:04:29Z",
+              "definition": {
+                "id": "x4NYFd1T",
+                "title": "[SE] - Jornada dos Pioneiros",
+                "fields": [
+                  {
+                    "id": "nkBYW9Ddv0YY",
+                    "ref": "01J2KSJJ5N8DWHHNB0GQG1XK8W",
+                    "type": "short_text",
+                    "title": "Qual é o seu nome?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "9ygiPtsufsrw",
+                    "ref": "2687c4a2-ed0f-4e98-b62c-35f3c51b25a2",
+                    "type": "email",
+                    "title": "Qual é o seu e-mail?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "qkEnWHu9Ctag",
+                    "ref": "559c2fe3-f107-410d-8fb8-6b87c37823d4",
+                    "type": "phone_number",
+                    "title": "Qual é o seu telefone?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "T9mhCMa0unEH",
+                    "ref": "055edb0d-821f-4d63-9dd1-27bcad1200b1",
+                    "type": "short_text",
+                    "title": "Qual é o seu segmento de mercado? (Seja específico)",
+                    "properties": {}
+                  },
+                  {
+                    "id": "5D1wGbwoQRJK",
+                    "ref": "35af0dbc-8f6f-4ee4-aa6a-835a19afcc83",
+                    "type": "multiple_choice",
+                    "title": "Qual é o seu faturamento mensal atual?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "5lLqTlgOa8yC",
+                        "ref": "f2f8820f-2d3e-45ad-89a3-f12d604c1867",
+                        "label": "Não tenho empresa"
+                      },
+                      {
+                        "id": "asVNioIvlcy1",
+                        "ref": "a0a199c9-5f8d-42db-b277-afa79c15edd7",
+                        "label": "Até R$20.000"
+                      },
+                      {
+                        "id": "w5MH6ESHS7Nt",
+                        "ref": "8b39b85c-6673-491a-8b7c-1ca7dc1246cf",
+                        "label": "De R$20.001 a R$50.000"
+                      },
+                      {
+                        "id": "bVTHP5m437Dj",
+                        "ref": "344c6351-d407-400a-905d-559378aadafd",
+                        "label": "De R$50.001 a R$100.000"
+                      },
+                      {
+                        "id": "SapSlgr1IOwS",
+                        "ref": "4a782f8f-4490-4bff-bd85-caf805c82bb6",
+                        "label": "De R$100.001 a R$500.000"
+                      },
+                      {
+                        "id": "0t5CkU3Rs2lw",
+                        "ref": "01b3088e-1603-425c-9122-c1d5a5f8559c",
+                        "label": "De R$500.001 a R$1.000.000"
+                      },
+                      {
+                        "id": "hPMegxuD98eh",
+                        "ref": "d27c93ff-5c75-4645-bd0a-03674b58c7dc",
+                        "label": "De R$1.000.001 a R$5.000.000"
+                      },
+                      {
+                        "id": "vagR7jjqwUtF",
+                        "ref": "6ad0f029-14e2-4008-a077-546d659d1b04",
+                        "label": "De R$5.000.001 a R$10.000.000"
+                      },
+                      {
+                        "id": "NvoOlfebRnmk",
+                        "ref": "ce4f555a-cffc-4e4b-9e7e-35253bf0b187",
+                        "label": "Acima de R$10.000.000"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "vChPwX0fzMTd",
+                    "ref": "d84b56ad-7270-4368-bd88-270093307220",
+                    "type": "multiple_choice",
+                    "title": "Qual é a sua meta de faturamento para os próximos 12 meses?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "VO9CqYBPqBzx",
+                        "ref": "0d06cec3-10ac-4379-8cff-3a780f39c8ec",
+                        "label": "Até R$20.000"
+                      },
+                      {
+                        "id": "7igQargQ0qfw",
+                        "ref": "04f683ba-e39d-462e-b61e-a495474636b9",
+                        "label": "De R$20.001 a R$50.000"
+                      },
+                      {
+                        "id": "Kqvpzez9gkvw",
+                        "ref": "f33415e3-2d0a-45e5-8ca1-cf8ae8336425",
+                        "label": "De R$50.001 a R$100.000"
+                      },
+                      {
+                        "id": "NG2X2pZe3Lia",
+                        "ref": "647c7b5e-99a7-486f-a5fe-6e2591f4d448",
+                        "label": "De R$100.001 a R$500.000"
+                      },
+                      {
+                        "id": "9eYaHvKJvcfp",
+                        "ref": "de87369c-0e4b-4866-b754-e9675d61f284",
+                        "label": "De R$500.001 a R$1.000.000"
+                      },
+                      {
+                        "id": "xEO4EZTveoKc",
+                        "ref": "2fb387af-f22d-4c1a-addb-51c22d823528",
+                        "label": "De R$1.000.001 a R$5.000.000"
+                      },
+                      {
+                        "id": "ZVjhKfbttrMi",
+                        "ref": "39838e7a-ba21-409f-861a-d24b7dc2b898",
+                        "label": "De R$5.000.001 a R$10.000.000"
+                      },
+                      {
+                        "id": "Icvbi8XJMsmP",
+                        "ref": "77d79171-d4b2-48dc-a997-4c881c5a7b80",
+                        "label": "De R$10.000.001 a R$50.000.000"
+                      },
+                      {
+                        "id": "52zMzNJMFIuV",
+                        "ref": "ee091421-7260-4fcf-9c71-05309957fc9f",
+                        "label": "Acima de R$50.000.000"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "q98rDpBHLKis",
+                    "ref": "00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c",
+                    "type": "long_text",
+                    "title": "Em quais áreas da vida você quer desenvolver e prosperar mais?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "Qfv2D1qWCnxR",
+                    "ref": "26555462-1ca2-4fd1-8a1b-f05e06348ff6",
+                    "type": "long_text",
+                    "title": "Qual é o seu maior desafio atualmente (profissional ou pessoal)?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "EaZweIWZJLz0",
+                    "ref": "1fa59597-6372-4e52-88cb-98899a431381",
+                    "type": "long_text",
+                    "title": "Por que você acredita que Carlos Wizard e equipe podem ajudar você a superar esse desafio?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "DXkU4LRjtAmi",
+                    "ref": "eaf0cda6-e068-4383-a342-2ae40e2372b8",
+                    "type": "long_text",
+                    "title": "Quais são as suas expectativas para a Jornada dos Pioneiros e o Programa de aceleração?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "cfdDLfJXBB9Q",
+                    "ref": "ce8f28ed-707f-438f-9126-03ead6644650",
+                    "type": "long_text",
+                    "title": "Você sabe que as vagas são *extremamente limitadas* e que a sabedoria entregue nesta jornada *não é para qualquer um*. Por que você deveria ser escolhido?",
+                    "properties": {}
+                  },
+                  {
+                    "id": "4ykqlxXB6qoi",
+                    "ref": "6d2d633e-af60-465f-9c22-4f95d1eebe4a",
+                    "type": "multiple_choice",
+                    "title": "Caso seja aprovado, você se compromete a *investir seu tempo e dedicação*, entregando o seu *máximo* em tudo que for orientado tanto na Jornada quanto no Programa de Aceleração?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "ZGhWKXxFxsHl",
+                        "ref": "2f2714ec-5c4a-4f5a-ac80-d06b064f29a3",
+                        "label": "Sim"
+                      },
+                      {
+                        "id": "3eYcEWOQx1Ip",
+                        "ref": "e07e3ded-f593-4ba5-835b-60d5a3e9f2ac",
+                        "label": "Não"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "SjkjWA0Vg0qp",
+                    "ref": "84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61",
+                    "type": "multiple_choice",
+                    "title": "Caso aprovado, como você pretende fazer o pagamento do valor inicial?",
+                    "properties": {},
+                    "choices": [
+                      {
+                        "id": "0Xc0dJHilOSQ",
+                        "ref": "7c090c83-e6e9-45a2-8256-f1e9ceea6b28",
+                        "label": "R$ 34.900,00 à vista (PIX ou transferência)"
+                      },
+                      {
+                        "id": "u7ePl6UqrC3m",
+                        "ref": "39c6cafc-5f81-4c73-98b0-e3c95981dd02",
+                        "label": "R$ 34.900,00 parcelado (em até 21x)"
+                      },
+                      {
+                        "id": "evP00jnXVEh2",
+                        "ref": "864b4a4e-05be-4b47-a4c0-97cfd30b5366",
+                        "label": "Ainda não possuo o valor do investimento disponível"
+                      }
+                    ]
+                  }
+                ],
+                "endings": [
+                  {
+                    "id": "zTHnlBp7FfJP",
+                    "ref": "thankyou-screen",
+                    "title": "Calendly Jornada",
+                    "type": "url_redirect",
+                    "properties": {
+                      "redirect_url": "https://calendly.com/d/cqgn-45v-fdw/se-jornada-dos-pioneiros"
+                    }
+                  }
+                ]
+              },
+              "answers": [
+                {
+                  "type": "text",
+                  "text": "Mateus Diniz",
+                  "field": {
+                    "id": "nkBYW9Ddv0YY",
+                    "type": "short_text",
+                    "ref": "01J2KSJJ5N8DWHHNB0GQG1XK8W"
+                  }
+                },
+                {
+                  "type": "email",
+                  "email": "mateusdiniz@automagicbots.com.br",
+                  "field": {
+                    "id": "9ygiPtsufsrw",
+                    "type": "email",
+                    "ref": "2687c4a2-ed0f-4e98-b62c-35f3c51b25a2"
+                  }
+                },
+                {
+                  "type": "phone_number",
+                  "phone_number": "+5562981196678",
+                  "field": {
+                    "id": "qkEnWHu9Ctag",
+                    "type": "phone_number",
+                    "ref": "559c2fe3-f107-410d-8fb8-6b87c37823d4"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Automações Digitais",
+                  "field": {
+                    "id": "T9mhCMa0unEH",
+                    "type": "short_text",
+                    "ref": "055edb0d-821f-4d63-9dd1-27bcad1200b1"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "w5MH6ESHS7Nt",
+                    "label": "De R$20.001 a R$50.000",
+                    "ref": "8b39b85c-6673-491a-8b7c-1ca7dc1246cf"
+                  },
+                  "field": {
+                    "id": "5D1wGbwoQRJK",
+                    "type": "multiple_choice",
+                    "ref": "35af0dbc-8f6f-4ee4-aa6a-835a19afcc83"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "9eYaHvKJvcfp",
+                    "label": "De R$500.001 a R$1.000.000",
+                    "ref": "de87369c-0e4b-4866-b754-e9675d61f284"
+                  },
+                  "field": {
+                    "id": "vChPwX0fzMTd",
+                    "type": "multiple_choice",
+                    "ref": "d84b56ad-7270-4368-bd88-270093307220"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testando automação",
+                  "field": {
+                    "id": "q98rDpBHLKis",
+                    "type": "long_text",
+                    "ref": "00f5003b-60fb-43c8-a0ec-fbe6c3b33c4c"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "relacionamento",
+                  "field": {
+                    "id": "Qfv2D1qWCnxR",
+                    "type": "long_text",
+                    "ref": "26555462-1ca2-4fd1-8a1b-f05e06348ff6"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "testeee",
+                  "field": {
+                    "id": "EaZweIWZJLz0",
+                    "type": "long_text",
+                    "ref": "1fa59597-6372-4e52-88cb-98899a431381"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "as maiores",
+                  "field": {
+                    "id": "DXkU4LRjtAmi",
+                    "type": "long_text",
+                    "ref": "eaf0cda6-e068-4383-a342-2ae40e2372b8"
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "automagic",
+                  "field": {
+                    "id": "cfdDLfJXBB9Q",
+                    "type": "long_text",
+                    "ref": "ce8f28ed-707f-438f-9126-03ead6644650"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "ZGhWKXxFxsHl",
+                    "label": "Sim",
+                    "ref": "2f2714ec-5c4a-4f5a-ac80-d06b064f29a3"
+                  },
+                  "field": {
+                    "id": "4ykqlxXB6qoi",
+                    "type": "multiple_choice",
+                    "ref": "6d2d633e-af60-465f-9c22-4f95d1eebe4a"
+                  }
+                },
+                {
+                  "type": "choice",
+                  "choice": {
+                    "id": "u7ePl6UqrC3m",
+                    "label": "R$ 34.900,00 parcelado (em até 21x)",
+                    "ref": "39c6cafc-5f81-4c73-98b0-e3c95981dd02"
+                  },
+                  "field": {
+                    "id": "SjkjWA0Vg0qp",
+                    "type": "multiple_choice",
+                    "ref": "84ef9439-2bca-4bfd-bf4c-6a2bcfcaca61"
+                  }
+                }
+              ],
+              "ending": {
+                "id": "zTHnlBp7FfJP",
+                "ref": "thankyou-screen"
+              }
+            }
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/aplicacao-preenchida-se",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-07-25T14:26:34.430Z",
+      "updatedAt": "2024-07-25T14:26:34.430Z",
+      "id": "8NB88qb2E4sLeIYX",
+      "name": "[NAG]"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2024-07-25T16:45:19.480Z",
+  "versionId": "8a577d4f-f14e-4710-94c3-c5d6eef94d31"
+}
