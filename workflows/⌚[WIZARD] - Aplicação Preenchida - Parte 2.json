@@ -1,6 +1,17 @@
 {
   "active": true,
   "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "segundo_ou_mais_erro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "segundo_ou_mais_erro": {
       "main": [
         [
@@ -74,6 +85,24 @@
         ]
       ]
     },
+    "nao_existe1": {
+      "main": [
+        [
+          {
+            "node": "cria_task",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "clickup_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "insert_data_utm_lead": {
       "main": [
         [
@@ -136,11 +165,18 @@
         ]
       ]
     },
-    "chega_da_fila": {
+    "nao_existe": {
       "main": [
         [
           {
-            "node": "segundo_ou_mais_erro",
+            "node": "cria_task1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "clickup_vazio1",
             "type": "main",
             "index": 0
           }
@@ -165,11 +201,33 @@
         ]
       ]
     },
+    "update_task3": {
+      "main": [
+        [
+          {
+            "node": "insere_dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "cria_task": {
       "main": [
         [
           {
             "node": "update_task3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task": {
+      "main": [
+        [
+          {
+            "node": "atualiza_ids",
             "type": "main",
             "index": 0
           }
@@ -249,18 +307,11 @@
         ]
       ]
     },
-    "nao_existe1": {
+    "update_task1": {
       "main": [
         [
           {
-            "node": "cria_task",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "clickup_vazio",
+            "node": "atualiza_ids",
             "type": "main",
             "index": 0
           }
@@ -283,39 +334,6 @@
         [
           {
             "node": "get_custom_fields",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "update_task3": {
-      "main": [
-        [
-          {
-            "node": "insere_dados",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "update_task": {
-      "main": [
-        [
-          {
-            "node": "atualiza_ids",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "update_task1": {
-      "main": [
-        [
-          {
-            "node": "atualiza_ids",
             "type": "main",
             "index": 0
           }
@@ -528,24 +546,6 @@
         [
           {
             "node": "entra_na_fila3",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "nao_existe": {
-      "main": [
-        [
-          {
-            "node": "cria_task1",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "clickup_vazio1",
             "type": "main",
             "index": 0
           }
@@ -1124,13 +1124,13 @@
           "parallelMessages": 3
         }
       },
-      "id": "b95890dc-2410-4bfc-b327-5f7358f062f2",
+      "id": "1944a450-df71-4b80-a96f-f4f90cdbe1e6",
       "name": "chega_da_fila",
       "type": "n8n-nodes-base.rabbitmqTrigger",
       "typeVersion": 1,
       "position": [
-        -260,
-        1740
+        -1220,
+        2680
       ],
       "credentials": {
         "rabbitmq": {
@@ -1143,13 +1143,13 @@
       "parameters": {
         "errorMessage": "An error ocurred!"
       },
-      "id": "2c061d44-d798-4dca-a678-95e65ac0b612",
+      "id": "6c6856d8-e313-42db-983d-bcbec785d611",
       "name": "Stop and Error",
       "type": "n8n-nodes-base.stopAndError",
       "typeVersion": 1,
       "position": [
-        140,
-        1620
+        -820,
+        2560
       ]
     },
     {
@@ -1163,13 +1163,13 @@
           ]
         }
       },
-      "id": "639f5c0f-29c9-481c-b67c-8016c2b07bf5",
+      "id": "b2753d9b-cf40-4b3d-b94f-97f3e86d73dd",
       "name": "segundo_ou_mais_erro",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        -40,
-        1740
+        -1000,
+        2680
       ]
     },
     {
@@ -1197,10 +1197,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        660,
-        1140
+        -300,
+        2080
       ],
-      "id": "070b47aa-1330-40ad-9e26-95e7ec033325"
+      "id": "121cb12a-ef7d-49ea-bde9-3c252f5b83ad"
     },
     {
       "parameters": {
@@ -1208,13 +1208,13 @@
         "height": 407.6377565498652,
         "width": 747.0856205721786
       },
-      "id": "3aca41f1-3715-4337-b657-a7010bb9ee1b",
+      "id": "f34c85cf-3396-4fa9-8201-3e917a1dd79a",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        180,
-        980
+        -780,
+        1920
       ]
     },
     {
@@ -1242,10 +1242,10 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 2,
       "position": [
-        460,
-        1140
+        -500,
+        2080
       ],
-      "id": "062374d8-21e8-4aa0-a317-b75dd753c5e7"
+      "id": "b1720c6e-ce16-49f4-a856-3e8bdab09e3f"
     },
     {
       "parameters": {
@@ -1266,13 +1266,13 @@
         },
         "options": {}
       },
-      "id": "76562e01-29d2-4ed7-9767-76f9cd605759",
+      "id": "4559fe4f-bffb-4cc5-9513-eb8ef06057c8",
       "name": "Set",
       "type": "n8n-nodes-base.set",
       "typeVersion": 2,
       "position": [
-        260,
-        1140
+        -700,
+        2080
       ]
     },
     {
@@ -1290,13 +1290,13 @@
           "durable": true
         }
       },
-      "id": "04db8dd4-4fb7-4ba5-88d3-6fdf25232ed9",
+      "id": "dd61b1b2-5b10-4055-b799-4a7067264c8d",
       "name": "entra_na_fila",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3420,
-        420
+        2460,
+        1360
       ],
       "credentials": {
         "rabbitmq": {
@@ -1320,13 +1320,13 @@
           "durable": true
         }
       },
-      "id": "896bc56b-8669-451c-b03b-ed7fb51735dc",
+      "id": "b23f8955-f2e6-4c7d-9731-491c79f06da3",
       "name": "entra_na_fila7",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3420,
-        1260
+        2460,
+        2200
       ],
       "credentials": {
         "rabbitmq": {
@@ -1369,13 +1369,13 @@
           "detailedOutput": false
         }
       },
-      "id": "dc38c6ab-d25b-407a-9c41-8c80a42fba3d",
+      "id": "3842ab7a-0686-4ec7-bf3e-b1c8fdddc7fd",
       "name": "pesquisa_lead_telefone_email_insta",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        1760,
-        560
+        800,
+        1500
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -1390,13 +1390,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "69000973-0b03-49b1-8130-50fd3541171d",
+      "id": "f1fdc8ad-5891-4cc8-83b8-7f146bf21d1a",
       "name": "pesquisa_lead2",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        1940,
-        560
+        980,
+        1500
       ]
     },
     {
@@ -1518,13 +1518,13 @@
         },
         "options": {}
       },
-      "id": "58054536-6b0c-4411-9db7-e2c45848cb2f",
+      "id": "b420d597-e15c-432d-bc0c-2019ad1002b1",
       "name": "dados18",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3240,
-        420
+        2280,
+        1360
       ]
     },
     {
@@ -1538,13 +1538,13 @@
           ]
         }
       },
-      "id": "276e1882-99c5-4e85-a21f-a4fc90a541c2",
+      "id": "cac55d22-ddb4-4a2c-8b52-6df995455a9b",
       "name": "nao_existe1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2120,
-        560
+        1160,
+        1500
       ]
     },
     {
@@ -1597,13 +1597,13 @@
           "detailedOutput": true
         }
       },
-      "id": "da416acc-31ae-4499-8300-57fce34613e8",
+      "id": "9a962b02-c4bd-4ddf-bc0b-546feda84764",
       "name": "insert_data_utm_lead",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3040,
-        420
+        2080,
+        1360
       ],
       "credentials": {
         "mySql": {
@@ -1657,13 +1657,13 @@
           "detailedOutput": true
         }
       },
-      "id": "2db6e2f3-c81e-4a45-b9ef-9760f4521472",
+      "id": "ebb71791-2e82-41f4-a10b-0da1cb0545cf",
       "name": "insere_dados",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2860,
-        420
+        1900,
+        1360
       ],
       "credentials": {
         "mySql": {
@@ -1705,13 +1705,13 @@
         },
         "options": {}
       },
-      "id": "676f6c87-d3a3-4d79-9303-ae610cf0bb36",
+      "id": "87814cef-0fcf-45c4-b92b-177fcf6e9dd0",
       "name": "desqualificado",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        1380,
-        1040
+        420,
+        1980
       ]
     },
     {
@@ -1748,13 +1748,13 @@
           "detailedOutput": false
         }
       },
-      "id": "7bed4f63-9f88-4406-804b-c1208a57cbfc",
+      "id": "63546c78-febb-4643-9c2d-a53f0a92e34b",
       "name": "pesquisa_lead_telefone_email_insta1",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        1700,
-        1400
+        740,
+        2340
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -1769,13 +1769,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "1d2fb8a9-22a5-41cd-be6a-bf520a09e036",
+      "id": "d04f7843-d68c-4629-8c35-c73295dcc2ef",
       "name": "pesquisa_lead",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        1880,
-        1400
+        920,
+        2340
       ]
     },
     {
@@ -1789,13 +1789,13 @@
           ]
         }
       },
-      "id": "91702074-5a17-4ac8-9a8d-65e1536a528e",
+      "id": "6585555e-7c8f-4135-92ed-ec67627463a1",
       "name": "nao_existe",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2060,
-        1400
+        1100,
+        2340
       ]
     },
     {
@@ -1813,13 +1813,13 @@
           "durable": true
         }
       },
-      "id": "a0a0dd0c-fa65-4bc1-b24d-fb430861ad2c",
+      "id": "70c8e388-013b-4a2e-aac2-07954b403263",
       "name": "entra_na_fila1",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3920,
-        720
+        2960,
+        1660
       ],
       "credentials": {
         "rabbitmq": {
@@ -1840,13 +1840,13 @@
         },
         "combineOperation": "any"
       },
-      "id": "7c87ee5a-f0e1-45dd-b457-fcac958a67e9",
+      "id": "f0cafa92-ad4d-4bec-91bb-ef65fc2abded",
       "name": "clickup_vazio",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2320,
-        660
+        1360,
+        1600
       ]
     },
     {
@@ -1858,13 +1858,13 @@
           "addAssignees": "96789246"
         }
       },
-      "id": "b71f68c7-b0c1-4bf3-826d-54b8da6d341e",
+      "id": "49dcc264-59ad-4b60-9e8c-1f5fe7f70a28",
       "name": "update_task3",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2500,
-        420
+        1540,
+        1360
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -1885,13 +1885,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "4a27b192-d572-444f-ae85-16b7be704557",
+      "id": "d8af205c-f2f0-49a2-a078-4a83cd1a2c55",
       "name": "cria_task",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2320,
-        420
+        1360,
+        1360
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -1912,13 +1912,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "f0237ca8-aecf-49bf-8e3e-9c49ca922fdf",
+      "id": "78dddf7d-4e65-4eda-b46d-195a558de341",
       "name": "update_task",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2680,
-        580
+        1720,
+        1520
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -1939,13 +1939,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "9ede29b9-3884-4e3f-931a-02a157d96297",
+      "id": "ff8a9778-a5e8-4a3b-9479-865823347dc7",
       "name": "cria_task2",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2500,
-        580
+        1540,
+        1520
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -1962,13 +1962,13 @@
         "amount": 3,
         "unit": "seconds"
       },
-      "id": "a8080984-5563-4ac8-995e-d0883098a714",
+      "id": "fc1d5058-e98c-4f59-bf0e-cc06f5a41e0d",
       "name": "3_segun",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        3180,
-        720
+        2220,
+        1660
       ],
       "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
     },
@@ -1976,13 +1976,13 @@
       "parameters": {
         "jsCode": "let fields = [\n {\n        \"id\": 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126' ,\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] || \"\"\n    },\n    {\n        \"id\": '146e6a0b-d2f6-4c77-9ca7-c5214de84776',\n        \"value\": 'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\"\n    },\n{\n        \"id\": '667c5680-e9e2-4527-a7f2-3a13597398ae',\n        \"value\": '+' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n {\n        \"id\": 'b3c89f54-d6ab-4a13-a96f-387f13cf259d',\n        \"value\": '4a24666b-e2b6-4d73-9fb4-3d6288dc6450'\n    },\n {\n        \"id\": '08279b52-51d7-4bf6-bddc-9f6ade0bbbf2',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] \n    },\n {\n        \"id\": '617065cb-25a9-4cdb-ad29-54c8a04c4858',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] \n    },\n {\n        \"id\": 'e0db01cd-81a3-47c9-a0cc-6ba43575d921',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] \n    },\n {\n        \"id\": '81b51f94-7551-4e1c-8ef0-d193d981023c',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] \n    },\n {\n        \"id\": 'c9244aac-7fdc-4c45-92c1-61bd5e159d02',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] \n    },\n {\n        \"id\": '443985b5-ca79-4188-a7cb-899f1b3ecdcd',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] \n    },\n {\n        \"id\": 'ac7efa91-935e-4443-bffa-0dd77207dcfa',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"]\n    },\n {\n        \"id\": '929d45b1-2256-42cc-9abf-00f649e57ab4',\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"]\n    },\n {\n        \"id\": 'a59d4006-877c-44b9-b1e2-39f119f946b0',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] \n    },\n {\n        \"id\":  '41ff8e34-078d-479e-ac1f-c50f36a5d0fc',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"]\n    }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
       },
-      "id": "215d2f1d-c765-4b74-b54a-92aa1d8572d8",
+      "id": "db1ccb3e-9329-4ab2-80be-51c2e7890ceb",
       "name": "campos_para_update",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        2500,
-        820
+        1540,
+        1760
       ]
     },
     {
@@ -1990,13 +1990,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "1d702e04-d59e-419b-8bcc-e17dc509c6d0",
+      "id": "41aa2f5c-1db9-459a-8853-17a2f00c3f50",
       "name": "item_unico",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        3020,
-        920
+        2060,
+        1860
       ]
     },
     {
@@ -2004,13 +2004,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "9c02bccb-4543-4fb3-8c0c-0cc2d149f8cf",
+      "id": "917d672e-d594-4b8b-98e0-0bf62e1d0c07",
       "name": "divide_campos",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        2760,
-        820
+        1800,
+        1760
       ]
     },
     {
@@ -2021,13 +2021,13 @@
         "field": "={{ $node[\"divide_campos\"].json[\"id\"] }}",
         "value": "={{ $node[\"divide_campos\"].json[\"value\"] }}"
       },
-      "id": "44be36e4-c44d-47e3-b59f-2188bd1aeec7",
+      "id": "16d61c23-5079-4fd6-97cd-b718d3c9ac04",
       "name": "add_ids",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        3000,
-        720
+        2040,
+        1660
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2045,13 +2045,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "2223824d-de44-46a3-b248-1eef14d02460",
+      "id": "a3fc4fc6-4347-4bb7-ae97-3891724cb2cc",
       "name": "update_task1",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        3200,
-        920
+        2240,
+        1860
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2066,13 +2066,13 @@
         "operation": "get",
         "id": "86a452fn5"
       },
-      "id": "0c1911b4-9afc-4f74-a12f-6ea4423cb417",
+      "id": "333df92e-35bc-475e-9e86-aeafb6cfb9a7",
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        1980,
-        360
+        1020,
+        1300
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2094,13 +2094,13 @@
         },
         "options": {}
       },
-      "id": "2e0dc9de-0c59-4815-b0eb-d30fe8334801",
+      "id": "9dca6397-0b01-4518-8a46-1145829d74c3",
       "name": "clickup_data",
       "type": "n8n-nodes-base.set",
       "typeVersion": 2,
       "position": [
-        260,
-        700
+        -700,
+        1640
       ]
     },
     {
@@ -2116,13 +2116,13 @@
           }
         }
       },
-      "id": "721bcac3-0d49-4bf3-a881-3ce1a254389d",
+      "id": "8443d8f6-dc65-43a0-8c56-f4c217b5ea72",
       "name": "get_members",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        440,
-        700
+        -520,
+        1640
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2153,13 +2153,13 @@
           }
         }
       },
-      "id": "9b56630e-e7a8-44aa-a041-7c2cbee7ac9c",
+      "id": "7e569473-4935-44f6-94b0-59d92f0c5261",
       "name": "get_custom_fields",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        640,
-        700
+        -320,
+        1640
       ]
     },
     {
@@ -2206,13 +2206,13 @@
           "detailedOutput": true
         }
       },
-      "id": "33d2fdc2-f7a3-4b79-866c-35364ee3db29",
+      "id": "1671df09-7cf5-4f9f-bd38-27d958e37174",
       "name": "atualiza_ids",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3540,
-        720
+        2580,
+        1660
       ],
       "credentials": {
         "mySql": {
@@ -2340,13 +2340,13 @@
         },
         "options": {}
       },
-      "id": "78b6e346-9b13-41a0-b68b-3cd3fac1d295",
+      "id": "d2af9dc4-fb3b-4376-8252-709efa4d586c",
       "name": "dados20",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3740,
-        720
+        2780,
+        1660
       ]
     },
     {
@@ -2468,13 +2468,13 @@
         },
         "options": {}
       },
-      "id": "d60aec0d-eed2-4d26-bf3b-a875b6425afe",
+      "id": "bd5182c9-1e2e-44a6-83e0-d4b0a786e60a",
       "name": "dados",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3220,
-        1260
+        2260,
+        2200
       ]
     },
     {
@@ -2527,13 +2527,13 @@
           "detailedOutput": true
         }
       },
-      "id": "368c0db4-3f17-4178-be50-aa6d6769f731",
+      "id": "85539011-3b7d-4b3a-8f03-6afed6981907",
       "name": "insert_data_utm_lead1",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3020,
-        1260
+        2060,
+        2200
       ],
       "credentials": {
         "mySql": {
@@ -2587,13 +2587,13 @@
           "detailedOutput": true
         }
       },
-      "id": "0b364840-b75d-4265-b9c5-4338bd5a1b4b",
+      "id": "3cfa67ab-0fb8-41e0-8eb2-7661a555dae0",
       "name": "insere_dados1",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2840,
-        1260
+        1880,
+        2200
       ],
       "credentials": {
         "mySql": {
@@ -2617,13 +2617,13 @@
           "durable": true
         }
       },
-      "id": "0a7e986b-42e0-45ca-bd91-ecf407c5c726",
+      "id": "1a9e08d9-52e9-4b3f-a8d4-638a395a4884",
       "name": "entra_na_fila3",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3900,
-        1560
+        2940,
+        2500
       ],
       "credentials": {
         "rabbitmq": {
@@ -2644,13 +2644,13 @@
         },
         "combineOperation": "any"
       },
-      "id": "8a31fd7e-acb7-4d7e-b1d8-b012a46b0510",
+      "id": "42e4468d-ca2a-49f6-9de0-5e15f6fb4a8f",
       "name": "clickup_vazio1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2300,
-        1500
+        1340,
+        2440
       ]
     },
     {
@@ -2662,13 +2662,13 @@
           "addAssignees": "96789246"
         }
       },
-      "id": "8cab0aed-57b9-44ba-9576-119ef331ea34",
+      "id": "2624627c-52b5-4e04-a9f3-674558eb54eb",
       "name": "update_task4",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2480,
-        1260
+        1520,
+        2200
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2689,13 +2689,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "48bb7679-6189-46cf-a3cb-7998902840de",
+      "id": "608344ea-9244-4821-b79e-ac24ad413006",
       "name": "cria_task1",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2300,
-        1260
+        1340,
+        2200
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -2716,13 +2716,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "4f982e31-f685-46a4-a37e-78290230dde5",
+      "id": "d302c1b5-6fd5-4bdd-8213-b1f06d9bba57",
       "name": "update_task2",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2660,
-        1420
+        1700,
+        2360
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2743,13 +2743,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "c938a1d1-5d43-4e64-a44b-53343d43a71a",
+      "id": "6839b5fd-6dab-4d69-8253-bde1dfea43f6",
       "name": "cria_task3",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2480,
-        1420
+        1520,
+        2360
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -2766,13 +2766,13 @@
         "amount": 3,
         "unit": "seconds"
       },
-      "id": "0fbab721-f8f6-49a9-a543-ee1a3fe5a8dc",
+      "id": "5afbcfe2-4010-4699-9f53-7360d055ce06",
       "name": "3_segun1",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        3160,
-        1560
+        2200,
+        2500
       ],
       "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
     },
@@ -2780,13 +2780,13 @@
       "parameters": {
         "jsCode": "let fields = [\n {\n        \"id\": 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126' ,\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] || \"\"\n    },\n    {\n        \"id\": '146e6a0b-d2f6-4c77-9ca7-c5214de84776',\n        \"value\": 'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\"\n    },\n{\n        \"id\": '667c5680-e9e2-4527-a7f2-3a13597398ae',\n        \"value\": '+' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n {\n        \"id\": 'b3c89f54-d6ab-4a13-a96f-387f13cf259d',\n        \"value\": '4a24666b-e2b6-4d73-9fb4-3d6288dc6450'\n    },\n {\n        \"id\": '08279b52-51d7-4bf6-bddc-9f6ade0bbbf2',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] \n    },\n {\n        \"id\": '617065cb-25a9-4cdb-ad29-54c8a04c4858',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] \n    },\n {\n        \"id\": 'e0db01cd-81a3-47c9-a0cc-6ba43575d921',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] \n    },\n {\n        \"id\": '81b51f94-7551-4e1c-8ef0-d193d981023c',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] \n    },\n {\n        \"id\": 'c9244aac-7fdc-4c45-92c1-61bd5e159d02',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] \n    },\n {\n        \"id\": '443985b5-ca79-4188-a7cb-899f1b3ecdcd',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] \n    },\n {\n        \"id\": 'ac7efa91-935e-4443-bffa-0dd77207dcfa',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"]\n    },\n {\n        \"id\": '929d45b1-2256-42cc-9abf-00f649e57ab4',\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"]\n    },\n {\n        \"id\": 'a59d4006-877c-44b9-b1e2-39f119f946b0',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] \n    },\n {\n        \"id\":  '41ff8e34-078d-479e-ac1f-c50f36a5d0fc',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"]\n    }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
       },
-      "id": "754d5971-b8fc-48a6-8427-8b458231e41e",
+      "id": "c98f2fb5-a4e6-481e-8ec0-21a043b559bc",
       "name": "campos_para_update1",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        2480,
-        1660
+        1520,
+        2600
       ]
     },
     {
@@ -2794,13 +2794,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "ff7645ab-23ae-428d-93d0-10d27da59d82",
+      "id": "549e1ede-f7e4-4a8d-b672-104042eac2be",
       "name": "item_unico1",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        3000,
-        1760
+        2040,
+        2700
       ]
     },
     {
@@ -2808,13 +2808,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "3d028d52-9002-4075-9321-a1aea4eeaf49",
+      "id": "ac78b5fd-6fe3-4069-bdbb-acace7fc60bf",
       "name": "divide_campos1",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        2740,
-        1660
+        1780,
+        2600
       ]
     },
     {
@@ -2825,13 +2825,13 @@
         "field": "={{ $node[\"divide_campos1\"].json[\"id\"] }}",
         "value": "={{ $node[\"divide_campos1\"].json[\"value\"] }}"
       },
-      "id": "23da19d6-8ab5-41d4-9f74-04713545a1aa",
+      "id": "f4d01d33-e04e-4c53-b505-f0d5a9e78ace",
       "name": "add_ids1",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2980,
-        1560
+        2020,
+        2500
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2849,13 +2849,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "1e645349-74ee-496e-8d41-6c90bc481f9b",
+      "id": "51b178bf-34dd-4d7f-85c5-6f3a09a66b7f",
       "name": "update_task5",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        3180,
-        1760
+        2220,
+        2700
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -2908,13 +2908,13 @@
           "detailedOutput": true
         }
       },
-      "id": "d2e4d061-e21e-4504-bd9a-d6fd78f0eeae",
+      "id": "401d9dd4-9b99-405a-8355-ca934ed3f981",
       "name": "atualiza_ids1",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3520,
-        1560
+        2560,
+        2500
       ],
       "credentials": {
         "mySql": {
@@ -3036,13 +3036,13 @@
         },
         "options": {}
       },
-      "id": "d71e1201-fd09-4dcc-8183-d458aeca1e09",
+      "id": "9d4ac057-8a83-41fd-a1c3-696fe5645ffc",
       "name": "dados21",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3720,
-        1560
+        2760,
+        2500
       ]
     },
     {
@@ -3072,13 +3072,13 @@
         },
         "options": {}
       },
-      "id": "f54927bb-37a4-4dbc-89ad-6fe036479f1c",
+      "id": "90872b2c-05ca-41d8-ac53-5c7b48c1e4c0",
       "name": "buscarContatoChatwoot1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        180,
-        1760
+        -780,
+        2700
       ],
       "onError": "continueRegularOutput"
     },
@@ -3106,13 +3106,13 @@
         },
         "options": {}
       },
-      "id": "f9d20d7b-bbca-4e89-9b41-1ee3edd3f64f",
+      "id": "31c8c6d8-ee2c-41bf-b3b6-4e8534b7f8cf",
       "name": "existe_chatwoot1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        380,
-        1760
+        -580,
+        2700
       ]
     },
     {
@@ -3137,13 +3137,13 @@
         "jsonBody": "={\n  \"name\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
         "options": {}
       },
-      "id": "7b2dcdba-b23b-451a-9bdd-b1c7a270532d",
+      "id": "4bfd33fc-05e5-43b8-8693-2faccec1b93a",
       "name": "atualizarContatoChatwoot1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        540,
-        1620
+        -420,
+        2560
       ],
       "onError": "continueRegularOutput"
     },
@@ -3169,13 +3169,13 @@
         "jsonBody": "={\n  \"name\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"Nome do Cliente\"] }}\",\n  \"inbox_id\": 1,\n  \"phone_number\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"] }}\"\n}",
         "options": {}
       },
-      "id": "71aeb686-67f6-4196-af1d-b7b3cb760db2",
+      "id": "1c014126-6df9-4ef2-a0b4-22251b8a70c6",
       "name": "criarContatoChatwoot1",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
       "position": [
-        540,
-        1840
+        -420,
+        2780
       ],
       "onError": "continueRegularOutput"
     },
@@ -3212,13 +3212,13 @@
         },
         "options": {}
       },
-      "id": "8a8dc5c9-e52d-44b1-803d-d4a8c52163e5",
+      "id": "44a469bb-c10c-43b2-b64f-fe3fe2f41408",
       "name": "é_webinario",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        820,
-        1720
+        -140,
+        2660
       ]
     },
     {
@@ -3236,13 +3236,13 @@
           "durable": true
         }
       },
-      "id": "92ae3248-8cdf-407f-86d3-c7af58bc9615",
+      "id": "e6326c2b-0bc3-49f8-a92c-f0f29646babc",
       "name": "entra_na_fila2",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3360,
-        1980
+        2400,
+        2920
       ],
       "credentials": {
         "rabbitmq": {
@@ -3266,13 +3266,13 @@
           "durable": true
         }
       },
-      "id": "a735c2be-3df1-4d56-bd48-049576d47472",
+      "id": "48e78a19-c62a-41e4-a787-9a33b92699b6",
       "name": "entra_na_fila8",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3360,
-        2820
+        2400,
+        3760
       ],
       "credentials": {
         "rabbitmq": {
@@ -3315,13 +3315,13 @@
           "detailedOutput": false
         }
       },
-      "id": "5e54c4cf-693e-4144-8e2b-3668274951d5",
+      "id": "96486e8e-e410-4434-bac7-6fce757afcda",
       "name": "pesquisa_lead_telefone_email_insta2",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        1700,
-        2120
+        740,
+        3060
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -3336,13 +3336,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "63c0d5a4-89f4-4c99-a746-e22a718c89ae",
+      "id": "3c3ba4ec-1d8f-4077-8607-029fccdbe6a3",
       "name": "pesquisa_lead3",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        1880,
-        2120
+        920,
+        3060
       ]
     },
     {
@@ -3464,13 +3464,13 @@
         },
         "options": {}
       },
-      "id": "d9b02780-e281-4371-b4c6-9801037b4c60",
+      "id": "ab3ffac5-0a6a-4ae2-bc4c-54eece74fa31",
       "name": "dados19",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3180,
-        1980
+        2220,
+        2920
       ]
     },
     {
@@ -3484,13 +3484,13 @@
           ]
         }
       },
-      "id": "97060a84-6109-48df-93f3-42dbe029f8ec",
+      "id": "20c00d6b-f154-42c2-9c41-a63d03d37e8c",
       "name": "nao_existe2",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2060,
-        2120
+        1100,
+        3060
       ]
     },
     {
@@ -3543,13 +3543,13 @@
           "detailedOutput": true
         }
       },
-      "id": "6ea35310-0350-422f-8f1b-44d576844ad7",
+      "id": "9cb569da-b297-4fd0-9dd7-243a43cb0905",
       "name": "insert_data_utm_lead2",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2980,
-        1980
+        2020,
+        2920
       ],
       "credentials": {
         "mySql": {
@@ -3603,13 +3603,13 @@
           "detailedOutput": true
         }
       },
-      "id": "276c54ee-8d31-48e0-abf9-6af078f19527",
+      "id": "ce9e41a2-cab5-472b-996d-3110f5b299a2",
       "name": "insere_dados2",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2800,
-        1980
+        1840,
+        2920
       ],
       "credentials": {
         "mySql": {
@@ -3651,13 +3651,13 @@
         },
         "options": {}
       },
-      "id": "c5f706d5-0d08-4a89-a625-9439a7532aac",
+      "id": "92d34085-5320-4305-93a7-5cf1e39a0307",
       "name": "desqualificado1",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        1320,
-        2600
+        360,
+        3540
       ]
     },
     {
@@ -3694,13 +3694,13 @@
           "detailedOutput": false
         }
       },
-      "id": "b532efd3-0836-444c-b682-c02b5f09e9c2",
+      "id": "02847ec9-87d4-4040-8129-db1f9d61012d",
       "name": "pesquisa_lead_telefone_email_insta3",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        1640,
-        2960
+        680,
+        3900
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -3715,13 +3715,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "f2d438d2-d173-4ec3-ac10-12c3973ea905",
+      "id": "a613c405-6955-46a4-9c46-1dd9bc5b5776",
       "name": "pesquisa_lead1",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        1820,
-        2960
+        860,
+        3900
       ]
     },
     {
@@ -3735,13 +3735,13 @@
           ]
         }
       },
-      "id": "2c65933c-3837-4036-a3df-0da853029a48",
+      "id": "8dd7784b-12d5-4871-b9c2-5237fdf65906",
       "name": "nao_existe3",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2000,
-        2960
+        1040,
+        3900
       ]
     },
     {
@@ -3759,13 +3759,13 @@
           "durable": true
         }
       },
-      "id": "936a71de-b152-4eca-8123-164c2a219af6",
+      "id": "09516eab-59aa-46b6-9bb7-e920f51ca3be",
       "name": "entra_na_fila4",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3860,
-        2280
+        2900,
+        3220
       ],
       "credentials": {
         "rabbitmq": {
@@ -3786,13 +3786,13 @@
         },
         "combineOperation": "any"
       },
-      "id": "a647244b-5f45-49c0-99c1-a56816ba5c78",
+      "id": "8d1c73f3-a306-49a8-ae08-13a7a9796720",
       "name": "clickup_vazio2",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2260,
-        2220
+        1300,
+        3160
       ]
     },
     {
@@ -3804,13 +3804,13 @@
           "addAssignees": "96789246"
         }
       },
-      "id": "a0efdfc7-82c2-4210-9319-5ec5eca5b74a",
+      "id": "1cf3d282-3e38-4914-9f31-0ea47d173d8f",
       "name": "update_task6",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2440,
-        1980
+        1480,
+        2920
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -3831,13 +3831,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "420280c8-0cec-4914-92a3-6e03ddd55bf4",
+      "id": "2026e858-1634-4945-823f-ce2758e1c915",
       "name": "cria_task4",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2260,
-        1980
+        1300,
+        2920
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -3858,13 +3858,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "9dfbac08-23af-47d5-8a40-7a415eb804a1",
+      "id": "ccf18722-fb8a-45af-b5b7-c7dcfd920c92",
       "name": "update_task7",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2620,
-        2140
+        1660,
+        3080
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -3885,13 +3885,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "52778096-3458-4c4a-968f-581f51558fbf",
+      "id": "ae9a89b3-b820-4b3c-8746-f89c2e619c5d",
       "name": "cria_task5",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2440,
-        2140
+        1480,
+        3080
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -3908,13 +3908,13 @@
         "amount": 3,
         "unit": "seconds"
       },
-      "id": "9f772b1a-4a3a-4fdc-80e3-e32176f36c74",
+      "id": "db3c2fa0-9299-4ac6-b22b-159753e2f21e",
       "name": "3_segun2",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        3120,
-        2280
+        2160,
+        3220
       ],
       "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
     },
@@ -3922,13 +3922,13 @@
       "parameters": {
         "jsCode": "let fields = [\n {\n        \"id\": 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126' ,\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] || \"\"\n    },\n    {\n        \"id\": '146e6a0b-d2f6-4c77-9ca7-c5214de84776',\n        \"value\": 'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\"\n    },\n{\n        \"id\": '667c5680-e9e2-4527-a7f2-3a13597398ae',\n        \"value\": '+' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n {\n        \"id\": 'b3c89f54-d6ab-4a13-a96f-387f13cf259d',\n        \"value\": '4a24666b-e2b6-4d73-9fb4-3d6288dc6450'\n    },\n {\n        \"id\": '08279b52-51d7-4bf6-bddc-9f6ade0bbbf2',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] \n    },\n {\n        \"id\": '617065cb-25a9-4cdb-ad29-54c8a04c4858',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] \n    },\n {\n        \"id\": 'e0db01cd-81a3-47c9-a0cc-6ba43575d921',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] \n    },\n {\n        \"id\": '81b51f94-7551-4e1c-8ef0-d193d981023c',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] \n    },\n {\n        \"id\": 'c9244aac-7fdc-4c45-92c1-61bd5e159d02',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] \n    },\n {\n        \"id\": '443985b5-ca79-4188-a7cb-899f1b3ecdcd',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] \n    },\n {\n        \"id\": 'ac7efa91-935e-4443-bffa-0dd77207dcfa',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"]\n    },\n {\n        \"id\": '929d45b1-2256-42cc-9abf-00f649e57ab4',\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"]\n    },\n {\n        \"id\": 'a59d4006-877c-44b9-b1e2-39f119f946b0',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] \n    },\n {\n        \"id\":  '41ff8e34-078d-479e-ac1f-c50f36a5d0fc',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"]\n    }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
       },
-      "id": "44032aba-4268-4266-99eb-9ea76da8f1ea",
+      "id": "9e2b0b9f-6686-4442-8931-99702f7a174c",
       "name": "campos_para_update2",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        2440,
-        2380
+        1480,
+        3320
       ]
     },
     {
@@ -3936,13 +3936,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "2a855ae6-90cd-44e4-abf5-137bda9cfa7e",
+      "id": "3a4fbdad-5fb2-4e1f-a711-8c38c23fcf77",
       "name": "item_unico2",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        2960,
-        2480
+        2000,
+        3420
       ]
     },
     {
@@ -3950,13 +3950,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "fa8215a5-a311-4d2d-82df-751e7c3ef7ba",
+      "id": "cc103b48-333d-4714-9de1-8aafbe6370ea",
       "name": "divide_campos2",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        2700,
-        2380
+        1740,
+        3320
       ]
     },
     {
@@ -3967,13 +3967,13 @@
         "field": "={{ $node[\"divide_campos2\"].json[\"id\"] }}",
         "value": "={{ $node[\"divide_campos2\"].json[\"value\"] }}"
       },
-      "id": "8ebd7d7e-d452-417f-ab65-5faa8eb60778",
+      "id": "7001035c-e8bd-4efd-a5f7-285eafdc4ed7",
       "name": "add_ids2",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2940,
-        2280
+        1980,
+        3220
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -3991,13 +3991,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "ab003e0d-379b-48c9-9879-4fcadce195fe",
+      "id": "f9318969-b6fe-494d-b13a-d3f438f0c3dd",
       "name": "update_task8",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        3140,
-        2480
+        2180,
+        3420
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4012,13 +4012,13 @@
         "operation": "get",
         "id": "86a452fn5"
       },
-      "id": "d893fd55-7c22-4c7e-b3f2-2391a428515f",
+      "id": "da964db5-500a-4c5e-85bf-7124ae37a7f3",
       "name": "ClickUp1",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        1920,
-        1920
+        960,
+        2860
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4071,13 +4071,13 @@
           "detailedOutput": true
         }
       },
-      "id": "b2af084a-a473-4341-98cd-c63fdc3c970d",
+      "id": "93569d53-8a14-4285-834e-8c995392cf08",
       "name": "atualiza_ids2",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3480,
-        2280
+        2520,
+        3220
       ],
       "credentials": {
         "mySql": {
@@ -4205,13 +4205,13 @@
         },
         "options": {}
       },
-      "id": "6ab9f9c5-97de-4145-85ac-e5aa6615810c",
+      "id": "09bbec7a-aaf9-4c29-b418-d5f9def3384b",
       "name": "dados22",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3680,
-        2280
+        2720,
+        3220
       ]
     },
     {
@@ -4333,13 +4333,13 @@
         },
         "options": {}
       },
-      "id": "7ad80315-0fa6-4b26-a009-84f541a82675",
+      "id": "97905cd7-3e74-4c1a-829a-c0013c73ae63",
       "name": "dados1",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3160,
-        2820
+        2200,
+        3760
       ]
     },
     {
@@ -4392,13 +4392,13 @@
           "detailedOutput": true
         }
       },
-      "id": "84528e80-1607-43d6-a67e-44883106aab7",
+      "id": "f7b5497d-14a6-4da2-aeb9-cff0988d1d87",
       "name": "insert_data_utm_lead3",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2960,
-        2820
+        2000,
+        3760
       ],
       "credentials": {
         "mySql": {
@@ -4452,13 +4452,13 @@
           "detailedOutput": true
         }
       },
-      "id": "21fb1497-664b-414e-9c48-7d84ed2de15b",
+      "id": "4ae7f96d-d043-4e90-90ca-f311c4191df2",
       "name": "insere_dados3",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        2780,
-        2820
+        1820,
+        3760
       ],
       "credentials": {
         "mySql": {
@@ -4482,13 +4482,13 @@
           "durable": true
         }
       },
-      "id": "8176bd52-3264-4614-934d-fa7fbb2e1a2d",
+      "id": "62c1b269-53b8-4f5a-a56f-1539dfdc85d7",
       "name": "entra_na_fila5",
       "type": "n8n-nodes-base.rabbitmq",
       "typeVersion": 1,
       "position": [
-        3840,
-        3120
+        2880,
+        4060
       ],
       "credentials": {
         "rabbitmq": {
@@ -4509,13 +4509,13 @@
         },
         "combineOperation": "any"
       },
-      "id": "01f879f9-a7a3-4500-896b-c7fb6ec892ee",
+      "id": "7fa372e8-1121-41e7-848a-5b2cbd2cd937",
       "name": "clickup_vazio3",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        2240,
-        3060
+        1280,
+        4000
       ]
     },
     {
@@ -4527,13 +4527,13 @@
           "addAssignees": "96789246"
         }
       },
-      "id": "143c5c78-2f03-4dc6-9868-627d13b48fa2",
+      "id": "41f850f4-47dd-4bce-ba81-da3f8498f51d",
       "name": "update_task9",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2420,
-        2820
+        1460,
+        3760
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4554,13 +4554,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "72a4abca-e16f-4da0-97e0-b788e05ac3a2",
+      "id": "126e239f-fe74-4a9c-8a36-017ab310b162",
       "name": "cria_task6",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2240,
-        2820
+        1280,
+        3760
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -4581,13 +4581,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "ab7f6570-5465-43c5-ba73-12dd118eb7c4",
+      "id": "ff8c93bf-edd1-48c0-a337-592af9602efa",
       "name": "update_task10",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2600,
-        2980
+        1640,
+        3920
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4608,13 +4608,13 @@
           "customFieldsJson": "=[\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] }}\"\n    },\n    {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_whatsapp_clickup\"] }}\",\n        \"value\": \"https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/{{   $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"] : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ? $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"] : null }}/\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone_clickup\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"Telefone do Cliente - Formato Z-API\"].slice(-8) }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_jdp_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"valor_jdp\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_segmento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_meta_faturamento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_desenvolver_prosperar_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_maior_desafio_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_acredita_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_expectativa_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_porque_voce_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_comprometimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] }}\"\n    },\n {\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_investimento_clickup\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"] }}\"\n    }\n]\n"
         }
       },
-      "id": "f4c96286-3e84-4959-9d67-54628285767c",
+      "id": "2bcb2d36-6a09-48a2-af45-fef2823b3679",
       "name": "cria_task7",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2420,
-        2980
+        1460,
+        3920
       ],
       "retryOnFail": true,
       "maxTries": 2,
@@ -4631,13 +4631,13 @@
         "amount": 3,
         "unit": "seconds"
       },
-      "id": "63c94a63-6785-49c9-9283-45f579b4de99",
+      "id": "101a64bf-aae6-490e-9bc9-05408e4e9598",
       "name": "3_segun3",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1,
       "position": [
-        3100,
-        3120
+        2140,
+        4060
       ],
       "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
     },
@@ -4645,13 +4645,13 @@
       "parameters": {
         "jsCode": "let fields = [\n {\n        \"id\": 'e85a521d-ed4b-4de5-a533-ccaaeb4a4126' ,\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"E-mail do Cliente\"] || \"\"\n    },\n    {\n        \"id\": '146e6a0b-d2f6-4c77-9ca7-c5214de84776',\n        \"value\": 'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' + $node[\"criarContatoChatwoot1\"].runIndex >= 0 ? $node[\"criarContatoChatwoot1\"].json[\"payload\"][\"contact\"][\"id\"].toString() : $node[\"buscarContatoChatwoot1\"].runIndex >= 0 ?   'https://atendimento-wizard.automagicbots.com.br/app/accounts/3/contacts/' +        $node[\"buscarContatoChatwoot1\"].json[\"payload\"][\"0\"][\"id\"].toString() : null  || \"\"\n    },\n{\n        \"id\": '667c5680-e9e2-4527-a7f2-3a13597398ae',\n        \"value\": '+' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"Telefone do Cliente - Formato Z-API\"].slice(-8) || \"\" },\n {\n        \"id\": 'b3c89f54-d6ab-4a13-a96f-387f13cf259d',\n        \"value\": '4a24666b-e2b6-4d73-9fb4-3d6288dc6450'\n    },\n {\n        \"id\": '08279b52-51d7-4bf6-bddc-9f6ade0bbbf2',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"segmento\"] \n    },\n {\n        \"id\": '617065cb-25a9-4cdb-ad29-54c8a04c4858',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"faturamento\"] \n    },\n {\n        \"id\": 'e0db01cd-81a3-47c9-a0cc-6ba43575d921',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"meta_faturamento\"] \n    },\n {\n        \"id\": '81b51f94-7551-4e1c-8ef0-d193d981023c',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"desenvolver_prosperar\"] \n    },\n {\n        \"id\": 'c9244aac-7fdc-4c45-92c1-61bd5e159d02',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"maior_desafio\"] \n    },\n {\n        \"id\": '443985b5-ca79-4188-a7cb-899f1b3ecdcd',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"porque_acredita\"] \n    },\n {\n        \"id\": 'ac7efa91-935e-4443-bffa-0dd77207dcfa',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"expectativa\"]\n    },\n {\n        \"id\": '929d45b1-2256-42cc-9abf-00f649e57ab4',\n        \"value\":  $node[\"chega_da_fila\"].json[\"content\"][\"porque_voce\"]\n    },\n {\n        \"id\": 'a59d4006-877c-44b9-b1e2-39f119f946b0',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"comprometimento\"] \n    },\n {\n        \"id\":  '41ff8e34-078d-479e-ac1f-c50f36a5d0fc',\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"investimento\"]\n    }\n];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { id: field.id, value: field.id === '667c5680-e9e2-4527-a7f2-3a13597398ae' ? \"'\" + field.value + \"'\" : field.value }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
       },
-      "id": "6afaefe8-f8f0-447a-9ec9-1ae567022091",
+      "id": "a5c6dadc-dd76-4df5-a5f3-7fe37660f212",
       "name": "campos_para_update3",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        2420,
-        3220
+        1460,
+        4160
       ]
     },
     {
@@ -4659,13 +4659,13 @@
         "operation": "limit",
         "keep": "lastItems"
       },
-      "id": "a1ae8f41-a4e5-40e5-b7fd-7e13738e73f9",
+      "id": "c8ef3be4-a38b-42be-923d-dc5b9f626e15",
       "name": "item_unico3",
       "type": "n8n-nodes-base.itemLists",
       "typeVersion": 3,
       "position": [
-        2940,
-        3320
+        1980,
+        4260
       ]
     },
     {
@@ -4673,13 +4673,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "e3f48883-217a-4ffa-b3af-72f468a7ad56",
+      "id": "0af2047c-9c2c-4384-8591-d4da9cd12e6c",
       "name": "divide_campos3",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 2,
       "position": [
-        2680,
-        3220
+        1720,
+        4160
       ]
     },
     {
@@ -4690,13 +4690,13 @@
         "field": "={{ $node[\"divide_campos3\"].json[\"id\"] }}",
         "value": "={{ $node[\"divide_campos3\"].json[\"value\"] }}"
       },
-      "id": "36f239c8-6785-4d0e-ba54-3c6f39fa381d",
+      "id": "922c048d-96b5-4417-ae6d-b8d4ebc7a783",
       "name": "add_ids3",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        2920,
-        3120
+        1960,
+        4060
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4714,13 +4714,13 @@
           "addAssignees": "=96789246"
         }
       },
-      "id": "3b1b842f-646a-41d8-a3b5-13ba61bef2c5",
+      "id": "2d0697dd-d2ee-40f8-be66-60b565ee127d",
       "name": "update_task11",
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        3120,
-        3320
+        2160,
+        4260
       ],
       "credentials": {
         "clickUpOAuth2Api": {
@@ -4773,13 +4773,13 @@
           "detailedOutput": true
         }
       },
-      "id": "2aa8abfa-cb7a-489f-8563-870bb513ac7e",
+      "id": "b170b5a1-b00c-4561-b04f-52b4b17673cd",
       "name": "atualiza_ids3",
       "type": "n8n-nodes-base.mySql",
       "typeVersion": 2.1,
       "position": [
-        3460,
-        3120
+        2500,
+        4060
       ],
       "credentials": {
         "mySql": {
@@ -4901,81 +4901,17 @@
         },
         "options": {}
       },
-      "id": "078062a8-0cff-4ca4-8f47-33be2b48028c",
+      "id": "25adbfae-fcd2-469e-bb03-ae20cc5fb988",
       "name": "dados23",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        3660,
-        3120
+        2700,
+        4060
       ]
     }
   ],
-  "pinData": {
-    "chega_da_fila": [
-      {
-        "json": {
-          "fields": {
-            "consumerTag": "amq.ctag-5-vA0OuxCoYwzeX0ZAlG1A",
-            "deliveryTag": 2,
-            "redelivered": false,
-            "exchange": "",
-            "routingKey": "Não Agendamentos - Parte 2"
-          },
-          "properties": {
-            "headers": {
-              "x-delivery-count": 29
-            }
-          },
-          "content": {
-            "Nome do Cliente": "Mateus Diniz",
-            "E-mail do Cliente": "mateusdiniz@automagicbots.com.br",
-            "Telefone do Cliente - Formato BC": "+556281196678",
-            "Telefone do Cliente - Formato Z-API": "556281196678",
-            "segmento": "Automações Digitais",
-            "faturamento": "De R$20.001 a R$50.000",
-            "meta_faturamento": "De R$500.001 a R$1.000.000",
-            "desenvolver_prosperar": "testando automação",
-            "maior_desafio": "relacionamento",
-            "porque_acredita": "testeee",
-            "expectativa": "as maiores",
-            "porque_voce": "automagic",
-            "comprometimento": "Sim",
-            "investimento": "R$ 34.900,00 parcelado (em até 21x)",
-            "id_campo_segmento_clickup": "08279b52-51d7-4bf6-bddc-9f6ade0bbbf2",
-            "id_campo_faturamento_clickup": "617065cb-25a9-4cdb-ad29-54c8a04c4858",
-            "id_campo_meta_faturamento_clickup": "e0db01cd-81a3-47c9-a0cc-6ba43575d921",
-            "id_campo_desenvolver_prosperar_clickup": "81b51f94-7551-4e1c-8ef0-d193d981023c",
-            "id_campo_maior_desafio_clickup": "c9244aac-7fdc-4c45-92c1-61bd5e159d02",
-            "id_campo_porque_acredita_clickup": "443985b5-ca79-4188-a7cb-899f1b3ecdcd",
-            "id_campo_expectativa_clickup": "ac7efa91-935e-4443-bffa-0dd77207dcfa",
-            "id_campo_porque_voce_clickup": "929d45b1-2256-42cc-9abf-00f649e57ab4",
-            "id_campo_comprometimento_clickup": "a59d4006-877c-44b9-b1e2-39f119f946b0",
-            "id_campo_investimento_clickup": "41ff8e34-078d-479e-ac1f-c50f36a5d0fc",
-            "id_campo_email_clickup": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126",
-            "id_campo_telefone_clickup": "667c5680-e9e2-4527-a7f2-3a13597398ae",
-            "utm_content": "",
-            "utm_source": "",
-            "utm_campaign": "",
-            "utm_medium": "",
-            "utm_term": "",
-            "data_resposta_type": "25/07/2024 15:04",
-            "data_ultima_quinzena": "2024-07-10",
-            "id_campo_link_whatsapp_clickup": "146e6a0b-d2f6-4c77-9ca7-c5214de84776",
-            "id_campo_situacao_atual_clickup": "be6701f6-e745-4613-b71c-2648ac9e9380",
-            "id_campo_visto_clickup": "68ea5ae1-72d7-43d0-92d3-ee74b73db741",
-            "link_whatsapp": "wa.me/556281196678",
-            "id_campo_se_clickup": "b3c89f54-d6ab-4a13-a96f-387f13cf259d",
-            "valor_SE": "4a24666b-e2b6-4d73-9fb4-3d6288dc6450",
-            "funil": "Oferta_Direta",
-            "variacao_do_funil": "OD_V1",
-            "qualificacao": "Qualificado",
-            "id_ending_typeform": "thankyou-screen"
-          }
-        }
-      }
-    ]
-  },
+  "pinData": {},
   "settings": {
     "executionOrder": "v1"
   },
@@ -4989,6 +4925,6 @@
     }
   ],
   "triggerCount": 1,
-  "updatedAt": "2024-09-20T00:12:14.439Z",
-  "versionId": "39e3e119-ae30-4343-82d5-5af348165386"
+  "updatedAt": "2024-09-26T01:14:47.454Z",
+  "versionId": "197782f9-9fb0-4a49-9f0a-0846a9b562b5"
 }
