@@ -1,0 +1,1692 @@
+{
+  "active": true,
+  "connections": {
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "encontrou_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_user": {
+      "main": [
+        [
+          {
+            "node": "email_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "email_igual": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_email_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "telefone_igual": {
+      "main": [
+        [
+          {
+            "node": "atualiza_data_atualizacao",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_telefone2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_telefone_na_tabela_telefones": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_users": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user1": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user2": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_emails1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_emails": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone1": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_telefones1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_telefones1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_emails1": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_email1": {
+      "main": [
+        [
+          {
+            "node": "encontrou_email1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_email1": {
+      "main": [
+        [
+          {
+            "node": "telefone_igual",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_email_na_tabela_emails",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone2": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone2": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_telefone_na_tabela_telefones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insere_lead_na_tabela_aplicacoes": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_email": {
+      "main": [
+        [
+          {
+            "node": "encontrou_email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_email": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "pesquisa_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_telefone": {
+      "main": [
+        [
+          {
+            "node": "encontrou_telefone",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "encontrou_telefone": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "insere_lead_na_tabela_users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "atualiza_data_atualizacao": {
+      "main": [
+        [
+          {
+            "node": "insere_lead_na_tabela_aplicacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-26T22:41:49.489Z",
+  "id": "NB6bQ5pu8Ekn17CG",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[IS] - Aplicação Preenchida - Parte 2",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] === $node[\"chega_da_fila\"].json[\"content\"][\"email\"] ? $node[\"chega_da_fila\"].json[\"content\"][\"email\"] : \"---------\" }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] === $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] ? $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] : \"---------\" }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "28b75cf2-c6e3-453b-bc1f-d4c502ec8017",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1060,
+        1180
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "504b884e-8f62-4491-a56b-6f606a8502e0",
+      "name": "encontrou_user",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1240,
+        1180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"email\"] }}",
+              "rightValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "65310b5f-057d-41ab-b361-2088aaeb731d",
+      "name": "email_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "ba114305-e222-4366-aafd-90f2852cdc8f",
+      "name": "insere_email_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1940,
+        1020
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_user\"].json[\"telefone\"] }}",
+              "rightValue": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a2cf5163-12e8-4c4e-9fd5-fa2d4dd213b8",
+      "name": "telefone_igual",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1660,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "760b7a90-7c67-4c08-94f5-a065edef88b2",
+      "name": "insere_telefone_na_tabela_telefones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2220,
+        880
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_de_entrada",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"].split(\" \")[0] }}"
+            },
+            {
+              "column": "sobrenome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"].split(\" \").length > 1 ? $node[\"chega_da_fila\"].json[\"content\"][\"nome\"].split(\" \").slice(1).join(\" \") : \"\" }}"
+            },
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "013388a1-c6d9-427b-87fc-fd68cfc2de23",
+      "name": "insere_lead_na_tabela_users",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2200,
+        1500
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_email\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "4e30e79a-157e-415a-b0f7-59c82602758a",
+      "name": "pesquisa_user1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1800,
+        1240
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"pesquisa_telefone\"].json[\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "f3e02fe5-7fd8-455d-8942-afaf5bb02bce",
+      "name": "pesquisa_user2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2200,
+        1320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "4ec11820-881b-4019-ad70-9712ec2f2dc3",
+      "name": "insere_lead_na_tabela_emails",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2420,
+        1500
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{ $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] }}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "26ecc03f-3980-4bf9-b3b4-c0de44526388",
+      "name": "insere_lead_na_tabela_telefones",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2620,
+        1500
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "05466b9e-e514-4f5c-b834-70fffd62b323",
+      "name": "pesquisa_telefone1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1980,
+        1240
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone1\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "d60765c2-b427-4bc8-9142-10e94e22d6ba",
+      "name": "encontrou_telefone1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2180,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 \n    ? $node[\"pesquisa_user\"].json[\"id\"]\n              : null\n}}"
+            },
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            }
+          ]
+        },
+        "options": {
+          "detailedOutput": true
+        }
+      },
+      "id": "b0bcadba-808f-47a7-ab66-64fd9c628a7f",
+      "name": "insere_lead_na_tabela_telefones1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        1140
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            },
+            {
+              "column": "data_criacao",
+              "value": "={{ $now }}"
+            },
+            {
+              "column": "id_user",
+              "value": "={{\n  $node[\"pesquisa_user1\"].runIndex >= 0 \n    ? $node[\"pesquisa_user1\"].json[\"id\"]\n    : $node[\"pesquisa_user2\"].runIndex >= 0 \n      ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0 \n      ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0 \n    ? $node[\"pesquisa_user\"].json[\"id\"]\n              : null\n}}"
+            }
+          ]
+        },
+        "options": {
+          "replaceEmptyStrings": true,
+          "detailedOutput": true,
+          "skipOnConflict": true
+        }
+      },
+      "id": "c74f47e4-251e-47f8-bad4-977e0686da0a",
+      "name": "insere_lead_na_tabela_emails1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2400,
+        1320
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "53e8fe19-81ca-41d9-b152-2f20aeda4c7c",
+      "name": "pesquisa_email1",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1560,
+        1020
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_email1\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "158713e7-6f56-4394-8795-1c43680696a1",
+      "name": "encontrou_email1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1740,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8f9f44db-a5e9-4a5b-a7cb-1b70a7623330",
+      "name": "pesquisa_telefone2",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1840,
+        820
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone2\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "39b81d21-a869-4328-a2d4-bc140373bc43",
+      "name": "encontrou_telefone2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "aplicacoes",
+          "mode": "list",
+          "cachedResultName": "aplicacoes"
+        },
+        "dataMode": "defineBelow",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_lead",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"id\"]     : $node[\"pesquisa_user2\"].runIndex >= 0        ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0        ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"id\"]               : null }}"
+            },
+            {
+              "column": "formulario",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"aplicacao_preenchida\"] }}"
+            },
+            {
+              "column": "data_aplicacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao\"] || $now }}"
+            },
+            {
+              "column": "pergunta1",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qtd_seguidores\"] }}"
+            },
+            {
+              "column": "pergunta2",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento_mensal\"] }}"
+            },
+            {
+              "column": "pergunta3",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"] }}"
+            },
+            {
+              "column": "pergunta4",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"objetivo\"] }}"
+            },
+            {
+              "column": "pergunta5",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"forma_de_pagamento_selecionada\"] }}"
+            },
+            {
+              "column": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}"
+            },
+            {
+              "column": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}"
+            },
+            {
+              "column": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}"
+            },
+            {
+              "column": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}"
+            },
+            {
+              "column": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}"
+            },
+            {
+              "column": "utm_fun",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}"
+            },
+            {
+              "column": "utm_var",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "caf8374e-496a-4e56-8bf9-dc35fae872a3",
+      "name": "insere_lead_na_tabela_aplicacoes",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        3060,
+        720
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "emails",
+          "mode": "list",
+          "cachedResultName": "emails"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "3d10c0a7-ed46-4c7f-a305-4f3c10662b78",
+      "name": "pesquisa_email",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1440,
+        1340
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_email\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "03f80aae-aadd-4f80-b709-add55777d8a9",
+      "name": "encontrou_email",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "telefones",
+          "mode": "list",
+          "cachedResultName": "telefones"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8dd25f5a-08f9-408a-a4b3-94a3ea92bbe5",
+      "name": "pesquisa_telefone",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1800,
+        1440
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "dd359e72-da78-43bb-84a7-1b0911d82aa5",
+              "leftValue": "={{ $node[\"pesquisa_telefone\"].json[\"id\"] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "bc567099-c2ec-46a3-a588-f9fa5467aaa5",
+      "name": "encontrou_telefone",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"pesquisa_user\"].json[\"id\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "data_atualizacao",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "69cfa014-e63d-47e8-a063-6898797be4ad",
+      "name": "atualiza_data_atualizacao",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1840,
+        620
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação - Parte 2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "c1c9a6f7-81c0-4eb4-9f85-c3c3bd011991",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        3460,
+        720
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ab6453ac-831e-4632-9212-d3e2f7bd0f76",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "937bd772-a9a6-4cfe-a6bb-1c2970f4ebce",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4ffd154d-452e-485a-a875-ce3556d24ade",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6c27d078-d749-449f-8f51-0084efe0bcf0",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "660fbd47-6185-498e-91bd-a8dfc50e6f68",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "228ac296-81fc-4cb8-ade8-fb9c0ef44fc1",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9ea8240e-c9c1-499f-9827-8cfd4ab5478c",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2221456e-4238-4467-9d40-56e81f83481d",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71dff649-b440-450e-92ed-aebb1534bd2f",
+              "name": "funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6fce00a3-4d06-4891-b2ab-2e515abb8e08",
+              "name": "variacao_do_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f38eb36e-42db-4562-83c6-de0e7ccea5b8",
+              "name": "data_aplicacao_clickup",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao_clickup\"] }}",
+              "type": "number"
+            },
+            {
+              "id": "4166aecd-b214-4bdb-b05f-63cbcdb940c7",
+              "name": "id_campo_telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "164509f6-837a-4345-9bc1-be4a33eebcf9",
+              "name": "id_campo_link_do_whatsapp",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a14967c5-f7ad-4a0e-82af-650b314472b2",
+              "name": "id_campo_forma_de_pagamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_forma_de_pagamento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9213d0bf-7c4c-4e0a-a81f-da392444227e",
+              "name": "id_campo_faturamento_atual",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_atual\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a84f3fcb-5606-4897-a64b-e68aacd8fe71",
+              "name": "id_campo_link_do_instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_instagram\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "aa246254-b757-4b3b-ac58-ced404260c0f",
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_quantidade_de_seguidores\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3471bef5-57f0-481d-9fdc-79e27feedb5b",
+              "name": "id_campo_email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3219483e-2ae9-4510-973e-b6b74e4aeaf1",
+              "name": "id_campo_dificuldade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dificuldade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f7a30dd8-fb4b-417b-a5c9-37df98931107",
+              "name": "id_campo_objetivo",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_objetivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0ce8f114-0cba-43b0-9275-3d753bcb8ed5",
+              "name": "aplicacao_preenchida",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"aplicacao_preenchida\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "c0c56276-6ee4-45d3-89e4-4add1e4dd568",
+              "name": "id_user",
+              "value": "={{   $node[\"pesquisa_user1\"].runIndex >= 0      ? $node[\"pesquisa_user1\"].json[\"id\"]     : $node[\"pesquisa_user2\"].runIndex >= 0        ? $node[\"pesquisa_user2\"].json[\"id\"]    : $node[\"insere_lead_na_tabela_users\"].runIndex >= 0        ? $node[\"insere_lead_na_tabela_users\"].json[\"data\"][\"insertId\"] : $node[\"pesquisa_user\"].runIndex >= 0        ? $node[\"pesquisa_user\"].json[\"id\"]               : null }}",
+              "type": "string"
+            },
+            {
+              "id": "958505d8-628a-44fe-8b25-1996349c1029",
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"forma_de_pagamento_selecionada\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8f95ef6e-a58c-4b63-aac7-431f0daadbdc",
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento_mensal\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6114b9c6-f0eb-4844-aa1d-695b9ff7d33c",
+              "name": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "97983ebb-ede6-409a-b9c3-27733ddeee85",
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qtd_seguidores\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "380c0127-6e0f-4695-8423-183d9843ecc0",
+              "name": "dificuldade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "cfd2843b-73af-4a9e-a8ed-f811f821bf7d",
+              "name": "objetivo",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"objetivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eedf2d64-147c-4d34-a128-97122a7f2779",
+              "name": "id_campo_data_resposta",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_data_resposta\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "281a3ba1-2d60-4adb-b631-68bd53e54066",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3260,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "fa5ca002-7815-4b96-871c-aff0a4a175fd",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        900,
+        1180
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-vnUu6X0k-UljDMir8Z0ofg",
+            "deliveryTag": 8,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Teste Influent Summit Aplicação"
+          },
+          "properties": {},
+          "content": {
+            "nome": "Gabriel",
+            "email": "amaral@automagicbots.com.br",
+            "Telefone do Cliente - Formato BC": "+553185711260",
+            "telefone": "553185711260",
+            "utm_content": "qrcode",
+            "utm_source": "palestra",
+            "utm_campaign": "influent_summit2024",
+            "utm_medium": "pitch-palestra",
+            "utm_term": "audiencia",
+            "instagram": "amaraldasautomacoes",
+            "qtd_seguidores": "De 100 mil até 500 mil seguidores",
+            "faturamento_mensal": "Faturo de R$10.001 a R$20.000 mensais",
+            "dificuldade": "dificuldade",
+            "objetivo": "objetivo",
+            "forma_de_pagamento_selecionada": "Quero pagar à vista",
+            "id_campo_telefone": "667c5680-e9e2-4527-a7f2-3a13597398ae",
+            "id_campo_link_do_whatsapp": "146e6a0b-d2f6-4c77-9ca7-c5214de84776",
+            "id_campo_forma_de_pagamento": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53",
+            "id_campo_faturamento_atual": "617065cb-25a9-4cdb-ad29-54c8a04c4858",
+            "id_campo_link_do_instagram": "61b185e1-fe06-4817-bd1f-9098fc19f8d8",
+            "id_campo_quantidade_de_seguidores": "e188d943-3c4f-438f-87e8-79c578a0126c",
+            "id_campo_email": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126",
+            "id_campo_dificuldade": "00810de6-8369-4c1a-8693-8ccaa3d9df70",
+            "id_campo_objetivo": "44a964d0-288f-48e6-af3e-939b6f4c35aa",
+            "aplicacao_preenchida": "[IS] - Aplicação Influent Accelerator Program",
+            "funil": "influent_summit",
+            "variacao_do_funil": "v1",
+            "data_ultima_quinzena": "2024-09-11",
+            "data_aplicacao_clickup": 1727388796000,
+            "id_campo_data_resposta": "b211dab6-f25d-4042-9610-fb7f40be90a5",
+            "data_aplicacao": "2024-09-26T19:13:16-03:00"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-09-26T23:07:05.851Z",
+  "versionId": "a4412e8e-2f97-4d46-b49d-f5df15c719ab"
+}
