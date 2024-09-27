@@ -157,6 +157,39 @@
           }
         ]
       ]
+    },
+    "update_task1": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "preenche_id_crm": {
+      "main": [
+        [
+          {
+            "node": "dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2024-09-26T22:47:01.077Z",
@@ -519,6 +552,239 @@
         2740,
         1160
       ]
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação - Parte 3",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "30271978-4ca4-4e7a-9655-9b59bae8316d",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        4000,
+        800
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ab6453ac-831e-4632-9212-d3e2f7bd0f76",
+              "name": "nome",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "937bd772-a9a6-4cfe-a6bb-1c2970f4ebce",
+              "name": "email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "4ffd154d-452e-485a-a875-ce3556d24ade",
+              "name": "telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6c27d078-d749-449f-8f51-0084efe0bcf0",
+              "name": "utm_source",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_source\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "660fbd47-6185-498e-91bd-a8dfc50e6f68",
+              "name": "utm_campaign",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_campaign\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "228ac296-81fc-4cb8-ade8-fb9c0ef44fc1",
+              "name": "utm_term",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_term\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9ea8240e-c9c1-499f-9827-8cfd4ab5478c",
+              "name": "utm_medium",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_medium\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "2221456e-4238-4467-9d40-56e81f83481d",
+              "name": "utm_content",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"utm_content\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "71dff649-b440-450e-92ed-aebb1534bd2f",
+              "name": "funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6fce00a3-4d06-4891-b2ab-2e515abb8e08",
+              "name": "variacao_do_funil",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"variacao_do_funil\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f38eb36e-42db-4562-83c6-de0e7ccea5b8",
+              "name": "data_aplicacao_clickup",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao_clickup\"] }}",
+              "type": "number"
+            },
+            {
+              "id": "4166aecd-b214-4bdb-b05f-63cbcdb940c7",
+              "name": "id_campo_telefone",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "164509f6-837a-4345-9bc1-be4a33eebcf9",
+              "name": "id_campo_link_do_whatsapp",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_whatsapp\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a14967c5-f7ad-4a0e-82af-650b314472b2",
+              "name": "id_campo_forma_de_pagamento",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_forma_de_pagamento\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "9213d0bf-7c4c-4e0a-a81f-da392444227e",
+              "name": "id_campo_faturamento_atual",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_atual\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "a84f3fcb-5606-4897-a64b-e68aacd8fe71",
+              "name": "id_campo_link_do_instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_instagram\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "aa246254-b757-4b3b-ac58-ced404260c0f",
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_quantidade_de_seguidores\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3471bef5-57f0-481d-9fdc-79e27feedb5b",
+              "name": "id_campo_email",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "3219483e-2ae9-4510-973e-b6b74e4aeaf1",
+              "name": "id_campo_dificuldade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dificuldade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "f7a30dd8-fb4b-417b-a5c9-37df98931107",
+              "name": "id_campo_objetivo",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_objetivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0ce8f114-0cba-43b0-9275-3d753bcb8ed5",
+              "name": "aplicacao_preenchida",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"aplicacao_preenchida\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "c0c56276-6ee4-45d3-89e4-4add1e4dd568",
+              "name": "id_user",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_user\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "958505d8-628a-44fe-8b25-1996349c1029",
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"forma_de_pagamento_selecionada\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "8f95ef6e-a58c-4b63-aac7-431f0daadbdc",
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento_mensal\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "6114b9c6-f0eb-4844-aa1d-695b9ff7d33c",
+              "name": "instagram",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "97983ebb-ede6-409a-b9c3-27733ddeee85",
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"qtd_seguidores\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "380c0127-6e0f-4695-8423-183d9843ecc0",
+              "name": "dificuldade",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "cfd2843b-73af-4a9e-a8ed-f811f821bf7d",
+              "name": "objetivo",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"objetivo\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "eedf2d64-147c-4d34-a128-97122a7f2779",
+              "name": "id_campo_data_resposta",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_data_resposta\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "113df826-2e26-4e5d-a567-0e9aeab4c8e5",
+              "name": "produto",
+              "value": "={{ $node[\"pesquisa_label\"].json[\"produto\"] }}",
+              "type": "string"
+            },
+            {
+              "id": "0f962432-0c0b-4050-9e58-4f8f838f650c",
+              "name": "copy",
+              "value": "={{ $node[\"pesquisa_label\"].json[\"copy_confirmacao\"] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "428b1827-ff6f-4e1b-8357-36a9fa254a50",
+      "name": "dados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        3820,
+        800
+      ]
     }
   ],
   "pinData": {
@@ -526,21 +792,19 @@
       {
         "json": {
           "fields": {
-            "consumerTag": "amq.ctag-1Py-ZjQMMPKJjj9iaeGg7g",
-            "deliveryTag": 1,
-            "redelivered": true,
+            "consumerTag": "amq.ctag-VuyoRx4e9q2_Nir--Fo_Aw",
+            "deliveryTag": 23,
+            "redelivered": false,
             "exchange": "",
             "routingKey": "Influent Summit - Aplicação - Parte 2"
           },
           "properties": {
-            "headers": {
-              "x-delivery-count": 4
-            }
+            "headers": {}
           },
           "content": {
-            "nome": "Teste04",
-            "email": "teste03@gmail.com",
-            "telefone": "5521999999994",
+            "nome": "Teste7",
+            "email": "teste7@gmail.com",
+            "telefone": "5521999999996",
             "utm_source": "palestra",
             "utm_campaign": "influent_summit2024",
             "utm_term": "audiencia",
@@ -548,7 +812,7 @@
             "utm_content": "qrcode",
             "funil": "influent_summit",
             "variacao_do_funil": "v1",
-            "data_aplicacao_clickup": 1727394744000,
+            "data_aplicacao_clickup": 1727446562000,
             "id_campo_telefone": "667c5680-e9e2-4527-a7f2-3a13597398ae",
             "id_campo_link_do_whatsapp": "146e6a0b-d2f6-4c77-9ca7-c5214de84776",
             "id_campo_forma_de_pagamento": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53",
@@ -558,14 +822,14 @@
             "id_campo_email": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126",
             "id_campo_dificuldade": "00810de6-8369-4c1a-8693-8ccaa3d9df70",
             "id_campo_objetivo": "44a964d0-288f-48e6-af3e-939b6f4c35aa",
-            "aplicacao_preenchida": "[IS] - Aplicação Influent Accelerator Program",
-            "id_user": "4",
+            "aplicacao_preenchida": "[IS] - Aplicação Influent Hive Society",
+            "id_user": "5",
             "forma_de_pagamento_selecionada": "Preciso de uma forma personalizada de pagamento",
-            "faturamento_mensal": "Ainda não faturo",
-            "instagram": "teste04",
-            "qtd_seguidores": "Até 10 mil seguidores",
-            "dificuldade": "4",
-            "objetivo": "4||4",
+            "faturamento_mensal": "Faturo de R$5.001 a R$10.000 mensais",
+            "instagram": "teste7",
+            "qtd_seguidores": "De 50 mil até 100 mil seguidores",
+            "dificuldade": "7",
+            "objetivo": "7 t|t|tt| 7",
             "id_campo_data_resposta": "b211dab6-f25d-4042-9610-fb7f40be90a5"
           }
         }
@@ -581,6 +845,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-09-27T01:21:33.805Z",
-  "versionId": "5b894839-797a-47d9-84e1-d3e1b6c437a3"
+  "updatedAt": "2024-09-27T14:46:51.430Z",
+  "versionId": "0808a5de-b152-4f64-90c8-eca20e15c357"
 }
