@@ -1,0 +1,245 @@
+{
+  "active": true,
+  "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "procura_produto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_produto": {
+      "main": [
+        [
+          {
+            "node": "procura_evolution",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "procura_evolution": {
+      "main": [
+        [
+          {
+            "node": "envia_msg",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-27T14:25:26.185Z",
+  "id": "M42RDwPVTAxqPYi9",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[IS] - Aplicação Preenchida - Parte 4",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação - Parte 3",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "bfc3856a-552a-4381-a26a-6a25be3cbee6",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        1720,
+        980
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "produtos",
+          "mode": "list",
+          "cachedResultName": "produtos"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"produto\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b504f977-f5fd-4a18-9f49-bfe88fcb163a",
+      "name": "procura_produto",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        1940,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "ferramentas",
+          "mode": "list",
+          "cachedResultName": "ferramentas"
+        },
+        "where": {
+          "values": [
+            {
+              "column": "ferramenta",
+              "value": "Evolution API"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2a796c1b-46a8-4e37-bee0-1bb81f7cf987",
+      "name": "procura_evolution",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        2140,
+        980
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $node[\"procura_evolution\"].json[\"url_api\"] }}/message/sendText/{{ $node[\"procura_evolution\"].json[\"instancia\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "={{ $node[\"procura_evolution\"].json[\"parametro_api\"] }}",
+              "value": "={{ $node[\"procura_evolution\"].json[\"api_key\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "number",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}"
+            },
+            {
+              "name": "text",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"copy\"].replace(\"<Nome>\",$node[\"chega_da_fila\"].json[\"content\"][\"nome\"]).replace(\"<Produto>\",$node[\"procura_produto\"].json[\"nome\"]).replace(\"<produto>\",$node[\"procura_produto\"].json[\"nome\"]) }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b0d3354b-79ec-4dad-a627-13e031287938",
+      "name": "envia_msg",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2360,
+        980
+      ]
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-HXMd4qPK7Zaodn_irWoftA",
+            "deliveryTag": 1,
+            "redelivered": false,
+            "exchange": "",
+            "routingKey": "Influent Summit - Aplicação - Parte 3"
+          },
+          "properties": {
+            "headers": {}
+          },
+          "content": {
+            "nome": "Teste7",
+            "email": "teste7@gmail.com",
+            "telefone": "5521967294501",
+            "utm_source": "palestra",
+            "utm_campaign": "influent_summit2024",
+            "utm_term": "audiencia",
+            "utm_medium": "pitch-palestra",
+            "utm_content": "qrcode",
+            "funil": "influent_summit",
+            "variacao_do_funil": "v1",
+            "data_aplicacao_clickup": 1727446562000,
+            "id_campo_telefone": "667c5680-e9e2-4527-a7f2-3a13597398ae",
+            "id_campo_link_do_whatsapp": "146e6a0b-d2f6-4c77-9ca7-c5214de84776",
+            "id_campo_forma_de_pagamento": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53",
+            "id_campo_faturamento_atual": "617065cb-25a9-4cdb-ad29-54c8a04c4858",
+            "id_campo_link_do_instagram": "61b185e1-fe06-4817-bd1f-9098fc19f8d8",
+            "id_campo_quantidade_de_seguidores": "e188d943-3c4f-438f-87e8-79c578a0126c",
+            "id_campo_email": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126",
+            "id_campo_dificuldade": "00810de6-8369-4c1a-8693-8ccaa3d9df70",
+            "id_campo_objetivo": "44a964d0-288f-48e6-af3e-939b6f4c35aa",
+            "aplicacao_preenchida": "[IS] - Aplicação Influent Hive Society",
+            "id_user": "5",
+            "forma_de_pagamento_selecionada": "Preciso de uma forma personalizada de pagamento",
+            "faturamento_mensal": "Faturo de R$5.001 a R$10.000 mensais",
+            "instagram": "teste7",
+            "qtd_seguidores": "De 50 mil até 100 mil seguidores",
+            "dificuldade": "7",
+            "objetivo": "7 t|t|tt| 7",
+            "id_campo_data_resposta": "b211dab6-f25d-4042-9610-fb7f40be90a5",
+            "produto": "3",
+            "copy": "<Nome>, parabéns pela sua decisão! 👏🏻\n\nAcabamos de receber sua aplicação para o <produto>.\n\nSeus dados estão sendo analisados e um especialista, em breve, vai chamar você por aqui.\n\nEnquanto isso, me conta: \n\nPor que você acredita que deveria ser aprovado para entrar no <Produto>?"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-09-27T14:54:59.847Z",
+  "versionId": "e35a52fa-b3bd-4b71-b049-920cfb38881e"
+}
