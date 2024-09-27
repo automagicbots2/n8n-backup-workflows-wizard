@@ -1,0 +1,586 @@
+{
+  "active": true,
+  "connections": {
+    "chega_da_fila": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_label",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_user": {
+      "main": [
+        [
+          {
+            "node": "crm_vazio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update_task": {
+      "main": [
+        [
+          {
+            "node": "preenche_id_crm",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "cria_task2": {
+      "main": [
+        [
+          {
+            "node": "update_task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3_segun": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "campos_para_update": {
+      "main": [
+        [
+          {
+            "node": "divide_campos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "item_unico": {
+      "main": [
+        [
+          {
+            "node": "update_task1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "divide_campos": {
+      "main": [
+        [
+          {
+            "node": "add_ids",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "item_unico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add_ids": {
+      "main": [
+        [
+          {
+            "node": "3_segun",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "crm_vazio": {
+      "main": [
+        [
+          {
+            "node": "cria_task2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "get_deal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "pesquisa_label": {
+      "main": [
+        [
+          {
+            "node": "pesquisa_user",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_deal": {
+      "main": [
+        [
+          {
+            "node": "buscar_campo_aplicacoes_preenchidas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "buscar_campo_aplicacoes_preenchidas": {
+      "main": [
+        [
+          {
+            "node": "campos_para_update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-26T22:47:01.077Z",
+  "id": "oUXBbaE8XX5yNSv0",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[IS] - Aplicação Preenchida - Parte 3",
+  "nodes": [
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação - Parte 2",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "acknowledge": "executionFinishesSuccessfully",
+          "jsonParseBody": "={{ true }}",
+          "parallelMessages": 3
+        }
+      },
+      "id": "854a2f39-242a-43da-90ea-9c1b3f7f9491",
+      "name": "chega_da_fila",
+      "type": "n8n-nodes-base.rabbitmqTrigger",
+      "typeVersion": 1,
+      "position": [
+        1720,
+        980
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "id",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_user\"] }}"
+            }
+          ]
+        },
+        "combineConditions": "OR",
+        "options": {}
+      },
+      "id": "a8c3b960-1835-452f-a418-7aaa91843835",
+      "name": "pesquisa_user",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2120,
+        980
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"cria_task2\"].json[\"id\"] }}",
+        "updateFields": {
+          "addAssignees": "96755733"
+        }
+      },
+      "id": "d066c3d8-cd39-4cf1-adb4-2937381b6b30",
+      "name": "update_task",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        2740,
+        800
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "team": "9013333894",
+        "space": "90131691042",
+        "folderless": true,
+        "list": "901305491514",
+        "name": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"nome\"] }}",
+        "additionalFields": {
+          "customFieldsJson": "=[\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone\"] }}\",\n        \"value\": \"+{{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"].slice(0,4)}}9{{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"].slice(-8) }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_whatsapp\"] }}\",\n        \"value\": \"https://wa.me/{{ $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_forma_de_pagamento\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"forma_de_pagamento_selecionada\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_atual\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"faturamento_mensal\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_instagram\"] }}\",\n        \"value\": \"https://instagram.com/{{ $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_quantidade_de_seguidores\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"qtd_seguidores\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"email\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dificuldade\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_objetivo\"] }}\",\n        \"value\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"objetivo\"] }}\"\n    },\n{\n        \"id\": \"{{ $node[\"pesquisa_label\"].json[\"id_campo_clickup\"] }}\",\n        \"value\": [\"{{ $node[\"pesquisa_label\"].json[\"id_label\"] }}\"]\n    },\n{\n        \"id\": \"{{ $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_data_resposta\"] }}\",\n        \"value\": {{ $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao_clickup\"] || new Date($now).getTime()\n }}\n    }\n]"
+        }
+      },
+      "id": "fd1862d4-7027-4a61-a370-d72e7970a237",
+      "name": "cria_task2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        800
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "8e403585-129f-4ad6-9be5-0d5107dadae8",
+      "name": "3_segun",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        3580,
+        1060
+      ],
+      "webhookId": "0c04f45a-8c13-42fb-b33c-0e88197ef61e"
+    },
+    {
+      "parameters": {
+        "jsCode": "let fields = [\n    {\n        \"id\": $node[\"pesquisa_label\"].json[\"id_campo_clickup\"],\n        \"value\": $node[\"buscar_campo_aplicacoes_preenchidas\"].json[\"value\"]\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone\"],\n        \"value\": '+' + $node[\"chega_da_fila\"].json.content[\"telefone\"].slice(0, 4) + '9' + $node[\"chega_da_fila\"].json.content[\"telefone\"].slice(-8) || \"\" \n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_whatsapp\"],\n        \"value\": 'https://wa.me/' + $node[\"chega_da_fila\"].json[\"content\"][\"telefone\"] || \"\"\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_forma_de_pagamento\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"forma_de_pagamento_selecionada\"] || \"\" \n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_faturamento_atual\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"faturamento_mensal\"] || \"\"\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_link_do_instagram\"],\n        \"value\": 'https://instagram.com/' + $node[\"chega_da_fila\"].json[\"content\"][\"instagram\"] || \"\"\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_quantidade_de_seguidores\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"qtd_seguidores\"] || \"\" \n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_email\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"email\"] || \"\" \n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dificuldade\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"dificuldade\"].toString() || \"\"\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_objetivo\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"objetivo\"].toString() || \"\"\n    },\n    {\n        \"id\": $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_data_resposta\"],\n        \"value\": $node[\"chega_da_fila\"].json[\"content\"][\"data_aplicacao_clickup\"] || new Date($now).getTime()\n    }\n];\n\nlet id_campo_telefone = $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_telefone\"];\nlet id_campo_dificuldade = $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_dificuldade\"];\nlet id_campo_objetivo = $node[\"chega_da_fila\"].json[\"content\"][\"id_campo_objetivo\"];\n\nlet output = fields.map(field => {\n  return {\n    fields: [\n      { \n        id: field.id, \n        value: (field.id === id_campo_telefone || field.id === id_campo_dificuldade || field.id === id_campo_objetivo) \n          ? \"'\" + field.value + \"'\" \n          : field.value \n      }\n    ]\n  };\n});\n\n// Flatten the output array\noutput = output.flatMap(item => item.fields);\n\nreturn output;\n"
+      },
+      "id": "f20381ec-8d18-4823-bf80-2b8a795b9e3a",
+      "name": "campos_para_update",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        2940,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit",
+        "keep": "lastItems"
+      },
+      "id": "0ec648ef-d80d-4b91-b85a-c2a3b0eeead9",
+      "name": "item_unico",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 3,
+      "position": [
+        3420,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "139c5666-bc64-4b76-a854-9e407b226ec9",
+      "name": "divide_campos",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 2,
+      "position": [
+        3160,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "setCustomField",
+        "task": "={{ $node[\"pesquisa_user\"].json[\"id_crm\"] }}",
+        "field": "={{ $node[\"divide_campos\"].json[\"id\"] }}",
+        "value": "={{ $node[\"divide_campos\"].json[\"value\"] }}"
+      },
+      "id": "39d29a4c-083b-423c-bf0d-b277c298cb4c",
+      "name": "add_ids",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        3400,
+        1060
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{ $node[\"pesquisa_user\"].json[\"id_crm\"] }}",
+        "updateFields": {
+          "addAssignees": "96755733"
+        }
+      },
+      "id": "0024a1e6-f20c-4a8e-858e-7480e3cb7201",
+      "name": "update_task1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        1260
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node[\"pesquisa_user\"].json[\"id_crm\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "acaca346-83e2-4dbc-93d7-a5da6ed4f4eb",
+      "name": "crm_vazio",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        2360,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": {
+          "__rl": true,
+          "value": "users",
+          "mode": "list",
+          "cachedResultName": "users"
+        },
+        "dataMode": "defineBelow",
+        "columnToMatchOn": "id",
+        "valueToMatchOn": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"id_user\"] }}",
+        "valuesToSend": {
+          "values": [
+            {
+              "column": "id_crm",
+              "value": "={{ $node[\"cria_task2\"].json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b8d82c84-aa22-45a6-b337-6b6a67bcfcda",
+      "name": "preenche_id_crm",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        2940,
+        800
+      ],
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "select",
+        "table": {
+          "__rl": true,
+          "value": "relacao_aplicacao_tag_clickup",
+          "mode": "list",
+          "cachedResultName": "relacao_aplicacao_tag_clickup"
+        },
+        "limit": 1,
+        "where": {
+          "values": [
+            {
+              "column": "formulario",
+              "value": "={{ $node[\"chega_da_fila\"].json[\"content\"][\"aplicacao_preenchida\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "23a7aaeb-5517-48f3-9b47-8b8c263f6b8f",
+      "name": "pesquisa_label",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.2,
+      "position": [
+        1920,
+        980
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "mySql": {
+          "id": "3KUjlOCL4NyXeSeg",
+          "name": "[MySQL] - Vitor Cabral"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "get",
+        "id": "={{ $node[\"pesquisa_user\"].json[\"id_crm\"] }}"
+      },
+      "id": "0a7b0ab9-fe9e-4988-ab02-0a45844b84de",
+      "name": "get_deal",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        1160
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Encontrar o campo customizado com o id especificado\nlet customField = $json[\"custom_fields\"].find(field => field.id === $node[\"pesquisa_label\"].json[\"id_campo_clickup\"]);\n\n// Garantir que o valor seja sempre um array, mesmo que esteja vazio ou indefinido\nlet valor = (customField && Array.isArray(customField.value)) ? customField.value : [];\n\n// Pegar o id_label do outro parâmetro\nlet idLabel = $node[\"pesquisa_label\"].json[\"id_label\"];\n\n// Verificar se o id_label já existe no array 'value'\nif (!valor.includes(idLabel)) {\n  // Se não existir, adicionar o id_label ao array\n  valor.push(idLabel);\n}\n\n// Retornar o resultado como um array de objetos\nreturn [\n  {\n    json: {\n      value: valor\n    }\n  }\n];\n"
+      },
+      "id": "fc4001ca-421a-40f1-a9a0-7ad573b1152b",
+      "name": "buscar_campo_aplicacoes_preenchidas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        2740,
+        1160
+      ]
+    }
+  ],
+  "pinData": {
+    "chega_da_fila": [
+      {
+        "json": {
+          "fields": {
+            "consumerTag": "amq.ctag-1Py-ZjQMMPKJjj9iaeGg7g",
+            "deliveryTag": 1,
+            "redelivered": true,
+            "exchange": "",
+            "routingKey": "Influent Summit - Aplicação - Parte 2"
+          },
+          "properties": {
+            "headers": {
+              "x-delivery-count": 4
+            }
+          },
+          "content": {
+            "nome": "Teste04",
+            "email": "teste03@gmail.com",
+            "telefone": "5521999999994",
+            "utm_source": "palestra",
+            "utm_campaign": "influent_summit2024",
+            "utm_term": "audiencia",
+            "utm_medium": "pitch-palestra",
+            "utm_content": "qrcode",
+            "funil": "influent_summit",
+            "variacao_do_funil": "v1",
+            "data_aplicacao_clickup": 1727394744000,
+            "id_campo_telefone": "667c5680-e9e2-4527-a7f2-3a13597398ae",
+            "id_campo_link_do_whatsapp": "146e6a0b-d2f6-4c77-9ca7-c5214de84776",
+            "id_campo_forma_de_pagamento": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53",
+            "id_campo_faturamento_atual": "617065cb-25a9-4cdb-ad29-54c8a04c4858",
+            "id_campo_link_do_instagram": "61b185e1-fe06-4817-bd1f-9098fc19f8d8",
+            "id_campo_quantidade_de_seguidores": "e188d943-3c4f-438f-87e8-79c578a0126c",
+            "id_campo_email": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126",
+            "id_campo_dificuldade": "00810de6-8369-4c1a-8693-8ccaa3d9df70",
+            "id_campo_objetivo": "44a964d0-288f-48e6-af3e-939b6f4c35aa",
+            "aplicacao_preenchida": "[IS] - Aplicação Influent Accelerator Program",
+            "id_user": "4",
+            "forma_de_pagamento_selecionada": "Preciso de uma forma personalizada de pagamento",
+            "faturamento_mensal": "Ainda não faturo",
+            "instagram": "teste04",
+            "qtd_seguidores": "Até 10 mil seguidores",
+            "dificuldade": "4",
+            "objetivo": "4||4",
+            "id_campo_data_resposta": "b211dab6-f25d-4042-9610-fb7f40be90a5"
+          }
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-09-27T01:21:33.805Z",
+  "versionId": "5b894839-797a-47d9-84e1-d3e1b6c437a3"
+}
