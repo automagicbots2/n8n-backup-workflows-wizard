@@ -1,0 +1,1078 @@
+{
+  "active": true,
+  "connections": {
+    "dados_validados3": {
+      "main": [
+        [
+          {
+            "node": "nao_finalizou_forms",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "formata_dados1": {
+      "main": [
+        [
+          {
+            "node": "dados_validados3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "clickup_data": {
+      "main": [
+        [
+          {
+            "node": "get_members",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_members": {
+      "main": [
+        [
+          {
+            "node": "get_custom_fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "nao_finalizou_forms": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "dados_validados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "aplicacao_preenchida": {
+      "main": [
+        [
+          {
+            "node": "formata_dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-09-26T22:39:28.066Z",
+  "id": "Jucb9TQ90Wc8MfLW",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "⌚[IS] - Aplicação Preenchida - Parte 1",
+  "nodes": [
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados1\"].json[\"fullname\"].trim() }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados1\"].json[\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"instagram\"].replace('@','').toLowerCase()}}"
+            },
+            {
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quantos seguidores você possui?\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quanto você já fatura por mês como influenciador?\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é a sua maior dificuldade hoje como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "objetivo",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu objetivo como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+            },
+            {
+              "name": "id_campo_telefone",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "id_campo_link_do_whatsapp",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_forma_de_pagamento",
+              "value": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53"
+            },
+            {
+              "name": "id_campo_faturamento_atual",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_link_do_instagram",
+              "value": "61b185e1-fe06-4817-bd1f-9098fc19f8d8"
+            },
+            {
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "e188d943-3c4f-438f-87e8-79c578a0126c"
+            },
+            {
+              "name": "id_campo_email",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_dificuldade",
+              "value": "00810de6-8369-4c1a-8693-8ccaa3d9df70"
+            },
+            {
+              "name": "id_campo_objetivo",
+              "value": "44a964d0-288f-48e6-af3e-939b6f4c35aa"
+            },
+            {
+              "name": "aplicacao_preenchida",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"formName\"] }}"
+            },
+            {
+              "name": "funil",
+              "value": "influent_summit"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "data_aplicacao_clickup",
+              "value": "={{ new Date($node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"]).getTime() }}"
+            },
+            {
+              "name": "id_campo_data_resposta",
+              "value": "b211dab6-f25d-4042-9610-fb7f40be90a5"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"] || $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "49795592-fd95-488d-aab6-764ef2e2323a",
+      "name": "dados_validados3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const fullNameAnswer = $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu nome?\"] || \"\";\nconst emailAnswer = $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu E-mail?\"] || \"\";\nconst telefoneClienteOriginal = $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu telefone?\"] || '';\nconst instagram = $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu Instagram?\"].replaceAll('@','').trimEnd().trimStart().toLowerCase() || \"\";\n\nfunction capitalizeName(fullName) {\n    if (typeof fullName === 'undefined') {\n        return { fname: '', lname: '', fullname: '' };\n    }\n\n    const lowerCaseWords = ['da', 'de', 'do', 'di', 'du'];\n    let words = fullName.toLowerCase().split(' ').map((word, index) => {\n        if (lowerCaseWords.includes(word) && index !== 0) {\n            return word;\n        }\n        return word.charAt(0).toUpperCase() + word.slice(1);\n    });\n\n    let fname = words.shift();\n    let lname = words.join(' ');\n\n    return { fname, lname, fullname: fname + ' ' + lname };\n}\n\nfunction formatEmail(email) {\n    return email.toLowerCase().trim();\n}\n\n  const telefoneLimpo = telefoneClienteOriginal.replace(/\\D/g, \"\");\n  const DDI = '55';\n  const DDD = telefoneLimpo.slice(2, 4); // Correção: Extrair os primeiros dois dígitos para obter o DDD\n\n  // Determinar o número de telefone final\n  if (parseInt(DDD) > 28) {\n    telefoneFinal = `${DDI}${DDD}${telefoneLimpo.slice(-8)}`;\n  } else {\n    telefoneFinal = `${DDI}${DDD}${telefoneLimpo.slice(-9)}`;\n  }\n\n\nconst formattedNames = capitalizeName(fullNameAnswer);\nconst formattedEmail = formatEmail(emailAnswer);\nconst utm_source = $node[\"aplicacao_preenchida\"].json[\"body\"][\"utmCampaign\"][\"utmSource\"] || \"\";\nconst utm_campaign = $node[\"aplicacao_preenchida\"].json[\"body\"][\"utmCampaign\"][\"utmCampaign\"] || \"\";\nconst utm_term = $node[\"aplicacao_preenchida\"].json[\"body\"][\"utmCampaign\"][\"utmTerm\"] || \"\";\nconst utm_medium = $node[\"aplicacao_preenchida\"].json[\"body\"][\"utmCampaign\"][\"utmMedium\"] || \"\";\nconst utm_content = $node[\"aplicacao_preenchida\"].json[\"body\"][\"utmCampaign\"][\"utmContent\"] || \"\";\n\n// Obter a data atual\nconst dataAtual = new Date();\n\n// Subtrair 15 dias\ndataAtual.setDate(dataAtual.getDate() - 15);\n\n// Formatar a data para YYYY-MM-DD\nconst ano = dataAtual.getFullYear();\nconst mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // +1 porque os meses começam em 0\nconst dia = String(dataAtual.getDate()).padStart(2, '0');\n\nconst dataFormatada = `${ano}-${mes}-${dia}`;\n\nconsole.log(dataFormatada); // Saída no formato YYYY-MM-DD\n\n\nconst result = {\n    ...formattedNames, // Nome formatado\n    email: formattedEmail, // Email formatado\n    whatsapp: telefoneFinal, // WhatsApp formatado\n    instagram: instagram,\n    utm_source: utm_source,\n    utm_campaign: utm_campaign,\n    utm_term: utm_term,\n    utm_medium: utm_medium,\n    utm_content: utm_content,\n    data_ultima_quinzena: dataFormatada,  \n};\n\n// Aqui estamos ajustando a estrutura do retorno para se adequar ao que o n8n espera\nreturn [{ json: result }];\n"
+      },
+      "id": "cff33690-19a4-49f6-b517-f3e3ba63c524",
+      "name": "formata_dados1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "list_id",
+              "value": "901305491514"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b3343dde-07e1-43f4-b6ce-38afa435b834",
+      "name": "clickup_data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        900,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://api.clickup.com/api/v2/list/{{ $json[\"list_id\"] }}/member",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "clickUpOAuth2Api",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "3db82eb3-0536-4f9a-a5dd-5991556ea809",
+      "name": "get_members",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1060,
+        360
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.clickup.com/api/v2/list/{{ $node[\"clickup_data\"].json[\"list_id\"] }}/field",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "clickUpOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "ea4ee399-deb3-40e5-ae01-9f652b1111a4",
+      "name": "get_custom_fields",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1260,
+        360
+      ],
+      "credentials": {
+        "clickUpOAuth2Api": {
+          "id": "11G9PSjzSpXl3N1E",
+          "name": "[ClickUp] - VirtuD Convert"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "list_id",
+              "value": "901305491514"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d36f5920-b873-4800-b918-7c63474ce8ae",
+      "name": "influent_accelerator_program",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        900,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "list_id",
+              "value": "901305491514"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c1737779-a000-40a8-9232-f81fc82d51b2",
+      "name": "influent_elite_circle",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1140,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "list_id",
+              "value": "901305491514"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6ccf0ab8-a7f0-4df5-b4d7-910c929e81c4",
+      "name": "influent_hive_society",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        1360,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "fdfa0cd4-2fc9-4768-a6a7-45f47becd328",
+              "leftValue": "={{ $node[\"dados_validados3\"].json[\"forma_de_pagamento_selecionada\"] }}",
+              "rightValue": "=",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ecb78640-735b-4090-849f-21494ea7383b",
+      "name": "nao_finalizou_forms",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        640
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "08112ba0-a2ed-486d-ab11-bd4e0e5ec076",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "3069db82-2592-4e95-8871-8ba07f059433",
+      "name": "entra_na_fila",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        580
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Influent Accelerator Program"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "56bfa943-24be-46b9-9832-563dbd7faaa5",
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "renameOutput": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0da44886-d614-405f-bdb6-1f4a4f00bb08",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1720,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados1\"].json[\"fullname\"].trim() }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados1\"].json[\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"instagram\"].replace('@','').toLowerCase()}}"
+            },
+            {
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quantos seguidores você possui?\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quanto você já fatura por mês como influenciador?\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é a sua maior dificuldade hoje como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "objetivo",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu objetivo como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+            },
+            {
+              "name": "id_campo_telefone",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "id_campo_link_do_whatsapp",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_forma_de_pagamento",
+              "value": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53"
+            },
+            {
+              "name": "id_campo_faturamento_atual",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_link_do_instagram",
+              "value": "61b185e1-fe06-4817-bd1f-9098fc19f8d8"
+            },
+            {
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "e188d943-3c4f-438f-87e8-79c578a0126c"
+            },
+            {
+              "name": "id_campo_email",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_dificuldade",
+              "value": "00810de6-8369-4c1a-8693-8ccaa3d9df70"
+            },
+            {
+              "name": "id_campo_objetivo",
+              "value": "44a964d0-288f-48e6-af3e-939b6f4c35aa"
+            },
+            {
+              "name": "aplicacao_preenchida",
+              "value": "[IS] - Aplicação Influent Accelerator Program"
+            },
+            {
+              "name": "funil",
+              "value": "influent_summit"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "data_aplicacao_clickup",
+              "value": "={{ new Date($node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"]).getTime() }}"
+            },
+            {
+              "name": "id_campo_data_resposta",
+              "value": "b211dab6-f25d-4042-9610-fb7f40be90a5"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"] || $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "dadba0f7-39e8-4d7e-8b67-bcd3295459f9",
+      "name": "dados_validados",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "influent-summit-aplicacao",
+        "options": {}
+      },
+      "id": "4861e3c7-0a65-448e-8745-c41d8c9c4d93",
+      "name": "aplicacao_preenchida",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        640
+      ],
+      "webhookId": "98b88c80-25f9-4c91-8758-19821b5dc3b7"
+    }
+  ],
+  "pinData": {
+    "influent_accelerator_program": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2512",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "35.197.110.103",
+            "x-forwarded-host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "61f25d337cc6",
+            "x-real-ip": "35.197.110.103"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "os": "Windows",
+            "browser": "Chrome",
+            "location": {
+              "ip": "177.116.69.54",
+              "success": true,
+              "type": "IPv4",
+              "continent": "South America",
+              "continent_code": "SA",
+              "country": "Brazil",
+              "country_code": "BR",
+              "region": "State of Minas Gerais",
+              "region_code": "MG",
+              "city": "Belo Horizonte",
+              "latitude": -19.9166813,
+              "longitude": -43.9344931,
+              "is_eu": false,
+              "postal": "30170-080",
+              "calling_code": "55",
+              "capital": "Brasília",
+              "borders": "AR,BO,CO,GF,GY,PE,PY,SR,UY,VE",
+              "flag": {
+                "img": "https://cdn.ipwhois.io/flags/br.svg",
+                "emoji": "🇧🇷",
+                "emoji_unicode": "U+1F1E7 U+1F1F7"
+              },
+              "connection": {
+                "asn": 26599,
+                "org": "TELEF NICA BRASIL S.A",
+                "isp": "TELEF NICA BRASIL S.A",
+                "domain": "telefonica.com.br"
+              },
+              "timezone": {
+                "id": "America/Sao_Paulo",
+                "abbr": "-03",
+                "is_dst": false,
+                "offset": -10800,
+                "utc": "-03:00",
+                "current_time": "2024-09-25T21:13:13-03:00"
+              },
+              "currency": {
+                "name": "Brazilian Real",
+                "code": "BRL",
+                "symbol": "$",
+                "plural": "Brazilian reals",
+                "exchange_rate": 5.475
+              }
+            },
+            "formId": "cm1igwyb800rp9x29awsw9n09",
+            "formName": "[IS] - Aplicação Influent Accelerator Program",
+            "utmCampaign": {
+              "utmTerm": "term",
+              "utmSource": "source",
+              "utmMedium": "medium",
+              "utmContent": "content",
+              "utmCampaign": "campaign"
+            },
+            "content": {
+              "Qual é o seu telefone?": "+5531985711260",
+              "Qual é o seu telefone? (Unformatted)": "5531985711260",
+              "Qual é o seu nome?": "Gabriel",
+              "Qual é o seu E-mail?": "teste@automagicbots.com.br",
+              "Qual é o seu Instagram?": "amaraldasautomacoes",
+              "Quantos seguidores você possui?": "De 500 mil seguidores até 1 milhão de seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$50.001 a R$100.000 mensais",
+              "Qual é a sua maior dificuldade hoje como influenciador?": "teste",
+              "Qual é o seu objetivo como influenciador?": "teste",
+              "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+            },
+            "Qual é o seu telefone?": "+5531985711260",
+            "Qual é o seu telefone? (Unformatted)": "5531985711260",
+            "Qual é o seu nome?": "Gabriel",
+            "Qual é o seu E-mail?": "teste@automagicbots.com.br",
+            "Qual é o seu Instagram?": "amaraldasautomacoes",
+            "Quantos seguidores você possui?": "De 500 mil seguidores até 1 milhão de seguidores",
+            "Quanto você já fatura por mês como influenciador?": "Faturo de R$50.001 a R$100.000 mensais",
+            "Qual é a sua maior dificuldade hoje como influenciador?": "teste",
+            "Qual é o seu objetivo como influenciador?": "teste",
+            "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+          }
+        }
+      }
+    ],
+    "influent_elite_circle": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2329",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "35.197.110.103",
+            "x-forwarded-host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "61f25d337cc6",
+            "x-real-ip": "35.197.110.103"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "os": "Windows",
+            "browser": "Chrome",
+            "location": {
+              "ip": "177.116.69.54",
+              "success": true,
+              "type": "IPv4",
+              "continent": "South America",
+              "continent_code": "SA",
+              "country": "Brazil",
+              "country_code": "BR",
+              "region": "State of Minas Gerais",
+              "region_code": "MG",
+              "city": "Belo Horizonte",
+              "latitude": -19.9166813,
+              "longitude": -43.9344931,
+              "is_eu": false,
+              "postal": "30170-080",
+              "calling_code": "55",
+              "capital": "Brasília",
+              "borders": "AR,BO,CO,GF,GY,PE,PY,SR,UY,VE",
+              "flag": {
+                "img": "https://cdn.ipwhois.io/flags/br.svg",
+                "emoji": "🇧🇷",
+                "emoji_unicode": "U+1F1E7 U+1F1F7"
+              },
+              "connection": {
+                "asn": 26599,
+                "org": "TELEF NICA BRASIL S.A",
+                "isp": "TELEF NICA BRASIL S.A",
+                "domain": "telefonica.com.br"
+              },
+              "timezone": {
+                "id": "America/Sao_Paulo",
+                "abbr": "-03",
+                "is_dst": false,
+                "offset": -10800,
+                "utc": "-03:00",
+                "current_time": "2024-09-26T18:55:10-03:00"
+              },
+              "currency": {
+                "name": "Brazilian Real",
+                "code": "BRL",
+                "symbol": "$",
+                "plural": "Brazilian reals",
+                "exchange_rate": 5.434
+              }
+            },
+            "formId": "cm1jte6i500zx9x290ial27f1",
+            "formName": "[IS] - Aplicação Influent Elite Circle",
+            "utmCampaign": {},
+            "content": {
+              "Qual é o seu telefone?": "+5531985711260",
+              "Qual é o seu telefone? (Unformatted)": "5531985711260",
+              "Qual é o seu nome?": "ga",
+              "Qual é o seu E-mail?": "teste@automagicobs.com",
+              "Qual é o seu Instagram?": "amaral",
+              "Quantos seguidores você possui?": "De 100 mil até 500 mil seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$10.001 a R$20.000 mensais",
+              "Qual é a sua maior dificuldade hoje como influenciador?": "dificuldade",
+              "Qual é o seu objetivo como influenciador?": "objetivo",
+              "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+            },
+            "Qual é o seu telefone?": "+5531985711260",
+            "Qual é o seu telefone? (Unformatted)": "5531985711260",
+            "Qual é o seu nome?": "ga",
+            "Qual é o seu E-mail?": "teste@automagicobs.com",
+            "Qual é o seu Instagram?": "amaral",
+            "Quantos seguidores você possui?": "De 100 mil até 500 mil seguidores",
+            "Quanto você já fatura por mês como influenciador?": "Faturo de R$10.001 a R$20.000 mensais",
+            "Qual é a sua maior dificuldade hoje como influenciador?": "dificuldade",
+            "Qual é o seu objetivo como influenciador?": "objetivo",
+            "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+          }
+        }
+      }
+    ],
+    "influent_hive_society": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2512",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "35.197.110.103",
+            "x-forwarded-host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "61f25d337cc6",
+            "x-real-ip": "35.197.110.103"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "os": "Windows",
+            "browser": "Chrome",
+            "location": {
+              "ip": "177.116.69.54",
+              "success": true,
+              "type": "IPv4",
+              "continent": "South America",
+              "continent_code": "SA",
+              "country": "Brazil",
+              "country_code": "BR",
+              "region": "State of Minas Gerais",
+              "region_code": "MG",
+              "city": "Belo Horizonte",
+              "latitude": -19.9166813,
+              "longitude": -43.9344931,
+              "is_eu": false,
+              "postal": "30170-080",
+              "calling_code": "55",
+              "capital": "Brasília",
+              "borders": "AR,BO,CO,GF,GY,PE,PY,SR,UY,VE",
+              "flag": {
+                "img": "https://cdn.ipwhois.io/flags/br.svg",
+                "emoji": "🇧🇷",
+                "emoji_unicode": "U+1F1E7 U+1F1F7"
+              },
+              "connection": {
+                "asn": 26599,
+                "org": "TELEF NICA BRASIL S.A",
+                "isp": "TELEF NICA BRASIL S.A",
+                "domain": "telefonica.com.br"
+              },
+              "timezone": {
+                "id": "America/Sao_Paulo",
+                "abbr": "-03",
+                "is_dst": false,
+                "offset": -10800,
+                "utc": "-03:00",
+                "current_time": "2024-09-25T21:13:13-03:00"
+              },
+              "currency": {
+                "name": "Brazilian Real",
+                "code": "BRL",
+                "symbol": "$",
+                "plural": "Brazilian reals",
+                "exchange_rate": 5.475
+              }
+            },
+            "formId": "cm1igwyb800rp9x29awsw9n09",
+            "formName": "[IS] - Aplicação Influent Accelerator Program",
+            "utmCampaign": {
+              "utmTerm": "term",
+              "utmSource": "source",
+              "utmMedium": "medium",
+              "utmContent": "content",
+              "utmCampaign": "campaign"
+            },
+            "content": {
+              "Qual é o seu telefone?": "+5531985711260",
+              "Qual é o seu telefone? (Unformatted)": "5531985711260",
+              "Qual é o seu nome?": "Gabriel",
+              "Qual é o seu E-mail?": "teste@automagicbots.com.br",
+              "Qual é o seu Instagram?": "amaraldasautomacoes",
+              "Quantos seguidores você possui?": "De 500 mil seguidores até 1 milhão de seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$50.001 a R$100.000 mensais",
+              "Qual é a sua maior dificuldade hoje como influenciador?": "teste",
+              "Qual é o seu objetivo como influenciador?": "teste",
+              "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+            },
+            "Qual é o seu telefone?": "+5531985711260",
+            "Qual é o seu telefone? (Unformatted)": "5531985711260",
+            "Qual é o seu nome?": "Gabriel",
+            "Qual é o seu E-mail?": "teste@automagicbots.com.br",
+            "Qual é o seu Instagram?": "amaraldasautomacoes",
+            "Quantos seguidores você possui?": "De 500 mil seguidores até 1 milhão de seguidores",
+            "Quanto você já fatura por mês como influenciador?": "Faturo de R$50.001 a R$100.000 mensais",
+            "Qual é a sua maior dificuldade hoje como influenciador?": "teste",
+            "Qual é o seu objetivo como influenciador?": "teste",
+            "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+          }
+        }
+      }
+    ],
+    "aplicacao_preenchida": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8nwebhookwizard.automagicbots.com.br",
+            "user-agent": "axios/1.7.5",
+            "content-length": "882",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, compress, deflate, br",
+            "content-type": "application/json",
+            "x-forwarded-for": "34.82.242.170",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "757403d7b840",
+            "x-real-ip": "34.82.242.170"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "content": {
+              "Qual é o seu nome?": "lui3",
+              "Qual é o seu telefone?": "+5521333333333",
+              "Qual é o seu E-mail?": "felipe3@gmail.com",
+              "Qual é o seu Instagram?": "teste3",
+              "Qual é a sua maior dificuldade hoje como influenciador?": "d3\n",
+              "Qual é o seu objetivo como influenciador?": "o3\n",
+              "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
+              "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Preciso de uma forma personalizada de pagamento"
+            },
+            "utmCampaign": {
+              "utmId": "",
+              "utmTerm": "audiencia",
+              "utmSource": "palestra",
+              "utmMedium": "pitch-palestra",
+              "utmContent": "qrcode",
+              "campaignId": "",
+              "utmCampaign": "influent_summit2024",
+              "campaignName": "",
+              "campaignTerm": "",
+              "campaignSource": "",
+              "campaignMedium": "",
+              "campaignContent": ""
+            }
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/influent-summit-aplicacao",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "YH3cb3FC5zDEa292"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-09-26T23:21:30.052Z",
+  "versionId": "56977f57-159f-4166-826e-3b9b5e033c33"
+}
