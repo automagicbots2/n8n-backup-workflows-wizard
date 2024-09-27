@@ -63,6 +63,28 @@
         ]
       ]
     },
+    "dados_validados": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "dados_validados1": {
+      "main": [
+        [
+          {
+            "node": "entra_na_fila1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "Switch": {
       "main": [
         [
@@ -71,14 +93,28 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "dados_validados1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "dados_validados2",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
-    "dados_validados": {
+    "dados_validados2": {
       "main": [
         [
           {
-            "node": "entra_na_fila",
+            "node": "entra_na_fila2",
             "type": "main",
             "index": 0
           }
@@ -167,7 +203,7 @@
             },
             {
               "name": "forma_de_pagamento_selecionada",
-              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
             },
             {
               "name": "id_campo_telefone",
@@ -488,72 +524,6 @@
     },
     {
       "parameters": {
-        "rules": {
-          "values": [
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict"
-                },
-                "conditions": [
-                  {
-                    "leftValue": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] }}",
-                    "rightValue": "",
-                    "operator": {
-                      "type": "string",
-                      "operation": "exists",
-                      "singleValue": true
-                    }
-                  }
-                ],
-                "combinator": "and"
-              },
-              "renameOutput": true,
-              "outputKey": "Influent Accelerator Program"
-            },
-            {
-              "conditions": {
-                "options": {
-                  "caseSensitive": true,
-                  "leftValue": "",
-                  "typeValidation": "strict"
-                },
-                "conditions": [
-                  {
-                    "id": "56bfa943-24be-46b9-9832-563dbd7faaa5",
-                    "leftValue": "",
-                    "rightValue": "",
-                    "operator": {
-                      "type": "string",
-                      "operation": "equals",
-                      "name": "filter.operator.equals"
-                    }
-                  }
-                ],
-                "combinator": "and"
-              },
-              "renameOutput": true
-            },
-            {
-              "renameOutput": true
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "0da44886-d614-405f-bdb6-1f4a4f00bb08",
-      "name": "Switch",
-      "type": "n8n-nodes-base.switch",
-      "typeVersion": 3,
-      "position": [
-        1720,
-        700
-      ]
-    },
-    {
-      "parameters": {
         "keepOnlySet": true,
         "values": {
           "string": [
@@ -615,7 +585,7 @@
             },
             {
               "name": "forma_de_pagamento_selecionada",
-              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
             },
             {
               "name": "id_campo_telefone",
@@ -692,6 +662,438 @@
       "position": [
         1940,
         580
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "6f096af7-f8e0-4902-8e77-ab6aade3facd",
+      "name": "entra_na_fila1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        760
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados1\"].json[\"fullname\"].trim() }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados1\"].json[\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"instagram\"].replace('@','').toLowerCase()}}"
+            },
+            {
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quantos seguidores você possui?\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quanto você já fatura por mês como influenciador?\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é a sua maior dificuldade hoje como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "objetivo",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu objetivo como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+            },
+            {
+              "name": "id_campo_telefone",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "id_campo_link_do_whatsapp",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_forma_de_pagamento",
+              "value": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53"
+            },
+            {
+              "name": "id_campo_faturamento_atual",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_link_do_instagram",
+              "value": "61b185e1-fe06-4817-bd1f-9098fc19f8d8"
+            },
+            {
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "e188d943-3c4f-438f-87e8-79c578a0126c"
+            },
+            {
+              "name": "id_campo_email",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_dificuldade",
+              "value": "00810de6-8369-4c1a-8693-8ccaa3d9df70"
+            },
+            {
+              "name": "id_campo_objetivo",
+              "value": "44a964d0-288f-48e6-af3e-939b6f4c35aa"
+            },
+            {
+              "name": "aplicacao_preenchida",
+              "value": "[IS] - Aplicação Influent Elite Circle"
+            },
+            {
+              "name": "funil",
+              "value": "influent_summit"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "data_aplicacao_clickup",
+              "value": "={{ new Date($node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"]).getTime() }}"
+            },
+            {
+              "name": "id_campo_data_resposta",
+              "value": "b211dab6-f25d-4042-9610-fb7f40be90a5"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"] || $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "12ffc838-cff4-4d6a-b323-cb97374ff8b2",
+      "name": "dados_validados1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Influent Accelerator Program"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "56bfa943-24be-46b9-9832-563dbd7faaa5",
+                    "leftValue": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Influent Elite Circle"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "id": "bf13c5b1-0488-4849-b9ad-936079a5d5c2",
+                    "leftValue": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?\"] }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Influent Hive Society"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0da44886-d614-405f-bdb6-1f4a4f00bb08",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        1720,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "Influent Summit - Aplicação",
+        "options": {
+          "arguments": {
+            "argument": [
+              {
+                "key": "x-queue-type",
+                "value": "quorum"
+              }
+            ]
+          },
+          "durable": true
+        }
+      },
+      "id": "60af119f-3913-461a-a838-2f348afb5d13",
+      "name": "entra_na_fila2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        2140,
+        960
+      ],
+      "credentials": {
+        "rabbitmq": {
+          "id": "Nk5zIeZQD4nBRyYM",
+          "name": "[RabbitMQ] - Wizard"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "nome",
+              "value": "={{ $node[\"formata_dados1\"].json[\"fullname\"].trim() }}"
+            },
+            {
+              "name": "email",
+              "value": "={{ $node[\"formata_dados1\"].json[\"email\"] }}"
+            },
+            {
+              "name": "Telefone do Cliente - Formato BC",
+              "value": "=+{{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "telefone",
+              "value": "={{ $node[\"formata_dados1\"].json[\"whatsapp\"] }}"
+            },
+            {
+              "name": "utm_content",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_content\"] }}"
+            },
+            {
+              "name": "utm_source",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_source\"] }}"
+            },
+            {
+              "name": "utm_campaign",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_campaign\"] }}"
+            },
+            {
+              "name": "utm_medium",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_medium\"] }}"
+            },
+            {
+              "name": "utm_term",
+              "value": "={{ $node[\"formata_dados1\"].json[\"utm_term\"] }}"
+            },
+            {
+              "name": "instagram",
+              "value": "={{ $node[\"formata_dados1\"].json[\"instagram\"].replace('@','').toLowerCase()}}"
+            },
+            {
+              "name": "qtd_seguidores",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quantos seguidores você possui?\"] }}"
+            },
+            {
+              "name": "faturamento_mensal",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Quanto você já fatura por mês como influenciador?\"] }}"
+            },
+            {
+              "name": "dificuldade",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é a sua maior dificuldade hoje como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "objetivo",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"Qual é o seu objetivo como influenciador?\"].replace(/\\n/g, '|') }}"
+            },
+            {
+              "name": "forma_de_pagamento_selecionada",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?\"] || $node[\"aplicacao_preenchida\"].json[\"body\"][\"content\"][\"O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?\"] || \"\" }}"
+            },
+            {
+              "name": "id_campo_telefone",
+              "value": "667c5680-e9e2-4527-a7f2-3a13597398ae"
+            },
+            {
+              "name": "id_campo_link_do_whatsapp",
+              "value": "146e6a0b-d2f6-4c77-9ca7-c5214de84776"
+            },
+            {
+              "name": "id_campo_forma_de_pagamento",
+              "value": "3c042f14-f0c1-4c79-b31a-2da8bfde7d53"
+            },
+            {
+              "name": "id_campo_faturamento_atual",
+              "value": "617065cb-25a9-4cdb-ad29-54c8a04c4858"
+            },
+            {
+              "name": "id_campo_link_do_instagram",
+              "value": "61b185e1-fe06-4817-bd1f-9098fc19f8d8"
+            },
+            {
+              "name": "id_campo_quantidade_de_seguidores",
+              "value": "e188d943-3c4f-438f-87e8-79c578a0126c"
+            },
+            {
+              "name": "id_campo_email",
+              "value": "e85a521d-ed4b-4de5-a533-ccaaeb4a4126"
+            },
+            {
+              "name": "id_campo_dificuldade",
+              "value": "00810de6-8369-4c1a-8693-8ccaa3d9df70"
+            },
+            {
+              "name": "id_campo_objetivo",
+              "value": "44a964d0-288f-48e6-af3e-939b6f4c35aa"
+            },
+            {
+              "name": "aplicacao_preenchida",
+              "value": "[IS] - Aplicação Influent Hive Society"
+            },
+            {
+              "name": "funil",
+              "value": "influent_summit"
+            },
+            {
+              "name": "variacao_do_funil",
+              "value": "v1"
+            },
+            {
+              "name": "data_ultima_quinzena",
+              "value": "={{ $node[\"formata_dados1\"].json[\"data_ultima_quinzena\"] }}"
+            },
+            {
+              "name": "data_aplicacao_clickup",
+              "value": "={{ new Date($node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"]).getTime() }}"
+            },
+            {
+              "name": "id_campo_data_resposta",
+              "value": "b211dab6-f25d-4042-9610-fb7f40be90a5"
+            },
+            {
+              "name": "data_aplicacao",
+              "value": "={{ $node[\"aplicacao_preenchida\"].json[\"body\"][\"location\"][\"timezone\"][\"current_time\"] || $now }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "572acf1a-ba53-41a3-9857-a1a6c78efe3b",
+      "name": "dados_validados2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        960
       ]
     },
     {
@@ -818,17 +1220,17 @@
       {
         "json": {
           "headers": {
-            "host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "host": "n8nwebhookwizard.automagicbots.com.br",
             "user-agent": "axios/1.7.2",
-            "content-length": "2329",
+            "content-length": "2422",
             "accept": "application/json, text/plain, */*",
             "accept-encoding": "gzip, compress, deflate, br",
             "content-type": "application/json",
             "x-forwarded-for": "35.197.110.103",
-            "x-forwarded-host": "n8n2webhookautomagicbots.automagicbots.com.br",
+            "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
-            "x-forwarded-server": "61f25d337cc6",
+            "x-forwarded-server": "757403d7b840",
             "x-real-ip": "35.197.110.103"
           },
           "params": {},
@@ -871,42 +1273,50 @@
                 "is_dst": false,
                 "offset": -10800,
                 "utc": "-03:00",
-                "current_time": "2024-09-26T18:55:10-03:00"
+                "current_time": "2024-09-27T10:41:35-03:00"
               },
               "currency": {
                 "name": "Brazilian Real",
                 "code": "BRL",
                 "symbol": "$",
                 "plural": "Brazilian reals",
-                "exchange_rate": 5.434
+                "exchange_rate": 5.438
               }
             },
             "formId": "cm1jte6i500zx9x290ial27f1",
             "formName": "[IS] - Aplicação Influent Elite Circle",
-            "utmCampaign": {},
+            "utmCampaign": {
+              "utmTerm": "audiencia",
+              "utmSource": "palestra",
+              "utmMedium": "pitch-palestra",
+              "utmContent": "qrcode",
+              "utmCampaign": "influent_summit2024"
+            },
             "content": {
-              "Qual é o seu telefone?": "+5531985711260",
-              "Qual é o seu telefone? (Unformatted)": "5531985711260",
-              "Qual é o seu nome?": "ga",
-              "Qual é o seu E-mail?": "teste@automagicobs.com",
+              "Qual é o seu telefone?": "+5531999999999",
+              "Qual é o seu telefone? (Unformatted)": "5531999999999",
+              "Qual é o seu nome?": "Ga",
+              "Qual é o seu E-mail?": "testenormal@gmail.com",
               "Qual é o seu Instagram?": "amaral",
-              "Quantos seguidores você possui?": "De 100 mil até 500 mil seguidores",
-              "Quanto você já fatura por mês como influenciador?": "Faturo de R$10.001 a R$20.000 mensais",
+              "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
               "Qual é a sua maior dificuldade hoje como influenciador?": "dificuldade",
               "Qual é o seu objetivo como influenciador?": "objetivo",
-              "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
+              "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero pagar à vista"
             },
-            "Qual é o seu telefone?": "+5531985711260",
-            "Qual é o seu telefone? (Unformatted)": "5531985711260",
-            "Qual é o seu nome?": "ga",
-            "Qual é o seu E-mail?": "teste@automagicobs.com",
+            "Qual é o seu telefone?": "+5531999999999",
+            "Qual é o seu telefone? (Unformatted)": "5531999999999",
+            "Qual é o seu nome?": "Ga",
+            "Qual é o seu E-mail?": "testenormal@gmail.com",
             "Qual é o seu Instagram?": "amaral",
-            "Quantos seguidores você possui?": "De 100 mil até 500 mil seguidores",
-            "Quanto você já fatura por mês como influenciador?": "Faturo de R$10.001 a R$20.000 mensais",
+            "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
+            "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
             "Qual é a sua maior dificuldade hoje como influenciador?": "dificuldade",
             "Qual é o seu objetivo como influenciador?": "objetivo",
-            "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero dividir no cartão de crédito"
-          }
+            "O valor do Influent Elite Circle é 12x de R$1997 ou R$19.997 à vista. Como você gostaria de pagá-lo?": "Quero pagar à vista"
+          },
+          "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/influent-summit-aplicacao",
+          "executionMode": "production"
         }
       }
     ],
@@ -1017,46 +1427,99 @@
         "json": {
           "headers": {
             "host": "n8nwebhookwizard.automagicbots.com.br",
-            "user-agent": "axios/1.7.5",
-            "content-length": "882",
+            "user-agent": "axios/1.7.2",
+            "content-length": "2528",
             "accept": "application/json, text/plain, */*",
             "accept-encoding": "gzip, compress, deflate, br",
             "content-type": "application/json",
-            "x-forwarded-for": "34.82.242.170",
+            "x-forwarded-for": "35.197.110.103",
             "x-forwarded-host": "n8nwebhookwizard.automagicbots.com.br",
             "x-forwarded-port": "443",
             "x-forwarded-proto": "https",
             "x-forwarded-server": "757403d7b840",
-            "x-real-ip": "34.82.242.170"
+            "x-real-ip": "35.197.110.103"
           },
           "params": {},
           "query": {},
           "body": {
-            "content": {
-              "Qual é o seu nome?": "lui3",
-              "Qual é o seu telefone?": "+5521333333333",
-              "Qual é o seu E-mail?": "felipe3@gmail.com",
-              "Qual é o seu Instagram?": "teste3",
-              "Qual é a sua maior dificuldade hoje como influenciador?": "d3\n",
-              "Qual é o seu objetivo como influenciador?": "o3\n",
-              "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
-              "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
-              "O valor do Influent Accelerator Program é 12x de R$997 ou R$9.997 à vista. Como você gostaria de pagá-lo?": "Preciso de uma forma personalizada de pagamento"
+            "os": "Windows",
+            "browser": "Chrome",
+            "location": {
+              "ip": "177.23.178.124",
+              "success": true,
+              "type": "IPv4",
+              "continent": "South America",
+              "continent_code": "SA",
+              "country": "Brazil",
+              "country_code": "BR",
+              "region": "State of Rio de Janeiro",
+              "region_code": "RJ",
+              "city": "Rio de Janeiro",
+              "latitude": -22.9068467,
+              "longitude": -43.1728965,
+              "is_eu": false,
+              "postal": "20270-150",
+              "calling_code": "55",
+              "capital": "Brasília",
+              "borders": "AR,BO,CO,GF,GY,PE,PY,SR,UY,VE",
+              "flag": {
+                "img": "https://cdn.ipwhois.io/flags/br.svg",
+                "emoji": "🇧🇷",
+                "emoji_unicode": "U+1F1E7 U+1F1F7"
+              },
+              "connection": {
+                "asn": 262898,
+                "org": "JM TELECOMUNICACOES E MANUTENCAO DE COMP. EIRELI",
+                "isp": "JM TELECOMUNICACOES E MANUTENCAO DE COMP. EIRELI",
+                "domain": "jmtelecomunicacoes.com.br"
+              },
+              "timezone": {
+                "id": "America/Sao_Paulo",
+                "abbr": "-03",
+                "is_dst": false,
+                "offset": -10800,
+                "utc": "-03:00",
+                "current_time": "2024-09-27T11:16:02-03:00"
+              },
+              "currency": {
+                "name": "Brazilian Real",
+                "code": "BRL",
+                "symbol": "$",
+                "plural": "Brazilian reals",
+                "exchange_rate": 5.438
+              }
             },
+            "formId": "cm1jtw6tc01039x292xws03sx",
+            "formName": "[IS] - Aplicação Influent Hive Society",
             "utmCampaign": {
-              "utmId": "",
               "utmTerm": "audiencia",
               "utmSource": "palestra",
               "utmMedium": "pitch-palestra",
               "utmContent": "qrcode",
-              "campaignId": "",
-              "utmCampaign": "influent_summit2024",
-              "campaignName": "",
-              "campaignTerm": "",
-              "campaignSource": "",
-              "campaignMedium": "",
-              "campaignContent": ""
-            }
+              "utmCampaign": "influent_summit2024"
+            },
+            "content": {
+              "Qual é o seu telefone?": "+5521999999996",
+              "Qual é o seu telefone? (Unformatted)": "5521999999996",
+              "Qual é o seu nome?": "teste7",
+              "Qual é o seu E-mail?": "teste7@gmail.com",
+              "Qual é o seu Instagram?": "teste7",
+              "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
+              "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
+              "Qual é a sua maior dificuldade hoje como influenciador?": "7",
+              "Qual é o seu objetivo como influenciador?": "7 t\nt\ntt\n 7",
+              "O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?": "Preciso de uma forma personalizada de pagamento"
+            },
+            "Qual é o seu telefone?": "+5521999999996",
+            "Qual é o seu telefone? (Unformatted)": "5521999999996",
+            "Qual é o seu nome?": "teste7",
+            "Qual é o seu E-mail?": "teste7@gmail.com",
+            "Qual é o seu Instagram?": "teste7",
+            "Quantos seguidores você possui?": "De 50 mil até 100 mil seguidores",
+            "Quanto você já fatura por mês como influenciador?": "Faturo de R$5.001 a R$10.000 mensais",
+            "Qual é a sua maior dificuldade hoje como influenciador?": "7",
+            "Qual é o seu objetivo como influenciador?": "7 t\nt\ntt\n 7",
+            "O valor do Influent Hive Society é 12x de R$59,70 ou R$597 à vista. Como você gostaria de pagá-lo?": "Preciso de uma forma personalizada de pagamento"
           },
           "webhookUrl": "https://n8nwebhookwizard.automagicbots.com.br/webhook/influent-summit-aplicacao",
           "executionMode": "production"
@@ -1073,6 +1536,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2024-09-26T23:21:30.052Z",
-  "versionId": "56977f57-159f-4166-826e-3b9b5e033c33"
+  "updatedAt": "2024-09-27T14:18:00.613Z",
+  "versionId": "0648bb18-3569-48be-9624-236dd76ead6e"
 }
